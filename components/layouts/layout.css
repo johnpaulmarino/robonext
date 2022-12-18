@@ -1,0 +1,74 @@
+/* Global position: relative; breaks gatsby-image */
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+  /* position: relative; */
+}
+
+/* overflow: hidden breaks position: sticky */
+html {
+  /* overflow-x: hidden; */
+  scroll-behavior: auto;
+}
+
+/* overflow: hidden breaks position: sticky */
+body {
+  line-height: 1.6;
+  margin: 0;
+  /* overflow-x: hidden; */
+  padding: 0;
+  font-family: 'Source Sans Pro', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body.scrollHidden {
+  overflow-y: hidden;
+}
+
+@font-face {
+  font-family: Source Sans Pro;
+  src: url(./../../../static/fonts/SourceSansPro-Regular.ttf);
+}
+
+@font-face {
+  font-family: Source Sans Pro Bold;
+  src: url(./../../../static/fonts/SourceSansPro-Bold.ttf);
+}
+
+@font-face {
+  font-family: Source Sans Pro Italic;
+  src: url(./../../../static/fonts/SourceSansPro-Italic.ttf);
+}
+
+@font-face {
+  font-family: Noto Serif;
+  src: url(./../../../static/fonts/NotoSerif-Regular.ttf);
+}
+
+@font-face {
+  font-family: Noto Serif Bold Italic;
+  src: url(./../../../static/fonts/NotoSerif-BoldItalic.ttf);
+}
+
+a[href^='tel'] {
+  color: inherit; /* Inherit text color of parent element. */
+  text-decoration: none; /* Remove underline. */
+}
+
+a, a:link {
+  text-decoration-color: #77CDD3;
+  transition: color 0.3s;
+}
+
+a:hover {
+  text-decoration: none;
+  text-decoration-color: #77CDD3;
+  color: #77CDD3 !important;
+}
+
+a:focus {
+  outline: none;
+  border: 3px solid #70cad6;
+}
