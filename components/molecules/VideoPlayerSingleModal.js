@@ -1,10 +1,10 @@
-import React from 'react'
-import { CSSTransition } from 'react-transition-group'
-import styled, { keyframes } from 'styled-components'
+import React from 'react';
+import { CSSTransition } from 'react-transition-group';
+import styled, { keyframes } from 'styled-components';
 
-import { BLACK, WHITE } from '../../../styles/colors'
-import TYPE from '../../../styles/type'
-import { S } from '../../../styles/breakpoints'
+import { BLACK, WHITE } from '@/styles/colors';
+import TYPE from '@/styles/type';
+import { S } from '@/styles/breakpoints';
 
 const VideoModal = styled.div`
   background-color: ${BLACK};
@@ -37,7 +37,7 @@ const VideoModal = styled.div`
     transform: translateY(-100%);
     -webkit-transform: translateY(-100%);
   }
-`
+`;
 const fadeIn = keyframes`
   0% {
     opacity: 0;
@@ -62,7 +62,7 @@ const VideoPlayer = styled.div`
   @media (max-width: ${S}px) {
     padding: 0;
   }
-`
+`;
 
 const CloseButtonWrapper = styled.div`
   color: ${WHITE};
@@ -78,7 +78,7 @@ const CloseButtonWrapper = styled.div`
     padding: 12px 0 4px 0px;
     justify-content: center;
   }
-`
+`;
 
 const CloseX = styled.div`
   font-size: 1.5rem;
@@ -92,7 +92,7 @@ const CloseX = styled.div`
     position: relative;
     top: -6px;
   }
-`
+`;
 
 const Close = styled.div`
   position: relative;
@@ -104,7 +104,7 @@ const Close = styled.div`
     font-size: 1.45rem;
     top: -6.5px;
   }
-`
+`;
 
 const VideoWrapper = styled.div`
   position: relative;
@@ -117,7 +117,7 @@ const VideoWrapper = styled.div`
     width: 100%;
     height: 100%;
   }
-`
+`;
 
 const VideoIFrame = styled.iframe`
   position: absolute;
@@ -125,7 +125,7 @@ const VideoIFrame = styled.iframe`
   left: 0;
   width: 100%;
   height: 100%;
-`
+`;
 
 const scrollHandler = () => {
   const bodyElement = document.querySelector('body')
@@ -173,4 +173,4 @@ const VideoPlayerSingleModal = props => {
   )
 }
 
-export default VideoPlayerSingleModal
+export default VideoPlayerSingleModal;

@@ -1,12 +1,12 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from 'react';
+import styled from 'styled-components';
 
-import { S } from '../../../styles/breakpoints'
-import TYPE, { TYPE_COLORS } from '../../../styles/type'
-import SPACING from '../../../styles/spacing'
-import { BLACK, WHITE } from '../../../styles/colors'
+import { S } from '@/styles/breakpoints';
+import TYPE, { TYPE_COLORS } from '@/styles/type';
+import SPACING from '@/styles/spacing';
+import { BLACK, WHITE } from '@/styles/colors';
 
-import sixthCardImage from '../../../static/enforcement/enforcement-icon.png'
+import sixthCardImage from '@/static/enforcement/enforcement-icon.png';
 
 const cardGradients = [
   'linear-gradient(180deg, #A992CC, #795BA4)',
@@ -15,7 +15,7 @@ const cardGradients = [
   'linear-gradient(180deg, #9EC7EE, #6495D2)',
   'linear-gradient(180deg, #93CEE7, #45A2CE)',
   'linear-gradient(180deg, #BBEBF0, #58B2C5)',
-]
+];
 
 const EnforcementCardContainer = styled.div`
   position: relative;
@@ -42,7 +42,7 @@ const EnforcementCardContainer = styled.div`
       width: 100% !important;
     }
   }
-`
+`;
 
 const EnforcementCard = styled.div`
   position: relative;
@@ -63,7 +63,7 @@ const EnforcementCard = styled.div`
     padding-bottom: 3rem;
     min-height: 225px;
   }
-`
+`;
 
 const EnforcementCardNumber = styled.div`
   position: absolute;
@@ -79,7 +79,7 @@ const EnforcementCardNumber = styled.div`
   @media (max-height: ${S - 1}) {
     font-size: 12rem;
   }
-`
+`;
 
 const EnforcementCardContent = styled.div`
   height: 100%;
@@ -88,7 +88,7 @@ const EnforcementCardContent = styled.div`
   @media (max-width: ${S - 1}px) {
     width: 100%;
   }
-`
+`;
 
 const EnforcementCardHeader = styled.div`
   display: flex;
@@ -108,7 +108,7 @@ const EnforcementCardHeader = styled.div`
       width: 100%;
     }
   }
-`
+`;
 
 const EnforcementCardBody = styled.p`
   width: 90%;
@@ -126,7 +126,7 @@ const EnforcementCardBody = styled.p`
     font-size: ${TYPE.bodySans.size};
     line-height: ${TYPE.bodySans.line};
   }
-`
+`;
 
 const BlockBoxContainer = styled.div`
   position: absolute;
@@ -139,7 +139,7 @@ const BlockBoxContainer = styled.div`
     top: calc(100% - 74px);
     width: 80%;
   }
-`
+`;
 
 const BlockBox = styled.div`
   border: 2px solid black;
@@ -150,7 +150,7 @@ const BlockBox = styled.div`
   @media (max-width: ${S}px) {
     max-width: none;
   }
-`
+`;
 
 const BlockBoxHeader = styled.h4`
   margin: 0;
@@ -163,7 +163,7 @@ const BlockBoxHeader = styled.h4`
   color: ${TYPE_COLORS.white};
   background-color: ${BLACK};
   text-transform: uppercase;
-`
+`;
 
 const BlockBoxParagraph = styled.p`
   margin: 0;
@@ -181,7 +181,7 @@ const BlockBoxParagraph = styled.p`
     padding: ${props =>
       props.learnMoreUrl ? '0.75rem 1rem 2em' : '0.75rem 1rem .9em'};
   }
-`
+`;
 
 const SixthCardBody = styled.div`
   color: ${TYPE_COLORS.white};
@@ -204,7 +204,7 @@ const SixthCardBody = styled.div`
       font-size: ${TYPE.m.size}rem;
     }
   }
-`
+`;
 
 const SixthCardImage = styled.img`
   position: absolute;
@@ -217,7 +217,7 @@ const SixthCardImage = styled.img`
   @media (max-width: ${S}px) {
     top: -65px;
   }
-`
+`;
 
 export const SixthCard = ({ content }) => (
   <EnforcementCardContainer>
@@ -231,7 +231,7 @@ export const SixthCard = ({ content }) => (
       </SixthCardBody>
     </EnforcementCard>
   </EnforcementCardContainer>
-)
+);
 export default function Component({  content, sixthCard }) { 
   const arr = content.map((content, i) => (
     <EnforcementCardContainer key={`enforcement-${i}`}>
@@ -255,5 +255,5 @@ export default function Component({  content, sixthCard }) {
     </EnforcementCardContainer>
   ))
   arr.push(<SixthCard key={`sixth-card`} content={sixthCard} />)
-  return arr
+  return arr;
 }

@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 export const PhoneGroup1 = ({ active }) => (
   <g
@@ -22,7 +22,7 @@ export const PhoneGroup1 = ({ active }) => (
       fillRule="nonzero"
     />
   </g>
-)
+);
 
 export const PhoneGroup2 = ({ active }) => (
   <g
@@ -46,7 +46,7 @@ export const PhoneGroup2 = ({ active }) => (
       fillRule="nonzero"
     />
   </g>
-)
+);
 
 export const PhoneGroup3 = ({ active }) => (
   <g
@@ -70,7 +70,7 @@ export const PhoneGroup3 = ({ active }) => (
       fillRule="nonzero"
     />
   </g>
-)
+);
 
 export const PhoneGroup4 = ({ active }) => (
   <g
@@ -94,7 +94,7 @@ export const PhoneGroup4 = ({ active }) => (
       fillRule="nonzero"
     />
   </g>
-)
+);
 
 export const PhoneGroup5 = ({ active }) => (
   <g
@@ -118,9 +118,10 @@ export const PhoneGroup5 = ({ active }) => (
       fillRule="nonzero"
     />
   </g>
-)
+);
 
-export default ({ children }) => (
+
+export default function Component({ children }) {
   <svg
     width="289px"
     height="483px"
@@ -167,4 +168,4 @@ export default ({ children }) => (
       </g>
     </g>
   </svg>
-)
+};

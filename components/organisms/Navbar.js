@@ -1,13 +1,14 @@
-import React from 'react'
-import styled from 'styled-components'
-import { navigate } from '@reach/router'
-import Logo from '../atoms/Logo'
-import ShareButtons from '../atoms/ShareButtons'
-import TYPE, { TYPE_COLORS } from '../../../styles/type'
-import { S } from '../../../styles/breakpoints'
-import { BLACK, WHITE, SEAGREEN, MEDIUMGRAY } from '../../../styles/colors'
-import whiteSpeckle from '../../../static/horizontal-dr/white-speckle.png'
-import menuIcon from '../../../static/menu/menu.png'
+import React from 'react';
+import styled from 'styled-components';
+import { navigate } from '@reach/router';
+import Logo from '@/components/atoms/Logo';
+import ShareButtons from '@/components/atoms/ShareButtons';
+import TYPE, { TYPE_COLORS } from '@/styles/type';
+import { S } from '@/styles/breakpoints';
+import { BLACK, WHITE, SEAGREEN, MEDIUMGRAY } from '@/styles/colors';
+import whiteSpeckle from '@/static/horizontal-dr/white-speckle.png';
+import menuIcon from '@/static/menu/menu.png';
+import Image from 'next/image';
 
 const StyledContainer = styled.div`
   position: fixed;
@@ -22,7 +23,7 @@ const StyledContainer = styled.div`
   top: 0;
   width: 100%;
   z-index: 1000;
-`
+`;
 
 const Progress = styled.div`
   position: relative;
@@ -34,7 +35,7 @@ const Progress = styled.div`
   @media screen and (max-width: ${S}px) {
     display: none;
   }
-`
+`;
 
 const Hamburger = styled.div`
   cursor: pointer;
@@ -42,7 +43,7 @@ const Hamburger = styled.div`
   @media screen and (min-width: ${S + 1}px) {
     display: none;
   }
-`
+`;
 
 const Bar = styled.div`
   width: 100%;
@@ -69,7 +70,7 @@ const Bar = styled.div`
   overflow: visible;
   margin: 0 auto;
   text-align: center;
-`
+`;
 
 const BarCover = styled.div`
   position: absolute;
@@ -81,13 +82,13 @@ const BarCover = styled.div`
       : 'translateY(-4px)'};
   transition: all 0.2s ease-in-out;
   width: 100%;
-`
+`;
 
 const BarNumber = styled.div`
   position: relative;
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
-`
+`;
 
 const BarTitle = styled.div`
   position: absolute;
@@ -111,7 +112,7 @@ const BarTitle = styled.div`
     right: ${props => (props.isLast ? '-20px' : null)};
     left: ${props => (props.isFirst ? '-20px' : null)};
   }
-`
+`;
 
 const BarContainer = styled.a`
   width: 100%;
@@ -157,7 +158,7 @@ const BarContainer = styled.a`
   &:focus ${Bar} {
     outline: none;
   }
-`
+`;
 
 class NavBar extends React.Component {
   state = {
@@ -232,7 +233,7 @@ class NavBar extends React.Component {
               document.getElementById('table-of-contents').scrollIntoView()
             }}
           >
-            <img src={menuIcon} width="30" alt="Menu" />
+            <Image src={menuIcon} width="30" alt="Menu" />
           </Hamburger>
           <ShareButtons />
         </div>
@@ -241,4 +242,4 @@ class NavBar extends React.Component {
   }
 }
 
-export default NavBar
+export default NavBar;

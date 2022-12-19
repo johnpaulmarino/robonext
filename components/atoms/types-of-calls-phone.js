@@ -1,21 +1,21 @@
-import React from 'react'
-import styled, { css, keyframes } from 'styled-components'
+import React from 'react';
+import styled, { css, keyframes } from 'styled-components';
 
-import P7B from '../../../static/types-of-calls/2DB380A26D3077B.png'
-import P7C from '../../../static/types-of-calls/2DB380A26D3077C.png'
-import P7D from '../../../static/types-of-calls/2DB380A26D3077D.png'
-import P7F from '../../../static/types-of-calls/2DB380A26D3077F.png'
-import P72 from '../../../static/types-of-calls/2DB380A26D30772.png'
-import P74 from '../../../static/types-of-calls/2DB380A26D30774.png'
-import P75 from '../../../static/types-of-calls/2DB380A26D30775.png'
-import P76 from '../../../static/types-of-calls/2DB380A26D30776.png'
-import P77 from '../../../static/types-of-calls/2DB380A26D30777.png'
-import P4C from '../../../static/types-of-calls/69AF19779C80144C.png'
-import P4D from '../../../static/types-of-calls/69AF19779C80144D.png'
-import P4F from '../../../static/types-of-calls/69AF19779C80144F.png'
-import P33 from '../../../static/types-of-calls/69AF19779C801433.png'
-import P34 from '../../../static/types-of-calls/69AF19779C801434.png'
-import P53 from '../../../static/types-of-calls/69AF19779C801453.png'
+import P7B from '@/static/types-of-calls/2DB380A26D3077B.png';
+import P7C from '@/static/types-of-calls/2DB380A26D3077C.png';
+import P7D from '@/static/types-of-calls/2DB380A26D3077D.png';
+import P7F from '@/static/types-of-calls/2DB380A26D3077F.png';
+import P72 from '@/static/types-of-calls/2DB380A26D30772.png';
+import P74 from '@/static/types-of-calls/2DB380A26D30774.png';
+import P75 from '@/static/types-of-calls/2DB380A26D30775.png';
+import P76 from '@/static/types-of-calls/2DB380A26D30776.png';
+import P77 from '@/static/types-of-calls/2DB380A26D30777.png';
+import P4C from '@/static/types-of-calls/69AF19779C80144C.png';
+import P4D from '@/static/types-of-calls/69AF19779C80144D.png';
+import P4F from '@/static/types-of-calls/69AF19779C80144F.png';
+import P33 from '@/static/types-of-calls/69AF19779C801433.png';
+import P34 from '@/static/types-of-calls/69AF19779C801434.png';
+import P53 from '@/static/types-of-calls/69AF19779C801453.png';
 
 const spot = keyframes`
   0% {
@@ -27,7 +27,7 @@ const spot = keyframes`
   100% {
     transform: translateY(0);
   }
-`
+`;
 
 const MasterGroup = styled.g`
   opacity: 0;
@@ -41,7 +41,7 @@ const MasterGroup = styled.g`
       opacity: 1;
       transform: scale(1);
     `}
-`
+`;
 
 const BaseG = styled.g`
   animation-name: ${spot};
@@ -56,7 +56,7 @@ const BaseG = styled.g`
   &:last-child {
     animation-duration: 5.4s;
   }
-`
+`;
 
 const PhoneGroup1 = ({ active }) => (
   <MasterGroup active={active}>
@@ -98,7 +98,7 @@ const PhoneGroup1 = ({ active }) => (
       />
     </BaseG>
   </MasterGroup>
-)
+);
 const PhoneGroup2 = ({ active }) => (
   <MasterGroup active={active}>
     <BaseG clipPath="url(#p)">
@@ -132,7 +132,7 @@ const PhoneGroup2 = ({ active }) => (
       />
     </BaseG>
   </MasterGroup>
-)
+);
 const PhoneGroup3 = ({ active }) => (
   <MasterGroup active={active}>
     <BaseG clipPath="url(#j)">
@@ -166,7 +166,7 @@ const PhoneGroup3 = ({ active }) => (
       />
     </BaseG>
   </MasterGroup>
-)
+);
 const PhoneGroup4 = ({ active }) => (
   <MasterGroup active={active}>
     <BaseG clipPath="url(#f)">
@@ -206,7 +206,7 @@ const PhoneGroup4 = ({ active }) => (
       />
     </BaseG>
   </MasterGroup>
-)
+);
 
 export default function Component({ currentPhone }) { 
   return (

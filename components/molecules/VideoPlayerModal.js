@@ -1,21 +1,22 @@
-import React, { useState } from 'react'
-import { CSSTransition } from 'react-transition-group'
-import styled, { keyframes } from 'styled-components'
+import React, { useState } from 'react';
+import { CSSTransition } from 'react-transition-group';
+import styled, { keyframes } from 'styled-components';
+import Image from 'next/image';
 
-import { BLACK, WHITE } from '../../../styles/colors'
-import TYPE, { TYPE_COLORS } from '../../../styles/type'
-import { S } from '../../../styles/breakpoints'
-import playIcon from '../../../static/media-icons/play.svg'
+import { BLACK, WHITE } from '@/styles/colors';
+import TYPE, { TYPE_COLORS } from '@/styles/type';
+import { S } from '@/styles/breakpoints';
+import playIcon from '@/static/media-icons/play.svg';
 
 const VideoComponentWrapper = styled.div`
   height: calc(100vh - 68px);
   position: relative;
-`
+`;
 const VideoLaunchPanel = styled.div`
   position: absolute;
   right: 0;
   bottom: 0;
-`
+`;
 const VideoModal = styled.div`
   background-color: ${BLACK};
   position: fixed;
@@ -47,7 +48,7 @@ const VideoModal = styled.div`
     transform: translateY(-100%);
     -webkit-transform: translateY(-100%);
   }
-`
+`;
 const fadeIn = keyframes`
   0% {
     opacity: 0;
@@ -55,7 +56,7 @@ const fadeIn = keyframes`
   100% {
     opacity: 1;
   }
-`
+`;
 
 const VideoPlayer = styled.div`
   padding: 0% 16%;
@@ -72,7 +73,7 @@ const VideoPlayer = styled.div`
   @media (max-width: ${S}px) {
     padding: 0;
   }
-`
+`;
 
 const CloseButtonWrapper = styled.div`
   color: ${WHITE};
@@ -88,7 +89,7 @@ const CloseButtonWrapper = styled.div`
     padding: 12px 0 4px 0px;
     justify-content: center;
   }
-`
+`;
 
 const CloseX = styled.div`
   font-size: 1.5rem;
@@ -102,7 +103,7 @@ const CloseX = styled.div`
     position: relative;
     top: -6px;
   }
-`
+`;
 
 const Close = styled.div`
   position: relative;
@@ -114,7 +115,7 @@ const Close = styled.div`
     font-size: 1.45rem;
     top: -6.5px;
   }
-`
+`;
 
 const BlockBox = styled.div`
   width: 100%;
@@ -123,7 +124,7 @@ const BlockBox = styled.div`
   @media (max-width: ${S}px) {
     max-width: none;
   }
-`
+`;
 
 const BlockBoxHeader = styled.button`
   border: none;
@@ -145,7 +146,7 @@ const BlockBoxHeader = styled.button`
     padding: 0.75rem 1rem 1.1em;
     height: 3rem;
   }
-`
+`;
 
 const PlayIcon = styled.div`
   margin: 3px 6px 0 0;
@@ -153,11 +154,11 @@ const PlayIcon = styled.div`
   @media (max-width: ${S}px) {
     margin: 5px 6px 0 0;
   }
-`
+`;
 
 const PlayTheVideo = styled.div`
   padding: 4.5px 0 0 2px;
-`
+`;
 
 const BlockBoxParagraph = styled.p`
   background-color: ${WHITE};
@@ -178,7 +179,7 @@ const BlockBoxParagraph = styled.p`
     letter-spacing: ${TYPE.mobileBlockBox.letterSpacing}px;
     padding: 0.75rem 1rem 1em;
   }
-`
+`;
 
 const VideoWrapper = styled.div`
   position: relative;
@@ -191,7 +192,7 @@ const VideoWrapper = styled.div`
     width: 100%;
     height: 100%;
   }
-`
+`;
 
 const VideoIFrame = styled.iframe`
   position: absolute;
@@ -199,7 +200,7 @@ const VideoIFrame = styled.iframe`
   left: 0;
   width: 100%;
   height: 100%;
-`
+`;
 
 const scrollHandler = () => {
   const bodyElement = document.querySelector('body')
@@ -214,7 +215,7 @@ const VideoPlayerModal = props => {
         <BlockBox>
           <BlockBoxHeader onClick={() => setShowMessage(true)}>
             <PlayIcon>
-              <img src={playIcon} alt="Play the Video" width="16px" />
+              <Image src={playIcon} alt="Play the Video"  width={16} />
             </PlayIcon>
             <PlayTheVideo>Play the Video</PlayTheVideo>
           </BlockBoxHeader>
@@ -269,4 +270,4 @@ const VideoPlayerModal = props => {
   )
 }
 
-export default VideoPlayerModal
+export default VideoPlayerModal;

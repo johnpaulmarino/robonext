@@ -1,7 +1,7 @@
-import React from 'react'
-import Swiper from 'react-id-swiper'
-import 'swiper/swiper.min.css'
-import { XS } from '../../../styles/breakpoints'
+import React from 'react';
+import Swiper from 'react-id-swiper';
+import 'swiper/swiper.min.css';
+import { XS } from '@/styles/breakpoints';
 
 export default function Component({ children }) {
   const params = {

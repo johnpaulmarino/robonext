@@ -1,25 +1,25 @@
-import React, { useReducer } from 'react'
-import styled from 'styled-components'
+import React, { useReducer } from 'react';
+import styled from 'styled-components';
 
-import { S } from '../../../styles/breakpoints'
-import Grid from '../atoms/Grid'
-import Column from '../atoms/Column'
+import { S } from '@/styles/breakpoints';
+import Grid from '@/components/atoms/Grid';
+import Column from '@/components/atoms/Column';
 
-import sectionTitles from '../../../cms/robocalls/section-titles'
-import Spacer from '../atoms/Spacer'
+import sectionTitles from '@/cms/robocalls/section-titles';
+import Spacer from '@/components/atoms/Spacer';
 import {
   Section,
   StyledSectionTitleContainer,
   SectionContent,
-} from '../styled/Section'
+} from '@/components/styled/Section';
 
-import HowRobocallsWork from '../../../cms/robocalls/how-robocalls-work'
-import roboSlugs from '../../../cms/robocalls/slugs'
+import HowRobocallsWork from '@/cms/robocalls/how-robocalls-work';
+import roboSlugs from '@/cms/robocalls/slugs';
 
-import RotatingGlobe from '../molecules/rotating-globe-final'
-import GlobeContent from '../molecules/globe-cards'
+import RotatingGlobe from '@/components/molecules/rotating-globe-final';
+import GlobeContent from '@/components/molecules/globe-cards';
 
-import globeBackground from '../../../static/background-textures/rotating-globe-bg.png'
+import globeBackground from '@/static/background-textures/rotating-globe-bg.png';
 
 const GlobeContainer = styled.div`
   position: absolute;
@@ -31,14 +31,14 @@ const GlobeContainer = styled.div`
   @media (max-width: ${S}px) {
     display: none;
   }
-`
+`;
 
 const GlobeContainerInner = styled.div`
   position: sticky;
   top: 68px;
   width: 100%;
   height: calc(100vh - 68px);
-`
+`;
 
 const ContentContainer = styled.div`
   position: relative;
@@ -49,13 +49,13 @@ const ContentContainer = styled.div`
     margin-top: 0;
     padding-bottom: 6rem;
   }
-`
+`;
 
 const BackgroundContainer = styled.div`
   position: absolute;
   height: 100%;
   width: 100%;
-`
+`;
 
 const BackgroundContainerInner = styled.div`
   position: relative;
@@ -66,7 +66,7 @@ const BackgroundContainerInner = styled.div`
   @media (max-width: ${S}px) {
     display: none;
   }
-`
+`;
 
 const BackgroundFullHeight = styled.div`
   position: sticky;
@@ -82,7 +82,7 @@ const BackgroundFullHeight = styled.div`
   @media (max-width: ${S}px) {
     display: none;
   }
-`
+`;
 
 export const SectionBackground = ({ bgGradient, bgImage }) => (
   <BackgroundContainer>
@@ -90,16 +90,16 @@ export const SectionBackground = ({ bgGradient, bgImage }) => (
       <BackgroundFullHeight bgImage={bgImage} />
     </BackgroundContainerInner>
   </BackgroundContainer>
-)
+);
 
-const globePositionReducer = (_state, { position }) => ({ position })
+const globePositionReducer = (_state, { position }) => ({ position });
 
 export default function Component({ checkSectionVisited }) {
   const [globePosition, dispatch] = useReducer(globePositionReducer, {
     position: 0,
-  })
+  });
 
-  const visited = checkSectionVisited(2)
+  const visited = checkSectionVisited(2);
 
   return (
     <Section>

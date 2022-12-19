@@ -1,6 +1,6 @@
-import { keyframes } from 'styled-components'
+import { keyframes } from 'styled-components';
 
-import { rotationAdjustments } from './rotating-globe-final'
+import { rotationAdjustments } from '@/components/molecules/rotating-globe-final';
 
 const bgScene1 = keyframes`
   0% {
@@ -14,7 +14,7 @@ const bgScene1 = keyframes`
   100% {
     transform: rotate(0deg) translateX(0px);
     opacity: 1;
-  }`
+  }`;
 
 const bgScene2 = () => {
   const rotation = `${-80 + rotationAdjustments[1]}`
@@ -139,5 +139,5 @@ const fgScene4 = () => {
   }
 `
 }
-export const bgKeyframes = [bgScene1, bgScene2, bgScene3, bgScene4]
-export const fgKeyframes = [fgScene1, fgScene2, fgScene3, fgScene4]
+export const bgKeyframes = [bgScene1, bgScene2, bgScene3, bgScene4];
+export const fgKeyframes = [fgScene1, fgScene2, fgScene3, fgScene4];

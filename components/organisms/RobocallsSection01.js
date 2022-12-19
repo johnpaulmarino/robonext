@@ -1,59 +1,60 @@
-import React, { useState } from 'react'
-import styled from 'styled-components'
-import { Waypoint } from 'react-waypoint'
+import React, { useState } from 'react';
+import styled from 'styled-components';
+import Image from 'next/image';
+import { Waypoint } from 'react-waypoint';
 
-import sectionTitles from '../../../cms/robocalls/section-titles'
-import whatIsContent from '../../../cms/robocalls/what-is-robocall'
-import roboSlugs from '../../../cms/robocalls/slugs'
+import sectionTitles from '@/cms/robocalls/section-titles';
+import whatIsContent from '@/cms/robocalls/what-is-robocall';
+import roboSlugs from '@/cms/robocalls/slugs';
 
-import Spacer from '../atoms/Spacer'
-import Grid from '../atoms/Grid'
-import Column from '../atoms/Column'
+import Spacer from '@/components/atoms/Spacer';
+import Grid from '@/components/atoms/Grid';
+import Column from '@/components/atoms/Column';
 
-import lightgreyTexture from '../../../static/background-textures/lightgrey-texture.jpg'
-import { TEEL } from '../../../styles/colors'
-import TYPE, { TYPE_COLORS } from '../../../styles/type'
-import { S } from '../../../styles/breakpoints'
+import lightgreyTexture from '@/static/background-textures/lightgrey-texture.jpg';
+import { TEEL } from '@/styles/colors';
+import TYPE, { TYPE_COLORS } from '@/styles/type';
+import { S } from '@/styles/breakpoints';
 
-import TypesCallsPhone from '../atoms/types-of-calls-phone'
+import TypesCallsPhone from '@/components/atoms/types-of-calls-phone';
 
-import mobileImage1 from '../../../static/types-of-calls/types-of-calls-mobile-4.png'
-import mobileImage2 from '../../../static/types-of-calls/types-of-calls-mobile-3.png'
-import mobileImage3 from '../../../static/types-of-calls/types-of-calls-mobile-2.png'
-import mobileImage4 from '../../../static/types-of-calls/types-of-calls-mobile-1.png'
+import mobileImage1 from '@/static/types-of-calls/types-of-calls-mobile-4.png';
+import mobileImage2 from '@/static/types-of-calls/types-of-calls-mobile-3.png';
+import mobileImage3 from '@/static/types-of-calls/types-of-calls-mobile-2.png';
+import mobileImage4 from '@/static/types-of-calls/types-of-calls-mobile-1.png';
 
 import {
   Section,
   StyledSectionTitleContainer,
   SectionContent,
-} from '../styled/Section'
+} from '@/components/styled/Section';
 
-const mobileImages = [mobileImage1, mobileImage2, mobileImage3, mobileImage4]
+const mobileImages = [mobileImage1, mobileImage2, mobileImage3, mobileImage4];
 const mobileImageAltTags = [
   'Computer with keyboard connected to drives and networks with cables',
   'Icon of airplane with "On Time" status',
   'Outside of financial building',
   'Warning triangle with exclamation mark',
-]
+];
 
 const BackgroundContainer = styled.div`
   position: absolute;
   height: 100%;
   width: 100%;
-`
+`;
 
 const BackgroundContainerInner = styled.div`
   position: relative;
   height: 100%;
   width: 100%;
-`
+`;
 
 const BackgroundFullHeight = styled.div`
   position: sticky;
   top: 68px;
   height: 100vh;
   width: 100%;
-`
+`;
 
 const BackgroundImageOverlay = styled.div`
   position: absolute;
@@ -66,7 +67,7 @@ const BackgroundImageOverlay = styled.div`
   background-image: url(${({ bgImage }) => bgImage});
   background-size: cover;
   background-position: center;
-`
+`;
 
 const SectionBackground = ({ bgImage }) => (
   <BackgroundContainer>
@@ -76,7 +77,7 @@ const SectionBackground = ({ bgImage }) => (
       </BackgroundFullHeight>
     </BackgroundContainerInner>
   </BackgroundContainer>
-)
+);
 
 const PhoneContainer = styled.div`
   width: 100%;
@@ -88,7 +89,7 @@ const PhoneContainer = styled.div`
   @media (max-width: ${S}px) {
     display: none;
   }
-`
+`;
 
 const PhoneContainerInner = styled.div`
   position: relative;
@@ -100,7 +101,7 @@ const PhoneContainerInner = styled.div`
     max-width: 100%;
     width: auto;
   }
-`
+`;
 
 const ContentBlockContainer = styled.div`
   position: relative;
@@ -117,11 +118,11 @@ const ContentBlockContainer = styled.div`
     margin: 0 auto 4rem;
     max-width: 375px;
   }
-`
+`;
 
 const ContentBlock = styled.div`
   max-width: 450px;
-`
+`;
 
 const BlockProgress = styled.h3`
   margin: 0 0 0.5rem 1px;
@@ -131,7 +132,7 @@ const BlockProgress = styled.h3`
   font-size: ${TYPE.label.size}rem;
   line-height: ${TYPE.label.line};
   letter-spacing: ${TYPE.label.letterSpacing}px;
-`
+`;
 const BlockHeader = styled.h2`
   margin: 0;
   padding: 0;
@@ -143,7 +144,7 @@ const BlockHeader = styled.h2`
   @media (max-width: ${S}px) {
     font-size: 1.5rem;
   }
-`
+`;
 const BlockBody = styled.p`
   margin: 0;
   padding: 8px 0 0;
@@ -156,7 +157,7 @@ const BlockBody = styled.p`
     font-size: ${TYPE.bodySerif.size}rem;
     line-height: ${TYPE.bodySerif.line};
   }
-`
+`;
 
 const BlockImageMobile = styled.div`
   position: relative;
@@ -173,7 +174,7 @@ const BlockImageMobile = styled.div`
     width: 100%;
     height: auto;
   }
-`
+`;
 
 const ContentContainer = styled.div`
   position: relative;
@@ -183,7 +184,7 @@ const ContentContainer = styled.div`
   @media (max-width: ${S}px) {
     margin-top: 0;
   }
-`
+`;
 
 const waypointOffsets = {
   top: '30%',
@@ -201,7 +202,7 @@ const ContentBlocks = ({ content, setCurrentPhone }) =>
           fireOnRapidScroll={false}
         />
         <BlockImageMobile>
-          <img src={mobileImages[i]} alt={mobileImageAltTags[i]} />
+          <Image src={mobileImages[i]} alt={mobileImageAltTags[i]} />
         </BlockImageMobile>
         <BlockProgress>{i + 1}/4</BlockProgress>
         <BlockHeader>{header}</BlockHeader>
@@ -211,10 +212,10 @@ const ContentBlocks = ({ content, setCurrentPhone }) =>
   ))
 
 export default function Component({ checkSectionVisited }) {
-  const [currentPhone, setCurrentPhone] = useState(-1)
+  const [currentPhone, setCurrentPhone] = useState(-1);
 
-  const section = sectionTitles[1]
-  const visited = checkSectionVisited(1)
+  const section = sectionTitles[1];
+  const visited = checkSectionVisited(1);
   return (
     <Section>
       <SectionBackground bgImage={lightgreyTexture} />

@@ -1,13 +1,14 @@
-import React from 'react'
-import styled from 'styled-components'
-import { BLACK, WHITE } from '../../../styles/colors'
-import TYPE, { TYPE_COLORS } from '../../../styles/type'
-import { S } from '../../../styles/breakpoints'
-import playIcon from '../../../static/media-icons/play.svg'
-import imageBreaker from './../../../static/image-breaker/resiliency-section02-breaker.jpg'
-import { section02video } from '../../../cms/resiliency/video-desriptions'
+import React from 'react';
+import styled from 'styled-components';
+import { BLACK, WHITE } from '@/styles/colors';
+import TYPE, { TYPE_COLORS } from '@/styles/type';
+import { S } from '@/styles/breakpoints';
+import playIcon from '@/static/media-icons/play.svg';
+import imageBreaker from '@/static/image-breaker/resiliency-section02-breaker.jpg';
+import { section02video } from '@/cms/resiliency/video-desriptions';
+import Image from 'next/image';
 
-import VideoPlayerSingleModal from '../molecules/VideoPlayerSingleModal'
+import VideoPlayerSingleModal from '@/components/molecules/VideoPlayerSingleModal';
 
 const BreakerContainer = styled.div`
   height: calc(100vh - 68px);
@@ -18,13 +19,13 @@ const BreakerContainer = styled.div`
   background-size: cover;
   background-position: center;
   box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.06);
-`
+`;
 
 const VideoLaunchPanel = styled.div`
   position: absolute;
   right: 0;
   bottom: 0;
-`
+`;
 
 const BlockBox = styled.div`
   width: 100%;
@@ -33,7 +34,7 @@ const BlockBox = styled.div`
   @media (max-width: ${S}px) {
     max-width: none;
   }
-`
+`;
 
 const BlockBoxHeader = styled.h4`
   cursor: pointer;
@@ -54,7 +55,7 @@ const BlockBoxHeader = styled.h4`
     padding: 0.75rem 1rem 1.1em;
     height: 3rem;
   }
-`
+`;
 
 const PlayIcon = styled.div`
   margin: 3px 6px 0 0;
@@ -62,11 +63,11 @@ const PlayIcon = styled.div`
   @media (max-width: ${S}px) {
     margin: 5px 6px 0 0;
   }
-`
+`;
 
 const PlayTheVideo = styled.div`
   padding: 4.5px 0 0 2px;
-`
+`;
 
 const BlockBoxParagraph = styled.p`
   background-color: ${WHITE};
@@ -87,7 +88,7 @@ const BlockBoxParagraph = styled.p`
     letter-spacing: ${TYPE.mobileBlockBox.letterSpacing}px;
     padding: 0.75rem 1rem 1em;
   }
-`
+`;
 
 export default class ResiliencyBreaker extends React.Component {
   state = { showVideoModal: false }
@@ -118,7 +119,7 @@ export default class ResiliencyBreaker extends React.Component {
           <BlockBox>
             <BlockBoxHeader onClick={() => this.setShowVideoModal()}>
               <PlayIcon>
-                <img src={playIcon} alt="Play the Video" width="16px" />
+                <Image src={playIcon} alt="Play the Video" width={16}/>
               </PlayIcon>
               <PlayTheVideo>Play the Video</PlayTheVideo>
             </BlockBoxHeader>

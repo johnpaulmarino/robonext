@@ -1,11 +1,11 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from 'react';
+import styled from 'styled-components';
 
-import TYPE, { TYPE_COLORS } from '../../../styles/type'
-import SPACING from '../../../styles/spacing'
-import { XS, S } from '../../../styles/breakpoints'
+import TYPE, { TYPE_COLORS } from '@/styles/type';
+import SPACING from '@/styles/spacing';
+import { XS, S } from '@/styles/breakpoints';
 
-import whiteSpeckle from '../../../static/horizontal-dr/white-speckle.png'
+import whiteSpeckle from '@/static/horizontal-dr/white-speckle.png';
 
 const RecoveryCardContainer = styled.div`
   max-width: 500px;
@@ -32,7 +32,7 @@ const RecoveryCardContainer = styled.div`
   @media (max-width: ${XS}px) {
     margin: 0 auto;
   }
-`
+`;
 
 const RecoveryCard = styled.div`
   position: relative;
@@ -57,7 +57,7 @@ const RecoveryCard = styled.div`
   @media (min-width: ${S}px) and (max-height: 650px) {
     padding: ${SPACING.l}rem;
   }
-`
+`;
 
 const RecoveryCardCircle = styled.div`
   position: absolute;
@@ -72,7 +72,7 @@ const RecoveryCardCircle = styled.div`
   opacity: 0.2;
   left: 65%;
   top: 10px;
-`
+`;
 
 const RecoveryCardSpeckle = styled.div`
   position: absolute;
@@ -85,7 +85,7 @@ const RecoveryCardSpeckle = styled.div`
   background-image: url(${whiteSpeckle});
   background-size: cover;
   background-position: center;
-`
+`;
 
 const RecoveryCardImgContainer = styled.div`
   position: absolute;
@@ -107,7 +107,7 @@ const RecoveryCardImgContainer = styled.div`
     transform: unset;
     margin: 0 auto;
   }
-`
+`;
 
 const RecoveryCardImg = styled.img`
   position: relative;
@@ -121,7 +121,7 @@ const RecoveryCardImg = styled.img`
     width: 100%;
     bottom: -30px;
   }
-`
+`;
 
 const RecoveryCardContent = styled.div`
   height: 100%;
@@ -134,7 +134,7 @@ const RecoveryCardContent = styled.div`
   @media (max-width: 320px) {
     padding-top: 5px;
   }
-`
+`;
 
 const RecoveryCardHeader = styled.div`
   display: flex;
@@ -178,7 +178,7 @@ const RecoveryCardHeader = styled.div`
       text-align: center;
     }
   }
-`
+`;
 
 const RecoveryCardBody = styled.p`
   width: 80%;
@@ -195,10 +195,9 @@ const RecoveryCardBody = styled.p`
     font-size: ${TYPE.bodySans.size};
     line-height: ${TYPE.bodySans.line};
   }
-`
-
-export default React.memo(({ recoveryContent, drImages }) =>
-  recoveryContent.map((content, i) => (
+`;
+const recoveryCards = React.memo(function recoveryCards({ recoveryContent, drImages }) {
+  return recoveryContent.map((content, i) => (
     <div key={`recovery-${i}`}>
       <RecoveryCardContainer>
         <RecoveryCard>
@@ -217,5 +216,7 @@ export default React.memo(({ recoveryContent, drImages }) =>
         </RecoveryCard>
       </RecoveryCardContainer>
     </div>
-  ))
-)
+  )) }
+);
+
+export default recoveryCards;

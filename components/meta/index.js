@@ -1,10 +1,10 @@
-import React from 'react'
-import Helmet from 'react-helmet'
+import React from 'react';
+import Helmet from 'react-helmet';
 
-import mstile7070 from '../../../static/meta/mstile-70x70.png'
-import mstile150150 from '../../../static/meta/mstile-150x150.png'
-import mstile310150 from '../../../static/meta/mstile-310x150.png'
-import mstile310310 from '../../../static/meta/mstile-310x310.png'
+import mstile7070 from '@/static/meta/mstile-70x70.png';
+import mstile150150 from '@/static/meta/mstile-150x150.png';
+import mstile310150 from '@/static/meta/mstile-310x150.png';
+import mstile310310 from '@/static/meta/mstile-310x310.png';
 
 export default function Component({  metadata}) { 
   const { title, description, author, lang, site, image } = metadata

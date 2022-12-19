@@ -1,37 +1,37 @@
-import React, { useReducer } from 'react'
-import styled from 'styled-components'
+import React, { useReducer } from 'react';
+import styled from 'styled-components';
 
-import cityContent from '../../../cms/resiliency/floating-city'
-import resiliencySlugs from '../../../cms/resiliency/slugs'
+import cityContent from '@/cms/resiliency/floating-city';
+import resiliencySlugs from '@/cms/resiliency/slugs';
 
-import { S } from '../../../styles/breakpoints'
-import { LIGHTBLUE } from '../../../styles/colors'
+import { S } from '@/styles/breakpoints';
+import { LIGHTBLUE } from '@/styles/colors';
 
-import sectionTitles from '../../../cms/resiliency/section-titles'
-import Grid from '../atoms/Grid'
-import Column from '../atoms/Column'
+import sectionTitles from '@/cms/resiliency/section-titles';
+import Grid from '@/components/atoms/Grid';
+import Column from '@/components/atoms/Column';
 
-import FloatingCityUpgrade, { vehicles } from '../atoms/floating-city-upgrade'
-import FloatingCityCards from '../molecules/floating-city-cards'
+import FloatingCityUpgrade, { vehicles } from '../atoms/floating-city-upgrade';
+import FloatingCityCards from '@/components/molecules/floating-city-cards';
 
-import FlCtMobile01 from '../../../static/floating-cities/floating-city-mobile-1.png'
-import FlCtMobile02 from '../../../static/floating-cities/floating-city-mobile-2.png'
-import FlCtMobile03 from '../../../static/floating-cities/floating-city-mobile-3.png'
-import FlCtMobile04 from '../../../static/floating-cities/floating-city-mobile-4.png'
-import FlCtMobile05 from '../../../static/floating-cities/floating-city-mobile-5.png'
-import FlCtMobile06 from '../../../static/floating-cities/floating-city-mobile-6.png'
-import FlCtMobile07 from '../../../static/floating-cities/floating-city-mobile-7.png'
-import FlCtMobile08 from '../../../static/floating-cities/floating-city-mobile-8.png'
+import FlCtMobile01 from '@/static/floating-cities/floating-city-mobile-1.png';
+import FlCtMobile02 from '@/static/floating-cities/floating-city-mobile-2.png';
+import FlCtMobile03 from '@/static/floating-cities/floating-city-mobile-3.png';
+import FlCtMobile04 from '@/static/floating-cities/floating-city-mobile-4.png';
+import FlCtMobile05 from '@/static/floating-cities/floating-city-mobile-5.png';
+import FlCtMobile06 from '@/static/floating-cities/floating-city-mobile-6.png';
+import FlCtMobile07 from '@/static/floating-cities/floating-city-mobile-7.png';
+import FlCtMobile08 from '@/static/floating-cities/floating-city-mobile-8.png';
 
-import backgroundClouds from '../../../static/background-textures/disaster-background-clouds-transparent.png'
+import backgroundClouds from '@/static/background-textures/disaster-background-clouds-transparent.png';
 
-import Spacer from '../atoms/Spacer'
+import Spacer from '@/components/atoms/Spacer';
 
 import {
   Section,
   StyledSectionTitleContainer,
   SectionContent,
-} from '../styled/Section'
+} from '@/components/styled/Section';
 
 const mobileVehicles = [
   FlCtMobile01,
@@ -42,19 +42,19 @@ const mobileVehicles = [
   FlCtMobile06,
   FlCtMobile07,
   FlCtMobile08,
-]
+];
 
 const ContentInner = styled.div`
   position: relative;
   width: 100%;
   padding-bottom: 48px;
-`
+`;
 
 const CityContainer = styled.div`
   width: 100%;
   position: sticky;
   top: 150px;
-`
+`;
 
 const CityContainerInner = styled.div`
   position: relative;
@@ -68,7 +68,7 @@ const CityContainerInner = styled.div`
   @media (max-height: 800px) {
     margin-top: -100px;
   }
-`
+`;
 
 const CityCardsContainer = styled.div`
   position: relative;
@@ -91,7 +91,7 @@ const CityCardsContainer = styled.div`
   @media (min-height: 900px) {
     padding-top: 200px;
   }
-`
+`;
 
 const Vehicles = ({
   vehicles,
@@ -114,13 +114,13 @@ const Vehicles = ({
 
 const StyledFloatingCity = styled(FloatingCityUpgrade)`
   width: 100%;
-`
+`;
 
 const BackgroundContainer = styled.div`
   position: absolute;
   height: 100%;
   width: 100%;
-`
+`;
 
 const BackgroundContainerInner = styled.div`
   position: relative;
@@ -131,7 +131,7 @@ const BackgroundContainerInner = styled.div`
     background: ${({ bgColor }) => (bgColor ? bgColor : 'unset')};
     opacity: 82%;
   }
-`
+`;
 
 const BackgroundFullHeight = styled.div`
   position: sticky;
@@ -147,7 +147,7 @@ const BackgroundFullHeight = styled.div`
   @media (max-width: ${S}px) {
     display: none;
   }
-`
+`;
 
 const BackgroundImageOverlay = styled.div`
   position: absolute;
@@ -160,7 +160,7 @@ const BackgroundImageOverlay = styled.div`
   background-image: url(${({ bgImage }) => bgImage});
   background-size: cover;
   background-position: center;
-`
+`;
 
 export const SectionBackground = ({ bgColor, bgGradient, bgImage }) => (
   <BackgroundContainer>
@@ -171,28 +171,28 @@ export const SectionBackground = ({ bgColor, bgGradient, bgImage }) => (
       </BackgroundFullHeight>
     </BackgroundContainerInner>
   </BackgroundContainer>
-)
+);
 
 const StyledSectionContent = styled(SectionContent)`
   @media (min-height: 1100px) {
     margin-top: -4rem;
   }
-`
+`;
 export default function Component({ checkSectionVisited }) {
-  const section = sectionTitles[2]
+  const section = sectionTitles[2];
 
   const [currentVehicle, dispatchCurrentVehicle] = useReducer(
     (_state, { currentVehicle }) => currentVehicle,
     1
-  )
+  );
   const [isScrolling, dispatchIsScrolling] = useReducer(
     (_state, { isScrolling }) => isScrolling,
     false
-  )
+  );
 
-  const bgGradient = 'linear-gradient(to right, #ECF7F8, #B2DFFB);'
+  const bgGradient = 'linear-gradient(to right, #ECF7F8, #B2DFFB);';
 
-  const visited = checkSectionVisited(2)
+  const visited = checkSectionVisited(2);
 
   return (
     <Section style={{ zIndex: 300 }}>

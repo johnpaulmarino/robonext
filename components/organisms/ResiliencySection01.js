@@ -1,30 +1,30 @@
-import React, { useReducer } from 'react'
-import styled from 'styled-components'
-import { Waypoint } from 'react-waypoint'
+import React, { useReducer } from 'react';
+import styled from 'styled-components';
+import { Waypoint } from 'react-waypoint';
 
-import { GRAYGRAIN_BACKGROUND } from '../../../styles/colors'
+import { GRAYGRAIN_BACKGROUND } from '@/styles/colors';
 
-import { S } from '../../../styles/breakpoints'
-import lightgreyTexture from '../../../static/background-textures/lightgrey-texture.jpg'
+import { S } from '@/styles/breakpoints'
+import lightgreyTexture from '@/static/background-textures/lightgrey-texture.jpg';
 
-import sectionTitles from '../../../cms/resiliency/section-titles'
-import { section01 } from '../../../cms/resiliency/section-content'
-import resiliencySlugs from '../../../cms/resiliency/slugs'
+import sectionTitles from '@/cms/resiliency/section-titles';
+import { section01 } from '@/cms/resiliency/section-content';
+import resiliencySlugs from '@/cms/resiliency/slugs';
 
 import {
   Section,
   StyledSectionTitleContainer,
   SectionContent,
   SectionBackground,
-} from '../styled/Section'
+} from '@/components/styled/Section';
 
-import MediaScroll from '../molecules/media-scroll-transition'
+import MediaScroll from '@/components/molecules/media-scroll-transition';
 import {
   LargeScreenContent,
   SmallScreenContent,
-} from '../molecules/media-scroll-content'
+} from '@/components/molecules/media-scroll-content';
 
-import Spacer from '../atoms/Spacer'
+import Spacer from '@/components/atoms/Spacer';
 
 const Section01Section = styled(Section)`
   padding-top: 20px;
@@ -33,13 +33,13 @@ const Section01Section = styled(Section)`
     padding-bottom: 60px;
     box-shadow: inset 0px 40px 20px -30px #f5f5f5;
   }
-`
+`;
 
 const Section01SectionContent = styled(SectionContent)`
   @media (min-width: ${S}px) {
     margin-top: 0;
   }
-`
+`;
 
 const MediaContainer = styled.div`
   position: absolute;
@@ -48,19 +48,19 @@ const MediaContainer = styled.div`
   height: 100%;
   width: 40%;
   z-index: 200;
-`
+`;
 
 const LargeScreen = styled.div`
   @media (max-width: ${S}px) {
     display: none;
   }
-`
+`;
 
 const SmallScreen = styled.div`
   @media (min-width: ${S + 1}px) {
     display: none;
   }
-`
+`;
 
 const MobileBackgroundContainer = styled.div`
   position: absolute;
@@ -70,13 +70,13 @@ const MobileBackgroundContainer = styled.div`
   @media (min-width: ${S + 1}px) {
     display: none;
   }
-`
+`;
 
 const MobileBackgroundContainerInner = styled.div`
   position: relative;
   height: 100%;
   width: 100%;
-`
+`;
 
 const MobileBackgroundFullHeight = styled.div`
   position: sticky;
@@ -88,7 +88,7 @@ const MobileBackgroundFullHeight = styled.div`
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-`
+`;
 
 const MobileSectionBackground = ({ bgImage }) => (
   <MobileBackgroundContainer>
@@ -96,10 +96,11 @@ const MobileSectionBackground = ({ bgImage }) => (
       <MobileBackgroundFullHeight bgImage={bgImage} />
     </MobileBackgroundContainerInner>
   </MobileBackgroundContainer>
-)
+);
 
-const TopWaypoint = React.memo(({ dispatchInView }) => (
-  <div style={{ position: 'absolute', top: 0 }}>
+const TopWaypoint = React.memo(function TopWaypoint({ dispatchInView}) {
+  return(
+    <div style={{ position: 'absolute', top: 0 }}>
     <Waypoint
       onEnter={wpObj => {
         if (wpObj.previousPosition === 'above')
@@ -112,9 +113,11 @@ const TopWaypoint = React.memo(({ dispatchInView }) => (
       fireOnRapidScroll={false}
     />
   </div>
-))
-const BottomWaypoint = React.memo(
-  ({ dispatchInView, dispatchCurrentMedia }) => (
+  )
+ });
+
+const BottomWaypoint = React.memo(function BottomWaypoint({ dispatchInView, dispatchCurrentMedia  }) { 
+  return(
     <div style={{ position: 'absolute', bottom: 0 }}>
       <Waypoint
         onEnter={_wpObj => {
@@ -125,7 +128,8 @@ const BottomWaypoint = React.memo(
       />
     </div>
   )
-)
+});
+
 
 const inViewReducer = (_state, { inView }) => inView
 const currentMediaReducer = (state, { currentMedia }) => {
@@ -143,16 +147,16 @@ const ShortMediaSpacer = styled.div`
   @media (min-width: ${S}px) and (max-height: 700px) {
     display: block;
   }
-`
+`;
 
 export default function Component({ checkSectionVisited }) {
-  const [inView, dispatchInView] = useReducer(inViewReducer, false)
+  const [inView, dispatchInView] = useReducer(inViewReducer, false);
   const [currentMedia, dispatchCurrentMedia] = useReducer(currentMediaReducer, {
     current: 0,
     previous: -1,
-  })
+  });
 
-  const visited = checkSectionVisited(1)
+  const visited = checkSectionVisited(1);
 
   return (
     <div>

@@ -1,15 +1,15 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from 'react';
+import styled from 'styled-components';
 
-import logoWhite from './../../../static/logo-white.svg'
-import logo from './../../../static/logo.svg'
+import logoWhite from '@/static/logo-white.svg';
+import logo from '@/static/logo.svg';
 
 const Logo = styled.img`
   height: auto;
   margin-left: 20px;
   width: 70px;
   padding-top: 3px;
-`
+`;
 
 Logo.defaultProps = {
   alt: 'CTIA',

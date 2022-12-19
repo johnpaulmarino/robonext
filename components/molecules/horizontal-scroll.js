@@ -1,8 +1,8 @@
-import React, { useReducer, useEffect, useRef } from 'react'
-import styled, { css } from 'styled-components'
+import React, { useReducer, useEffect, useRef } from 'react';
+import styled, { css } from 'styled-components';
 
-import dotPattern from '../../../static/background-textures/dot-pattern.svg'
-import { S } from '../../../styles/breakpoints'
+import dotPattern from '@/static/background-textures/dot-pattern.svg';
+import { S } from '@/styles/breakpoints';
 
 const DynamicHeightContainer = styled.div.attrs(({ dynamicHeight }) => {
   const height = `${dynamicHeight}px`
@@ -10,7 +10,7 @@ const DynamicHeightContainer = styled.div.attrs(({ dynamicHeight }) => {
 })`
   position: relative;
   width: ${({ enabled }) => (enabled ? '100%' : 'auto')};
-`
+`;
 
 const HorizontalObjectContainer = styled.div`
   position: sticky;
@@ -29,7 +29,7 @@ const HorizontalObjectContainer = styled.div`
     padding-bottom: 8rem;
     padding-top: 6rem;
   }
-`
+`;
 
 const DotPatternContainer = styled.div`
   position: absolute;
@@ -41,17 +41,17 @@ const DotPatternContainer = styled.div`
   @media (max-width: ${S}px) {
     display: none;
   }
-`
+`;
 
 const DotPatternContainer1 = styled(DotPatternContainer)`
   bottom: 0;
   left: 100px;
-`
+`;
 
 const DotPatternContainer2 = styled(DotPatternContainer)`
   top: -125px;
   right: -300px;
-`
+`;
 
 const HorizontalObject = styled.div.attrs(({ translate }) => ({
   style: { transform: `translateX(${translate}px)` },
@@ -63,7 +63,7 @@ const HorizontalObject = styled.div.attrs(({ translate }) => ({
   padding: 0 150px 0 250px;
   flex-grow: 1;
   will-change: transform;
-`
+`;
 
 const calcDynamicHeight = objectWidth => {
   const vw = window.innerWidth
@@ -117,7 +117,7 @@ const HorizontalObjectInner = styled.div`
       transition-delay: 0.15s, 0.15s;
       transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
     `}
-`
+`;
 
 export default function Component({  cards, header, page, active }) {
   const [translate, dispatch] = useReducer(translateReducer, {
@@ -126,10 +126,10 @@ export default function Component({  cards, header, page, active }) {
     dynamicHeight: null,
     objectWidth: null,
     enabled: false,
-  })
+  });
 
-  const containerRef = useRef(null)
-  const objectRef = useRef(null)
+  const containerRef = useRef(null);
+  const objectRef = useRef(null);
 
   useEffect(() => {
     dispatch({ type: 'SET_ENABLED' })
@@ -138,7 +138,7 @@ export default function Component({  cards, header, page, active }) {
     window.addEventListener('resize', () => {
       setDynamicHeight(objectRef, dispatch)
     })
-  }, [])
+  }, []);
 
   return (
     <DynamicHeightContainer

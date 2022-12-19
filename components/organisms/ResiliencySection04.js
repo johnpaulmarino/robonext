@@ -1,26 +1,27 @@
-import React from 'react'
-import styled, { createGlobalStyle } from 'styled-components'
+import React from 'react';
+import styled, { createGlobalStyle } from 'styled-components';
 
-import sectionTitles from '../../../cms/resiliency/section-titles'
-import resiliencySlugs from '../../../cms/resiliency/slugs'
-import testimonialContent from '../../../cms/resiliency/testimonial-content'
+import sectionTitles from '@/cms/resiliency/section-titles';
+import resiliencySlugs from '@/cms/resiliency/slugs';
+import testimonialContent from '@/cms/resiliency/testimonial-content';
 
-import TYPE, { TYPE_COLORS } from '../../../styles/type'
-import { BLACK, TEEL } from '../../../styles/colors'
-import { S, XS } from '../../../styles/breakpoints'
+import TYPE, { TYPE_COLORS } from '@/styles/type';
+import { BLACK, TEEL } from '@/styles/colors';
+import { S, XS } from '@/styles/breakpoints';
+import Image from 'next/image';
 
-import Testimonials from '../molecules/testimonial-slider'
-import playIcon from '../../../static/media-icons/play.svg'
+import Testimonials from '@/components/molecules/testimonial-slider';
+import playIcon from '@/static/media-icons/play.svg';
 
 import {
   Section,
   StyledSectionTitleContainer,
   SectionContent,
-} from '../styled/Section'
+} from '@/components/styled/Section';
 
-import Spacer from '../atoms/Spacer'
+import Spacer from '@/components/atoms/Spacer';
 
-import VideoPlayerSingleModal from '../molecules/VideoPlayerSingleModal'
+import VideoPlayerSingleModal from '@/components/molecules/VideoPlayerSingleModal';
 
 const GlobalTestimonialStyles = createGlobalStyle`
   .testimonial-card-container.swiper-slide-active .testimonial-card-quote {
@@ -37,7 +38,7 @@ const GlobalTestimonialStyles = createGlobalStyle`
     visibility: visible !important;
   }
 
-`
+`;
 
 const TestimonialCardContainer = styled.div`
   /* .swiper-slide-active {
@@ -48,7 +49,7 @@ const TestimonialCardContainer = styled.div`
   @media (max-width: ${S}px) {
     margin-bottom: 14px;
   }
-`
+`;
 
 const TestimonialCard = styled.div`
   position: relative;
@@ -62,7 +63,7 @@ const TestimonialCard = styled.div`
   @media (max-width: ${S}px) {
     background-position: right;
   }
-`
+`;
 
 const TestimonialCardInner = styled.div`
   display: flex;
@@ -88,7 +89,7 @@ const TestimonialCardInner = styled.div`
       rgba(255, 255, 255, 0)
     );
   }
-`
+`;
 
 const TestimonialCardQuote = styled.div`
   position: relative;
@@ -131,7 +132,7 @@ const TestimonialCardQuote = styled.div`
       font-size: 1.4rem;
     }
   }
-`
+`;
 
 const TestimonialCardButton = styled.button`
   width: 180px;
@@ -168,14 +169,14 @@ const TestimonialCardButton = styled.button`
     align-self: center;
     bottom: -20px !important;
   }
-`
+`;
 
 const SwiperOuterContainer = styled.div`
   position: relative;
   width: 100%;
   overflow: hidden;
   padding: 2rem 0 100px;
-`
+`;
 const SwiperInnerContainer = styled.div`
   width: 150%;
   margin-left: -25%;
@@ -253,26 +254,26 @@ const SwiperInnerContainer = styled.div`
     width: 230%;
     margin-left: -65%;
   }
-`
+`;
 
 const PlayVideoWrapper = styled.div`
   display: flex;
-`
+`;
 
 const PlayIcon = styled.div`
   margin: 3px 6px 0 0;
-`
+`;
 
 const PlayButtonText = styled.div`
   position: relative;
   top: 2.5px;
-`
+`;
 
 const StyledSection = styled(Section)`
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-between;
-`
+`;
 
 const NoJsNotice = styled.h3`
   position: relative;
@@ -284,7 +285,7 @@ const NoJsNotice = styled.h3`
   line-height: ${TYPE.m.line};
   font-weight: ${TYPE.m.weight};
   color: ${TYPE_COLORS.black};
-`
+`;
 
 class ResiliencySection04 extends React.Component {
   state = {
@@ -294,7 +295,7 @@ class ResiliencySection04 extends React.Component {
     noJs: true,
   }
 
-  componentDidMount = () => this.setState({ noJs: false })
+  componentDidMount = () => this.setState({ noJs: false });
 
   setShowVideoModal = (url, title) => {
     if (this.state.showVideoModal) {
@@ -331,7 +332,7 @@ class ResiliencySection04 extends React.Component {
             >
               <PlayVideoWrapper>
                 <PlayIcon>
-                  <img src={playIcon} alt="Play the Video" width="16px" />
+                  <Image src={playIcon} alt="Play the Video" width={Image} />
                 </PlayIcon>
                 <PlayButtonText>Hear Their Story</PlayButtonText>
               </PlayVideoWrapper>
@@ -387,4 +388,4 @@ class ResiliencySection04 extends React.Component {
   }
 }
 
-export default ResiliencySection04
+export default ResiliencySection04;

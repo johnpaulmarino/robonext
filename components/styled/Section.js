@@ -1,18 +1,18 @@
-import React from 'react'
-import styled, { css } from 'styled-components'
-import Grid from '../atoms/Grid'
-import Column from '../atoms/Column'
+import React from 'react';
+import styled, { css } from 'styled-components';
+import Grid from '@/components/atoms/Grid';
+import Column from '@/components/atoms/Column';
 
-import SPACING from '../../../styles/spacing'
-import { XS, S, M } from '../../../styles/breakpoints'
-import TYPE, { TYPE_COLORS } from '../../../styles/type'
-import { TEEL } from '../../../styles/colors'
+import SPACING from '@/styles/spacing';
+import { XS, S, M } from '@/styles/breakpoints';
+import TYPE, { TYPE_COLORS } from '@/styles/type';
+import { TEEL } from '@/styles/colors';
 
 export const Section = styled.section`
   position: relative;
   width: 100%;
   min-height: 100vh;
-`
+`;
 
 export const SectionTitleContainer = styled.div`
   position: relative;
@@ -38,7 +38,7 @@ export const SectionTitleContainer = styled.div`
   @media (min-width: ${S}px) and (max-height: 700px) {
     padding-bottom: 0;
   }
-`
+`;
 
 export const SectionNumber = styled.img`
   height: 75px;
@@ -49,7 +49,7 @@ export const SectionNumber = styled.img`
   @media (max-width: ${XS}px) {
     height: 59px;
   }
-`
+`;
 
 export const SectionTitle = styled.h2`
   color: ${({ inverse }) => (!inverse ? TYPE_COLORS.black : TYPE_COLORS.white)};
@@ -69,7 +69,7 @@ export const SectionTitle = styled.h2`
   @media (max-width: ${S}px) {
     font-size: 2rem;
   }
-`
+`;
 
 export const SectionSubtitle = styled.h3`
   color: ${({ inverse }) => (!inverse ? TYPE_COLORS.grey : TYPE_COLORS.white)};
@@ -93,7 +93,7 @@ export const SectionSubtitle = styled.h3`
     max-width: ${props =>
       props.smallMaxWidth ? `${props.smallMaxWidth}px` : '750px'};
   }
-`
+`;
 
 export const SectionContent = styled.div`
   position: relative;
@@ -111,7 +111,7 @@ export const SectionContent = styled.div`
       transition-delay: 0.15s, 0.15s;
       transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
     `}
-`
+`;
 
 const BackgroundContainer = styled.div`
   position: absolute;
@@ -121,7 +121,7 @@ const BackgroundContainer = styled.div`
   @media (max-width: ${S}px) {
     display: ${({ mobileHide }) => (mobileHide ? 'none' : 'block')};
   }
-`
+`;
 
 const BackgroundContainerInner = styled.div`
   position: relative;
@@ -132,7 +132,7 @@ const BackgroundContainerInner = styled.div`
     background: ${({ bgColor }) => (bgColor ? bgColor : 'unset')};
     opacity: 82%;
   }
-`
+`;
 
 const BackgroundFullHeight = styled.div`
   position: sticky;
@@ -148,7 +148,7 @@ const BackgroundFullHeight = styled.div`
   @media (max-width: ${S}px) {
     display: none;
   }
-`
+`;
 
 export const SectionBackground = ({ bgColor, bgImage, mobileHide }) => (
   <BackgroundContainer mobileHide={mobileHide}>
@@ -156,7 +156,7 @@ export const SectionBackground = ({ bgColor, bgImage, mobileHide }) => (
       <BackgroundFullHeight bgImage={bgImage} />
     </BackgroundContainerInner>
   </BackgroundContainer>
-)
+);
 
 export const StyledSectionTitleContainer = ({
   section,

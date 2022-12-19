@@ -1,15 +1,15 @@
-import React from 'react'
-import styled, { css } from 'styled-components'
+import React from 'react';
+import styled, { css } from 'styled-components';
 
-import FE from '../../../static/resiliency-accordion-phone/F026551A0CA5AB5E.png'
-import F0 from '../../../static/resiliency-accordion-phone/F026551A0CA5AB50.png'
-import F1 from '../../../static/resiliency-accordion-phone/F026551A0CA5AB51.png'
-import F2 from '../../../static/resiliency-accordion-phone/F026551A0CA5AB52.png'
-import F3 from '../../../static/resiliency-accordion-phone/F026551A0CA5AB53.png'
-import F4 from '../../../static/resiliency-accordion-phone/F026551A0CA5AB54.png'
-import F5 from '../../../static/resiliency-accordion-phone/F026551A0CA5AB55.png'
-import F6 from '../../../static/resiliency-accordion-phone/F026551A0CA5AB56.png'
-import F7 from '../../../static/resiliency-accordion-phone/F026551A0CA5AB57.png'
+import FE from '@/static/resiliency-accordion-phone/F026551A0CA5AB5E.png';
+import F0 from '@/static/resiliency-accordion-phone/F026551A0CA5AB50.png';
+import F1 from '@/static/resiliency-accordion-phone/F026551A0CA5AB51.png';
+import F2 from '@/static/resiliency-accordion-phone/F026551A0CA5AB52.png';
+import F3 from '@/static/resiliency-accordion-phone/F026551A0CA5AB53.png';
+import F4 from '@/static/resiliency-accordion-phone/F026551A0CA5AB54.png';
+import F5 from '@/static/resiliency-accordion-phone/F026551A0CA5AB55.png';
+import F6 from '@/static/resiliency-accordion-phone/F026551A0CA5AB56.png';
+import F7 from '@/static/resiliency-accordion-phone/F026551A0CA5AB57.png';
 
 const BaseG = styled.g`
   opacity: 0;
@@ -23,7 +23,7 @@ const BaseG = styled.g`
       opacity: 1;
       transform: scale(1);
     `}
-`
+`;
 
 const PhoneGroupE = ({ active }) => (
   <BaseG active={active} clipPath="url(#j)">
@@ -36,7 +36,7 @@ const PhoneGroupE = ({ active }) => (
       xlinkHref={FE}
     />
   </BaseG>
-)
+);
 
 const PhoneGroup0 = ({ active }) => (
   <BaseG active={active} clipPath="url(#h)">
@@ -49,7 +49,7 @@ const PhoneGroup0 = ({ active }) => (
       xlinkHref={F0}
     />
   </BaseG>
-)
+);
 
 const PhoneGroup1 = ({ active }) => (
   <BaseG active={active} clipPath="url(#d)">
@@ -62,7 +62,7 @@ const PhoneGroup1 = ({ active }) => (
       xlinkHref={F1}
     />
   </BaseG>
-)
+);
 
 const PhoneGroup3 = ({ active }) => (
   <BaseG active={active} clipPath="url(#f)">
@@ -75,7 +75,7 @@ const PhoneGroup3 = ({ active }) => (
       xlinkHref={F3}
     />
   </BaseG>
-)
+);
 
 const PhoneGroup4 = ({ active }) => (
   <BaseG active={active} clipPath="url(#p)">
@@ -88,7 +88,7 @@ const PhoneGroup4 = ({ active }) => (
       xlinkHref={F4}
     />
   </BaseG>
-)
+);
 
 const PhoneGroup5 = ({ active }) => (
   <BaseG active={active} clipPath="url(#l)">
@@ -101,7 +101,7 @@ const PhoneGroup5 = ({ active }) => (
       xlinkHref={F5}
     />
   </BaseG>
-)
+);
 
 const PhoneGroup7 = ({ active }) => (
   <BaseG active={active} clipPath="url(#n)">
@@ -114,7 +114,7 @@ const PhoneGroup7 = ({ active }) => (
       xlinkHref={F7}
     />
   </BaseG>
-)
+);
 export default function Component({ currentPhone }) { 
   return (
     <svg

@@ -1,11 +1,11 @@
-import React from 'react'
-import styled from 'styled-components'
-import { Waypoint } from 'react-waypoint'
+import React from 'react';
+import styled from 'styled-components';
+import { Waypoint } from 'react-waypoint';
 
-import { S, XS } from '../../../styles/breakpoints'
-import TYPE, { TYPE_COLORS } from '../../../styles/type'
-import SPACING from '../../../styles/spacing'
-import { TEEL, BLACK } from '../../../styles/colors'
+import { S, XS } from '@/styles/breakpoints';
+import TYPE, { TYPE_COLORS } from '@/styles/type';
+import SPACING from '@/styles/spacing';
+import { TEEL, BLACK } from '@/styles/colors';
 
 const waypointOffsets = {
   top: '35%',
@@ -36,7 +36,7 @@ const CityCard = styled.div`
     padding: 10px ${SPACING.xs}rem;
     opacity: 1;
   }
-`
+`;
 
 const CityCardCircle = styled.div`
   position: absolute;
@@ -55,12 +55,12 @@ const CityCardCircle = styled.div`
   @media (max-width: ${S}px) {
     display: none;
   }
-`
+`;
 
 const CityCardContent = styled.div`
   position: relative;
   height: 100%;
-`
+`;
 
 const CityCardHeader = styled.div`
   display: flex;
@@ -89,7 +89,7 @@ const CityCardHeader = styled.div`
       font-size: 1.2rem;
     }
   }
-`
+`;
 
 const CityCardNumber = styled.div`
   width: 40px;
@@ -113,7 +113,7 @@ const CityCardNumber = styled.div`
   @media (max-width: ${S}px) {
     display: none;
   }
-`
+`;
 
 const CityCardBody = styled.p`
   position: relative;
@@ -129,7 +129,7 @@ const CityCardBody = styled.p`
     font-size: ${TYPE.bodySans.size}rem;
     line-height: ${TYPE.bodySans.line};
   }
-`
+`;
 
 const CityCardImage = styled.div`
   display: none;
@@ -144,7 +144,7 @@ const CityCardImage = styled.div`
     height: 60vw;
     margin-bottom: -1rem;
   }
-`
+`;
 
 const handleCardOnEnter = (
   _wpObj,
@@ -162,8 +162,8 @@ const handleCardOnEnter = (
   }
 }
 
-const CityCardContentContainer = React.memo(
-  ({ cardImage, cardNum, content, active }) => (
+const CityCardContentContainer = React.memo(function Component({ cardImage, cardNum, content, active  }) {
+  return (
     <CityCardContent>
       <CityCardCircle />
       <CityCardImage cardImage={cardImage}>
@@ -182,7 +182,9 @@ const CityCardContentContainer = React.memo(
       <CityCardBody>{content.content}</CityCardBody>
     </CityCardContent>
   )
-)
+});
+
+
 export default function Component({ cityContent,
   dispatchCurrentVehicle,
   isScrolling,

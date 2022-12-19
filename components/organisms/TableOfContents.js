@@ -1,14 +1,15 @@
-import React from 'react'
-import styled from 'styled-components'
-import { SOURCE, SOURCE_BOLD } from '../../../styles/type'
-import { BLACK, WHITE, GRAY, MEDIUMGRAY, TEEL } from '../../../styles/colors'
-import { S } from '../../../styles/breakpoints'
-import arrowDown from './../../../static/arrows/long-arrow-down.svg'
-import resilArrowDownActive from './../../../static/arrows/resil-long-arrow-down-active.svg'
-import roboArrowDownActive from './../../../static/arrows/robo-long-arrow-down-active.svg'
-import { navigate } from '@reach/router'
-import Spacer from '../atoms/Spacer'
-import dotPattern from '../../../static/background-textures/dot-pattern.svg'
+import React from 'react';
+import styled from 'styled-components';
+import { SOURCE, SOURCE_BOLD } from '@/styles/type';
+import { BLACK, WHITE, GRAY, MEDIUMGRAY, TEEL } from '@/styles/colors';
+import { S } from '@/styles/breakpoints';
+import arrowDown from '@/static/arrows/long-arrow-down.svg';
+import resilArrowDownActive from '@/static/arrows/resil-long-arrow-down-active.svg';
+import roboArrowDownActive from '@/static/arrows/robo-long-arrow-down-active.svg';
+import { navigate } from '@reach/router';
+import Spacer from '@/components/atoms/Spacer';
+import dotPattern from '@/static/background-textures/dot-pattern.svg';
+import Image from 'next/image';
 
 const OuterContainer = styled.div`
   position: relative;
@@ -19,7 +20,7 @@ const OuterContainer = styled.div`
   @media (max-width: ${S}px) {
     padding-bottom: 0 !important;
   }
-`
+`;
 
 const Container = styled.div`
   position: relative;
@@ -34,7 +35,7 @@ const Container = styled.div`
     width: 100%;
     box-shadow: 0 10px 27px 0 rgba(0, 0, 0, 0.04);
   }
-`
+`;
 
 const DotPatternContainer = styled.div`
   position: absolute;
@@ -45,7 +46,7 @@ const DotPatternContainer = styled.div`
   @media (max-width: ${S}px) {
     display: none;
   }
-`
+`;
 
 const DotPatternContainer1 = styled(DotPatternContainer)`
   top: 50%;
@@ -53,14 +54,14 @@ const DotPatternContainer1 = styled(DotPatternContainer)`
   left: -155px;
   width: 550px;
   height: 550px;
-`
+`;
 
 const DotPatternContainer2 = styled(DotPatternContainer)`
   top: -75px;
   right: -140px;
   width: 475px;
   height: 475px;
-`
+`;
 
 const ContentsArrow = styled.div`
   background-image: url(${arrowDown});
@@ -70,14 +71,14 @@ const ContentsArrow = styled.div`
   @media (max-width: ${S}px) {
     display: none;
   }
-`
+`;
 
 const TableContentsCardContainer = styled.div`
   position: relative;
   &:not(:last-child) {
     border-bottom: 1px solid ${MEDIUMGRAY};
   }
-`
+`;
 
 const TableContentsCard = styled.a`
   position: relative;
@@ -111,7 +112,7 @@ const TableContentsCard = styled.a`
           : `url(${roboArrowDownActive})`};
     }
   }
-`
+`;
 
 const NumberContainer = styled.div`
   position: relative;
@@ -126,20 +127,20 @@ const NumberContainer = styled.div`
     margin-right: 7%;
     width: 55px;
   }
-`
+`;
 
 const NumberImage = ({ number, index }) => (
-  <img
+  <Image
     src={number}
     alt={`Section ${index}`}
     style={{ paddingTop: 5, width: '136%' }}
   />
-)
+);
 
 const TitleContainer = styled.div`
   width: 66%;
   align-self: center;
-`
+`;
 
 const Title = styled.div`
   font-family: ${SOURCE_BOLD};
@@ -152,7 +153,7 @@ const Title = styled.div`
     margin-top: 0px;
     line-height: 30px;
   }
-`
+`;
 
 const Subtitle = styled.div`
   font-family: ${SOURCE};
@@ -163,13 +164,13 @@ const Subtitle = styled.div`
   @media (max-width: ${S}px) {
     display: none;
   }
-`
+`;
 
 const Button = styled.div`
   align-self: center;
-`
+`;
 
-export default React.memo(({ sectionTitles, page, navigateSection, slugs }) => {
+const TableOfContents = React.memo(function TableOfContents({ sectionTitles, page, navigateSection, slugs }) { 
   return (
     <OuterContainer>
       <Spacer height={5} id={slugs[0]} />
@@ -210,4 +211,5 @@ export default React.memo(({ sectionTitles, page, navigateSection, slugs }) => {
       </Container>
     </OuterContainer>
   )
-})
+ });
+export default TableOfContents;

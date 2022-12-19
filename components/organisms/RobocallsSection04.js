@@ -1,42 +1,42 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from 'react';
+import styled from 'styled-components';
 
-import sectionTitles from '../../../cms/robocalls/section-titles'
-import roboSlugs from '../../../cms/robocalls/slugs'
-import Spacer from '../atoms/Spacer'
+import sectionTitles from '@/cms/robocalls/section-titles';
+import roboSlugs from '@/cms/robocalls/slugs';
+import Spacer from '@/components/atoms/Spacer';
 
-import { S } from '../../../styles/breakpoints'
+import { S } from '@/styles/breakpoints';
 
-import lightgreyTexture from '../../../static/background-textures/lightgrey-texture.jpg'
-import HorizontalScroll from '../molecules/horizontal-scroll'
-import EnforcementCards from '../molecules/enforcement-cards'
-import enforcementContent, { sixthCardContent } from '../../../cms/robocalls/enforcement-content'
+import lightgreyTexture from '@/static/background-textures/lightgrey-texture.jpg';
+import HorizontalScroll from '@/components/molecules/horizontal-scroll';
+import EnforcementCards from '@/components/molecules/enforcement-cards';
+import enforcementContent, { sixthCardContent } from '@/cms/robocalls/enforcement-content';
 
 
 import {
   Section,
   StyledSectionTitleContainer,
   SectionContent,
-} from '../styled/Section'
+} from '@/components/styled/Section';
 
 const BackgroundContainer = styled.div`
   position: absolute;
   height: 100%;
   width: 100%;
-`
+`;
 
 const BackgroundContainerInner = styled.div`
   position: relative;
   height: 100%;
   width: 100%;
-`
+`;
 
 const BackgroundFullHeight = styled.div`
   position: sticky;
   top: 68px;
   height: 100vh;
   width: 100%;
-`
+`;
 
 const BackgroundImageOverlay = styled.div`
   position: absolute;
@@ -49,7 +49,7 @@ const BackgroundImageOverlay = styled.div`
   background-image: url(${({ bgImage }) => bgImage});
   background-size: cover;
   background-position: center;
-`
+`;
 
 export const SectionBackground = ({ bgColor, bgGradient, bgImage }) => (
   <BackgroundContainer>
@@ -59,7 +59,7 @@ export const SectionBackground = ({ bgColor, bgGradient, bgImage }) => (
       </BackgroundFullHeight>
     </BackgroundContainerInner>
   </BackgroundContainer>
-)
+);
 
 const HorizontalContainer = styled.div`
   position: relative;
@@ -70,7 +70,7 @@ const HorizontalContainer = styled.div`
   @media (max-width: ${S - 1}px) {
     display: none;
   }
-`
+`;
 
 const MobileContainer = styled.div`
   display: none;
@@ -79,16 +79,16 @@ const MobileContainer = styled.div`
   @media (max-width: ${S - 1}px) {
     display: block;
   }
-`
+`;
 
 const StyledSectionContent = styled(SectionContent)`
   opacity: 1;
   transform: translateY(0%);
-`
+`;
 
 export default function Component({ checkSectionVisited }) {
-  const section = sectionTitles[4]
-  const visited = checkSectionVisited(4)
+  const section = sectionTitles[4];
+  const visited = checkSectionVisited(4);
   return (
     <Section>
       <SectionBackground bgImage={lightgreyTexture} />

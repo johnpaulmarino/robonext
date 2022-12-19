@@ -1,9 +1,9 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from 'react';
+import styled from 'styled-components';
 
-import { S } from '../../../styles/breakpoints'
-import TYPE, { TYPE_COLORS } from '../../../styles/type'
-import SPACING from '../../../styles/spacing'
+import { S } from '@/styles/breakpoints';
+import TYPE, { TYPE_COLORS } from '@/styles/type';
+import SPACING from '@/styles/spacing';
 
 const FightingCardContainer = styled.div`
   height: 150%;
@@ -21,7 +21,7 @@ const FightingCardContainer = styled.div`
   @media (min-width: ${S}px) and (max-height: 700px) {
     padding-top: 0;
   }
-`
+`;
 
 const FightingCard = styled.div`
   position: relative;
@@ -36,7 +36,7 @@ const FightingCard = styled.div`
     padding: ${SPACING.l}rem;
     height: auto;
   } */
-`
+`;
 
 const FightingCardImage = styled.img`
   position: relative;
@@ -48,14 +48,14 @@ const FightingCardImage = styled.img`
     width: 75%;
     height: auto;
   }
-`
+`;
 
 const FightingCardContent = styled.div`
   position: relative;
   height: 50%;
   width: 100%;
   color: ${TYPE_COLORS.white};
-`
+`;
 
 const FightingCardHeader = styled.div`
   display: flex;
@@ -72,7 +72,7 @@ const FightingCardHeader = styled.div`
     text-align: center;
     width: 100%;
   }
-`
+`;
 
 const FightingCardBody = styled.p`
   width: 100%;
@@ -92,7 +92,7 @@ const FightingCardBody = styled.p`
     font-size: ${TYPE.bodySans.size}rem;
     line-height: ${TYPE.bodySans.line};
   }
-`
+`;
 export default function Component({  content, images, altTags  }) { 
   return(
     content.map((content, i) => (

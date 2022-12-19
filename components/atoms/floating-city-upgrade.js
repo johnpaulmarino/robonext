@@ -1,16 +1,15 @@
-import React from 'react'
-import styled, { css, keyframes } from 'styled-components'
-import Scroll from './../Scroll'
-
-import FlCty01 from '../../../static/floating-cities/floating-city-base-resize.png'
-import FlCty02 from '../../../static/floating-cities/floating-city2.png'
-import FlCty03 from '../../../static/floating-cities/floating-city3.png'
-import FlCty04 from '../../../static/floating-cities/floating-city4.png'
-import FlCty05 from '../../../static/floating-cities/floating-city5.png'
-import FlCty06 from '../../../static/floating-cities/floating-city6.png'
-import FlCty07 from '../../../static/floating-cities/floating-city7.png'
-import FlCty08 from '../../../static/floating-cities/floating-city8.png'
-import FlCty09 from '../../../static/floating-cities/floating-city9.png'
+import React from 'react';
+import styled, { css, keyframes } from 'styled-components';
+import Scroll from '@/components/Scroll';
+import FlCty01 from '@/static/floating-cities/floating-city-base-resize.png';
+import FlCty02 from '@/static/floating-cities/floating-city2.png';
+import FlCty03 from '@/static/floating-cities/floating-city3.png';
+import FlCty04 from '@/static/floating-cities/floating-city4.png';
+import FlCty05 from '@/static/floating-cities/floating-city5.png';
+import FlCty06 from '@/static/floating-cities/floating-city6.png';
+import FlCty07 from '@/static/floating-cities/floating-city7.png';
+import FlCty08 from '@/static/floating-cities/floating-city8.png';
+import FlCty09 from '@/static/floating-cities/floating-city9.png';
 
 const BaseG = styled.g`
   opacity: 0;
@@ -31,30 +30,30 @@ const BaseG = styled.g`
         opacity: 0.5;
       }
     `}
-`
+`;
 
 const floatingIsland = keyframes`
   0% {transform: translate3d(0, 0, 0px);}
   100% {transform: translate3d(0, 8px, 0px);}
-`
+`;
 
 const floatingCloud1 = keyframes`
   0% {transform: translate3d(0, 0, 0px);}
   100% {transform: translate3d(0, 15px, 0px);}
-`
+`;
 
 const floatingCloud2 = keyframes`
   0% {transform: translate3d(0, 0, 0px);}
   100% {transform: translate3d(0, 10px, 0px);}
-`
+`;
 
 const BaseSVG = styled.svg`
   animation: ${floatingIsland} 1.5s ease-in-out 0s infinite alternate;
-`
+`;
 
 const CloudG = styled.g`
   animation: ${({ anim }) => anim} 1.5s ease-in-out 0s infinite alternate;
-`
+`;
 
 const NumberG = styled.g`
   opacity: 0;
@@ -69,7 +68,7 @@ const NumberG = styled.g`
       transition: all 200ms ease-out;
       transform: translateY(0px) !important;
     `}
-`
+`;
 
 const getOffset = id => {
   const el = document.querySelector(`#${id}`)
@@ -128,7 +127,7 @@ const VehicleGroup8 = ({
       </NumberG>
     </BaseG>
   </Scroll>
-)
+);
 
 const VehicleGroup7 = ({
   active,
@@ -175,7 +174,7 @@ const VehicleGroup7 = ({
       </NumberG>
     </BaseG>
   </Scroll>
-)
+);
 
 const VehicleGroup6 = ({
   active,
@@ -222,7 +221,7 @@ const VehicleGroup6 = ({
       </NumberG>
     </BaseG>
   </Scroll>
-)
+);
 
 const VehicleGroup5 = ({
   active,
@@ -269,7 +268,7 @@ const VehicleGroup5 = ({
       </NumberG>
     </BaseG>
   </Scroll>
-)
+);
 
 const VehicleGroup4 = ({
   active,
@@ -316,7 +315,7 @@ const VehicleGroup4 = ({
       </g>
     </BaseG>
   </Scroll>
-)
+);
 
 const VehicleGroup3 = ({
   active,
@@ -368,7 +367,7 @@ const VehicleGroup3 = ({
       </NumberG>
     </BaseG>
   </Scroll>
-)
+);
 
 const VehicleGroup2 = ({
   active,
@@ -420,7 +419,7 @@ const VehicleGroup2 = ({
       </NumberG>
     </BaseG>
   </Scroll>
-)
+);
 
 const VehicleGroup1 = ({
   active,
@@ -472,7 +471,7 @@ const VehicleGroup1 = ({
       </NumberG>
     </BaseG>
   </Scroll>
-)
+);
 
 export const vehicles = [
   VehicleGroup1,

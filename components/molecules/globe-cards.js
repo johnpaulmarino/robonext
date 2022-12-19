@@ -1,23 +1,23 @@
-import React from 'react'
-import styled from 'styled-components'
-import { Waypoint } from 'react-waypoint'
+import React from 'react';
+import styled from 'styled-components';
+import { Waypoint } from 'react-waypoint';
 
-import SPACING from '../../../styles/spacing'
-import TYPE, { TYPE_COLORS } from '../../../styles/type'
-import { S } from '../../../styles/breakpoints'
-import { BLACK, WHITE } from '../../../styles/colors'
+import SPACING from '@/styles/spacing';
+import TYPE, { TYPE_COLORS } from '@/styles/type';
+import { S } from '@/styles/breakpoints';
+import { BLACK, WHITE } from '@/styles/colors';
 
-import mobileGlobeImg1 from '../../../static/rotating-globe/rotatingglobe-mobile-1.png'
-import mobileGlobeImg2 from '../../../static/rotating-globe/rotatingglobe-mobile-2.png'
-import mobileGlobeImg3 from '../../../static/rotating-globe/rotatingglobe-mobile-3.png'
-import mobileGlobeImg4 from '../../../static/rotating-globe/rotatingglobe-mobile-4.png'
+import mobileGlobeImg1 from '@/static/rotating-globe/rotatingglobe-mobile-1.png';
+import mobileGlobeImg2 from '@/static/rotating-globe/rotatingglobe-mobile-2.png';
+import mobileGlobeImg3 from '@/static/rotating-globe/rotatingglobe-mobile-3.png';
+import mobileGlobeImg4 from '@/static/rotating-globe/rotatingglobe-mobile-4.png';
 
 const mobileGlobeImgs = [
   mobileGlobeImg1,
   mobileGlobeImg2,
   mobileGlobeImg3,
   mobileGlobeImg4,
-]
+];
 
 const CardContainer = styled.div`
   position: relative;
@@ -39,7 +39,7 @@ const CardContainer = styled.div`
     align-items: center;
     background: linear-gradient(to bottom, #e6f5f8 0%, #c4e6fa 100%);
   }
-`
+`;
 
 const CardContainerInner = styled.div`
   position: relative;
@@ -48,7 +48,7 @@ const CardContainerInner = styled.div`
     width: 100%;
     padding: 1rem;
   }
-`
+`;
 
 const GlobeCard = styled.div`
   position: relative;
@@ -65,7 +65,7 @@ const GlobeCard = styled.div`
     max-width: none;
     box-shadow: none;
   }
-`
+`;
 
 const GlobeCardCircle = styled.div`
   position: absolute;
@@ -80,7 +80,7 @@ const GlobeCardCircle = styled.div`
   opacity: 0.2;
   left: 50%;
   top: 10px;
-`
+`;
 
 const GlobeCardContent = styled.div`
   height: 100%;
@@ -90,7 +90,7 @@ const GlobeCardContent = styled.div`
     width: 100%;
     text-align: center;
   }
-`
+`;
 
 const GlobeCardHeader = styled.div`
   display: flex;
@@ -112,7 +112,7 @@ const GlobeCardHeader = styled.div`
     justify-content: center;
     align-items: center;
   }
-`
+`;
 
 const GlobeCardBody = styled.p`
   width: 100%;
@@ -129,7 +129,7 @@ const GlobeCardBody = styled.p`
     font-size: ${TYPE.bodySans.size};
     line-height: ${TYPE.bodySans.line};
   }
-`
+`;
 
 const MobileGlobeImage = styled.img`
   display: none;
@@ -139,7 +139,7 @@ const MobileGlobeImage = styled.img`
     width: calc(100%);
     height: auto;
   }
-`
+`;
 
 const BlockBoxContainer = styled.div`
   position: absolute;
@@ -153,7 +153,7 @@ const BlockBoxContainer = styled.div`
     top: calc(100% - 74px);
     width: 80%;
   }
-`
+`;
 
 const BlockBox = styled.div`
   border: 2px solid black;
@@ -165,7 +165,7 @@ const BlockBox = styled.div`
   @media (max-width: ${S}px) {
     display: none;
   }
-`
+`;
 
 const BlockBoxHeader = styled.h4`
   margin: 0;
@@ -178,7 +178,7 @@ const BlockBoxHeader = styled.h4`
   color: ${TYPE_COLORS.white};
   background-color: ${BLACK};
   text-transform: uppercase;
-`
+`;
 
 const BlockBoxParagraph = styled.p`
   margin: 0;
@@ -194,10 +194,11 @@ const BlockBoxParagraph = styled.p`
     font-size: ${TYPE.mobileBlockBox.size}rem;
     letter-spacing: ${TYPE.mobileBlockBox.letterSpacing}px;
   }
-`
+`;
+//export default React.memo(({ content, dispatch }) =>
 
-export default React.memo(({ content, dispatch }) =>
-  content.map(({ header, body, dyk }, i) => (
+const globeCards = React.memo(function globeCards({ content, dispatch }) {
+  return content.map(({ header, body, dyk }, i) => (
     <CardContainer key={`globe-card-${i}`}>
       <CardContainerInner>
         <GlobeCard>
@@ -226,5 +227,7 @@ export default React.memo(({ content, dispatch }) =>
       </CardContainerInner>
       <MobileGlobeImage src={mobileGlobeImgs[i]} />
     </CardContainer>
-  ))
-)
+  ))}
+);
+
+export default globeCards;

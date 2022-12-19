@@ -1,26 +1,26 @@
-import React, { useState, useRef } from 'react'
-import styled from 'styled-components'
+import React, { useState, useRef } from 'react';
+import styled from 'styled-components';
 
-import { S, M } from '../../../styles/breakpoints'
+import { S, M } from '@/styles/breakpoints';
 
-import sectionTitles from '../../../cms/resiliency/section-titles'
-import accordionContent from '../../../cms/resiliency/accordion-content'
-import resiliencySlugs from '../../../cms/resiliency/slugs'
+import sectionTitles from '@/cms/resiliency/section-titles';
+import accordionContent from '@/cms/resiliency/accordion-content';
+import resiliencySlugs from '@/cms/resiliency/slugs';
 
-import Accordion from '../molecules/accordion'
+import Accordion from '@/components/molecules/accordion';
 
-import AccordionPhone from '../atoms/resiliency-accordion-phone'
+import AccordionPhone from '@/components/atoms/resiliency-accordion-phone';
 
-import Grid from '../atoms/Grid'
-import Column from '../atoms/Column'
+import Grid from '@/components/atoms/Grid';
+import Column from '@/components/atoms/Column';
 
 import {
   Section,
   StyledSectionTitleContainer,
   SectionContent,
-} from '../styled/Section'
+} from '@/components/styled/Section';
 
-import Spacer from '../atoms/Spacer'
+import Spacer from '@/components/atoms/Spacer';
 
 const AccordionContainer = styled.div`
   width: 100%;
@@ -29,7 +29,7 @@ const AccordionContainer = styled.div`
   @media (max-width: ${M}px) {
     padding: 0;
   }
-`
+`;
 
 const PhoneContainer = styled.div`
   width: 100%;
@@ -41,21 +41,21 @@ const PhoneContainer = styled.div`
   @media (max-width: ${S}px) {
     display: none;
   }
-`
+`;
 
 const SectionContentInner = ({ accordionContent }) => {
-  const [currentAccordion, setCurrentAccordion] = useState(0)
-  const [bodyHeight, setBodyHeight] = useState(0)
+  const [currentAccordion, setCurrentAccordion] = useState(0);
+  const [bodyHeight, setBodyHeight] = useState(0);
 
-  const item0 = useRef(null)
-  const item1 = useRef(null)
-  const item2 = useRef(null)
-  const item3 = useRef(null)
-  const item4 = useRef(null)
-  const item5 = useRef(null)
-  const item6 = useRef(null)
+  const item0 = useRef(null);
+  const item1 = useRef(null);
+  const item2 = useRef(null);
+  const item3 = useRef(null);
+  const item4 = useRef(null);
+  const item5 = useRef(null);
+  const item6 = useRef(null);
 
-  const refs = [item0, item1, item2, item3, item4, item5, item6]
+  const refs = [item0, item1, item2, item3, item4, item5, item6];
 
   return (
     <Grid>
@@ -81,9 +81,9 @@ const SectionContentInner = ({ accordionContent }) => {
 }
 
 export default function Component({ checkSectionVisited }) {
-  const section = sectionTitles[5]
+  const section = sectionTitles[5];
 
-  const visited = checkSectionVisited(5)
+  const visited = checkSectionVisited(5);
 
   return (
     <Section style={{ marginBottom: '3rem' }}>

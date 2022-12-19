@@ -1,0 +1,13 @@
+export const BLACK = '#202737';
+export const WHITE = '#ffffff';
+export const PURPLE = '#40266C';
+export const DARKPURPLE = '#363E52';
+export const GRAY = '#7e7e7e';
+export const MEDIUMGRAY = '#ebebeb';
+export const LIGHTGRAY = '#979797';
+export const GRAYGRAIN_BACKGROUND = '#FAFCFF';
+export const VERYLIGHTGRAY = '#cecece';
+export const TAN = '#fff4f0';
+export const TEEL = '#77CDD3';
+export const SEAGREEN = '#7BCDD0';
+export const LIGHTBLUE = '#ddf0f9';

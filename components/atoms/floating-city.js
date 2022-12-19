@@ -1,6 +1,6 @@
-import React from 'react'
-import styled, { css } from 'styled-components'
-import Scroll from './../Scroll'
+import React from 'react';
+import styled, { css } from 'styled-components';
+import Scroll from '@/components/Scroll';
 
 const BaseG = styled.g`
   opacity: 0;
@@ -11,7 +11,7 @@ const BaseG = styled.g`
     css`
       opacity: 1;
     `}
-`
+`;
 
 const getOffset = id => {
   const el = document.querySelector(`#${id}`)
@@ -118,7 +118,7 @@ const VehicleGroup2 = ({
       </g>
     </BaseG>
   </Scroll>
-)
+);
 
 const VehicleGroup3 = ({
   active,
@@ -165,7 +165,7 @@ const VehicleGroup3 = ({
       </g>
     </BaseG>
   </Scroll>
-)
+);
 const VehicleGroup4 = ({
   active,
   vehicleNum,
@@ -211,7 +211,7 @@ const VehicleGroup4 = ({
       </g>
     </BaseG>
   </Scroll>
-)
+);
 const VehicleGroup5 = ({
   active,
   vehicleNum,
@@ -257,7 +257,7 @@ const VehicleGroup5 = ({
       </g>
     </BaseG>
   </Scroll>
-)
+);
 const VehicleGroup6 = ({
   active,
   setCurrentVehicle,
@@ -310,7 +310,7 @@ const VehicleGroup6 = ({
       </g>
     </BaseG>
   </Scroll>
-)
+);
 const VehicleGroup7 = ({
   active,
   setCurrentVehicle,
@@ -356,7 +356,7 @@ const VehicleGroup7 = ({
       </g>
     </BaseG>
   </Scroll>
-)
+);
 
 const VehicleGroup8 = ({
   active,
@@ -418,9 +418,9 @@ export const Vehicles = [
   VehicleGroup6,
   VehicleGroup7,
   VehicleGroup8,
-]
+];
 
-export default ({ children }) => (
+export default function Component({ children }) {
   <svg
     viewBox="0 0 809 498"
     version="1.1"
@@ -472,4 +472,4 @@ export default ({ children }) => (
       {children}
     </g>
   </svg>
-)
+};

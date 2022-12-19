@@ -1,20 +1,21 @@
-import React from 'react'
-import styled from 'styled-components'
-import { Waypoint } from 'react-waypoint'
-import { debounce } from 'lodash'
+import React from 'react';
+import styled from 'styled-components';
+import Image from 'next/image';
+import { Waypoint } from 'react-waypoint';
+import { debounce } from 'lodash';
 
-import TYPE, { TYPE_COLORS } from '../../../styles/type'
-import SPACING from '../../../styles/spacing'
-import { S, L } from '../../../styles/breakpoints'
-import { WHITE, TEEL, BLACK } from '../../../styles/colors'
+import TYPE, { TYPE_COLORS } from '@/styles/type';
+import SPACING from '@/styles/spacing';
+import { S, L } from '@/styles/breakpoints';
+import { WHITE, TEEL, BLACK } from '@/styles/colors';
 
-import arrowRight from '../../../static/arrows/arrow-right.svg'
+import arrowRight from '@/static/arrows/arrow-right.svg';
 
-import ms1Mobile from '../../../static/media-scroll-mobile/ms-1-mobile.jpg'
-import ms2Mobile from '../../../static/media-scroll-mobile/ms-2-mobile.jpg'
-import ms3Mobile from '../../../static/media-scroll-mobile/ms-3-mobile.jpg'
+import ms1Mobile from '@/static/media-scroll-mobile/ms-1-mobile.jpg';
+import ms2Mobile from '@/static/media-scroll-mobile/ms-2-mobile.jpg';
+import ms3Mobile from '@/static/media-scroll-mobile/ms-3-mobile.jpg';
 
-const imgArrayMobile = [ms1Mobile, ms2Mobile, ms3Mobile]
+const imgArrayMobile = [ms1Mobile, ms2Mobile, ms3Mobile];
 
 const TextBlockContainer = styled.div`
   position: relative;
@@ -29,7 +30,7 @@ const TextBlockContainer = styled.div`
     width: 100%;
     min-height: initial;
   }
-`
+`;
 
 const TextBlock = styled.div`
   position: relative;
@@ -48,7 +49,7 @@ const TextBlock = styled.div`
   @media (min-height: 900px) and (min-width: ${L}px) {
     margin-top: -15vh;
   }
-`
+`;
 
 const BlockPreheader = styled.h4`
   position: relative;
@@ -59,7 +60,7 @@ const BlockPreheader = styled.h4`
   margin: ${SPACING.s}rem 0 ${SPACING.s}rem;
   font-family: ${TYPE.label.font};
   font-weight: ${TYPE.label.weight};
-`
+`;
 
 const BlockHeader = styled.h3`
   position: relative;
@@ -82,7 +83,7 @@ const BlockHeader = styled.h3`
   @media (max-height: 750px) {
     font-size: 3.5vh;
   }
-`
+`;
 
 const BlockBox = styled.div`
   position: relative;
@@ -96,7 +97,7 @@ const BlockBox = styled.div`
   @media (max-width: ${S}px) {
     max-width: none;
   }
-`
+`;
 
 const BlockBoxHeader = styled.h4`
   position: relative;
@@ -110,7 +111,7 @@ const BlockBoxHeader = styled.h4`
   color: ${TYPE_COLORS.white};
   background-color: ${BLACK};
   text-transform: uppercase;
-`
+`;
 
 const BlockBoxParagraph = styled.p`
   position: relative;
@@ -130,7 +131,7 @@ const BlockBoxParagraph = styled.p`
     padding: ${props =>
       props.learnMoreUrl ? '0.75rem 1rem 2em' : '0.75rem 1rem .9em'};
   }
-`
+`;
 
 const BlockBoxButton = styled.a`
   cursor: pointer;
@@ -171,7 +172,7 @@ const BlockBoxButton = styled.a`
     border: 3px solid #70cad6;
     /* box-sizing: content-box; */
   }
-`
+`;
 
 const LearnMore = styled.div`
   position: relative;
@@ -180,7 +181,7 @@ const LearnMore = styled.div`
   @media (max-width: ${S}px) {
     top: -1px;
   }
-`
+`;
 
 const LearnMoreArrow = styled.div`
   position: relative;
@@ -190,23 +191,23 @@ const LearnMoreArrow = styled.div`
   @media (max-width: ${S}px) {
     top: 0.5px;
   }
-`
+`;
 
 const debounceSetCurrentMedia = debounce(
   (currentMedia, dispatchCurrentMedia) =>
     dispatchCurrentMedia({ currentMedia }),
   200,
   { leading: false }
-)
+);
 
 const wpOffsets = {
   top: '10%',
   bottom: '10%',
 }
 
-export const LargeScreenContent = React.memo(
-  ({ sectionContent, dispatchCurrentMedia }) =>
-    sectionContent.map((content, i) => (
+export const LargeScreenContent = React.memo(function LargeScreenContent({ sectionContent, dispatchCurrentMedia }) {
+
+    return sectionContent.map((content, i) => (
       <TextBlockContainer key={`content-${i}`}>
         <TextBlock>
           <BlockPreheader>{content.preHeader}</BlockPreheader>
@@ -231,22 +232,22 @@ export const LargeScreenContent = React.memo(
               >
                 <LearnMore>Learn More</LearnMore>
                 <LearnMoreArrow>
-                  <img src={arrowRight} alt="Learn More" width="12.5px" />
+                  <Image src={arrowRight} alt="Learn More" width={12.5} />
                 </LearnMoreArrow>
               </BlockBoxButton>
             ) : null}
           </BlockBox>
         </TextBlock>
       </TextBlockContainer>
-    ))
-)
+    ))}
+);
 
-export const SmallScreenContent = React.memo(({ sectionContent }) =>
-  sectionContent.map((content, i) => (
+export const SmallScreenContent = React.memo(function SmallScreenContent({ sectionContent }) {
+  return sectionContent.map((content, i) => (
     <TextBlockContainer key={`content-${i}`}>
       <TextBlock>
         <div style={{ paddingTop: '10px' }}>
-          <img src={imgArrayMobile[i]} width="100%" alt="" />
+          <Image src={imgArrayMobile[i]}  alt="" layout="fill"/>
         </div>
         <BlockPreheader>{content.preHeader}</BlockPreheader>
         <BlockHeader>{content.header}</BlockHeader>
@@ -264,12 +265,12 @@ export const SmallScreenContent = React.memo(({ sectionContent }) =>
             >
               <LearnMore>Learn More</LearnMore>
               <LearnMoreArrow>
-                <img src={arrowRight} alt="Learn More" width="14.5px" />
+                <Image src={arrowRight} alt="Learn More" width={14.5} />
               </LearnMoreArrow>
             </BlockBoxButton>
           ) : null}
         </BlockBox>
       </TextBlock>
     </TextBlockContainer>
-  ))
-)
+  ))}
+);

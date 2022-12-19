@@ -1,14 +1,15 @@
-import React from 'react'
-import styled from 'styled-components'
-import { SMALL } from './../../../styles/spacing'
-import { BLACK, TEEL } from './../../../styles/colors'
+import React from 'react';
+import styled from 'styled-components';
+import { SMALL } from '@/styles/spacing';
+import { BLACK, TEEL } from '@/styles/colors';
 
-import linkNaked from './../../../static/social-icons/link-naked.svg'
-import facebookNaked from './../../../static/social-icons/facebook-naked.svg'
-import mailNaked from './../../../static/social-icons/mail-naked.svg'
-import twitterNaked from './../../../static/social-icons/twitter-naked.svg'
-import linkedInNaked from './../../../static/social-icons/linkedin-naked.svg'
-import share from './../../../static/share.svg'
+import linkNaked from '@/static/social-icons/link-naked.svg';
+import facebookNaked from '@/static/social-icons/facebook-naked.svg';
+import mailNaked from '@/static/social-icons/mail-naked.svg';
+import twitterNaked from '@/static/social-icons/twitter-naked.svg';
+import linkedInNaked from '@/static/social-icons/linkedin-naked.svg';
+import share from '@/static/share.svg';
+import Image from 'next/image';
 
 const ShareOpener = styled.div`
   position: relative;
@@ -27,7 +28,7 @@ const ShareOpener = styled.div`
     opacity: 1;
     background-color: ${TEEL};
   }
-`
+`;
 
 const ShareList = styled.div`
   background: #fff;
@@ -40,7 +41,7 @@ const ShareList = styled.div`
   transition: 0.3s transform, 0.3s opacity;
   width: 100%;
   z-index: 1;
-`
+`;
 
 const Link = styled.a`
   cursor: pointer;
@@ -52,11 +53,11 @@ const Link = styled.a`
   &:hover {
     opacity: 1;
   }
-`
+`;
 
 const SmallMessage = styled.span`
   font-size: 11px;
-`
+`;
 
 function popup(e) {
   e.preventDefault()
@@ -120,21 +121,21 @@ class ShareButtons extends React.Component {
         />
         <ShareList active={dropdownActive}>
           <Link as="span" className="copy" onClick={this.copy}>
-            <img src={linkNaked} alt="link" />
+            <Image src={linkNaked} alt="link" />
           </Link>
           {message ? <SmallMessage>{message}</SmallMessage> : null}
           <Link
             onClick={popup}
             href={`https://www.facebook.com/sharer/sharer.php?u=${url}`}
           >
-            <img src={facebookNaked} alt="facebook" />
+            <Image src={facebookNaked} alt="facebook" />
           </Link>
           <Link
             href={`mailto:?subject=${encodeURIComponent(
               title
             )}&body=${encodeURIComponent(url)}`}
           >
-            <img src={mailNaked} alt="mail" />
+            <Image src={mailNaked} alt="mail" />
           </Link>
           <Link
             onClick={popup}
@@ -142,13 +143,13 @@ class ShareButtons extends React.Component {
               title
             )}`}
           >
-            <img src={twitterNaked} alt="twitter" />
+            <Image src={twitterNaked} alt="twitter" />
           </Link>
           <Link
             onClick={popup}
             href={`https://www.linkedin.com/shareArticle?mini=true&url=${url}&title=${title}`}
           >
-            <img src={linkedInNaked} alt="linkedin" />
+            <Image src={linkedInNaked} alt="linkedin" />
           </Link>
         </ShareList>
       </div>

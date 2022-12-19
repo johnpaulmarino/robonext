@@ -1,33 +1,33 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from 'react';
+import styled from 'styled-components';
 
-import { XS, S } from '../../../styles/breakpoints'
+import { XS, S } from '@/styles/breakpoints';
 
-import dr01 from '../../../static/horizontal-dr/disaster-recovery-sm-1.png'
-import dr02 from '../../../static/horizontal-dr/disaster-recovery-sm-2.png'
-import dr03 from '../../../static/horizontal-dr/disaster-recovery-sm-3.png'
-import dr04 from '../../../static/horizontal-dr/disaster-recovery-sm-4.png'
-import dr05 from '../../../static/horizontal-dr/disaster-recovery-sm-5.png'
+import dr01 from '@/static/horizontal-dr/disaster-recovery-sm-1.png';
+import dr02 from '@/static/horizontal-dr/disaster-recovery-sm-2.png';
+import dr03 from '@/static/horizontal-dr/disaster-recovery-sm-3.png';
+import dr04 from '@/static/horizontal-dr/disaster-recovery-sm-4.png';
+import dr05 from '@/static/horizontal-dr/disaster-recovery-sm-5.png';
 
-import lightgreyTexture from '../../../static/background-textures/lightgrey-texture.jpg'
+import lightgreyTexture from '@/static/background-textures/lightgrey-texture.jpg';
 
-import sectionTitles from '../../../cms/resiliency/section-titles'
-import resiliencySlugs from '../../../cms/resiliency/slugs'
-import recoveryContent from '../../../cms/resiliency/horizontal-dr-content'
+import sectionTitles from '@/cms/resiliency/section-titles';
+import resiliencySlugs from '@/cms/resiliency/slugs';
+import recoveryContent from '@/cms/resiliency/horizontal-dr-content';
 
-import HorizontalScroll from '../molecules/horizontal-scroll'
-import RecoveryCards from '../molecules/recovery-cards'
+import HorizontalScroll from '@/components/molecules/horizontal-scroll';
+import RecoveryCards from '@/components/molecules/recovery-cards';
 
 import {
   Section,
   StyledSectionTitleContainer,
   SectionContent,
   SectionBackground,
-} from '../styled/Section'
+} from '@/components/styled/Section';
 
-import Spacer from '../atoms/Spacer'
+import Spacer from '@/components/atoms/Spacer';
 
-const drImages = [dr01, dr02, dr03, dr04, dr05]
+const drImages = [dr01, dr02, dr03, dr04, dr05];
 
 const MobileContainer = styled.div`
   display: none;
@@ -47,7 +47,7 @@ const MobileContainer = styled.div`
       margin: 0 auto 7rem;
     }
   }
-`
+`;
 
 const HorizontalContainer = styled.div`
   position: relative;
@@ -57,19 +57,19 @@ const HorizontalContainer = styled.div`
   @media (max-width: ${S - 1}px) {
     display: none;
   }
-`
+`;
 
 const MobileBackgroundContainer = styled.div`
   position: absolute;
   height: 100%;
   width: 100%;
-`
+`;
 
 const MobileBackgroundContainerInner = styled.div`
   position: relative;
   height: 100%;
   width: 100%;
-`
+`;
 
 const MobileBackgroundFullHeight = styled.div`
   position: sticky;
@@ -81,7 +81,7 @@ const MobileBackgroundFullHeight = styled.div`
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-`
+`;
 
 const MobileSectionBackground = ({ bgImage }) => (
   <MobileBackgroundContainer>
@@ -89,17 +89,17 @@ const MobileSectionBackground = ({ bgImage }) => (
       <MobileBackgroundFullHeight bgImage={bgImage} />
     </MobileBackgroundContainerInner>
   </MobileBackgroundContainer>
-)
+);
 
 const StyledSectionContent = styled(SectionContent)`
   opacity: 1;
   transform: translateY(0%);
-`
+`;
 
 export default function Component({ checkSectionVisited }) {
-  const section = sectionTitles[3]
+  const section = sectionTitles[3];
 
-  const visited = checkSectionVisited(3)
+  const visited = checkSectionVisited(3);
 
   return (
     <Section>

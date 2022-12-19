@@ -1,6 +1,6 @@
-import React from 'react'
-import styled from 'styled-components'
-import { XL, L, M, S } from '../../../styles/breakpoints'
+import React from 'react';
+import styled from 'styled-components';
+import { XL, L, M, S } from '@/styles/breakpoints';
 
 const StyledSpacer = styled.div`
   height: ${props => props.height}rem;
@@ -21,7 +21,7 @@ const StyledSpacer = styled.div`
   @media screen and (max-width: ${S}px) {
     height: ${props => props.xSmallHeight}rem;
   }
-`
+`;
 
 const Spacer = props => {
   const {
@@ -44,4 +44,4 @@ const Spacer = props => {
   )
 }
 
-export default Spacer
+export default Spacer;

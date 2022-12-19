@@ -1,24 +1,24 @@
-import React, { useState } from 'react'
-import styled, { keyframes } from 'styled-components'
+import React, { useState } from 'react';
+import styled, { keyframes } from 'styled-components';
 
-import { XS, S, M, XL } from '../../../styles/breakpoints'
-import SPACING from '../../../styles/spacing'
-import TYPE, { TYPE_COLORS } from '../../../styles/type'
+import { XS, S, M, XL } from '@/styles/breakpoints';
+import SPACING from '@/styles/spacing';
+import TYPE, { TYPE_COLORS } from '@/styles/type';
 
-import Grid from '../atoms/Grid'
-import Column from '../atoms/Column'
+import Grid from '@/components/atoms/Grid';
+import Column from '@/components/atoms/Column';
 
 const Header = styled.header`
   position: relative;
   padding-top: 68px;
   width: 100%;
   height: 100vh;
-`
+`;
 
 const imageFadeIn = keyframes`
   from {opacity: 0}
   to {opacity: 1}
-`
+`;
 
 const BackgroundVideoContainer = styled.div`
   position: relative;
@@ -31,7 +31,7 @@ const BackgroundVideoContainer = styled.div`
   @media (max-height: 700px) and (min-width: 1000px) {
     height: 72.5%;
   }
-`
+`;
 
 const BackgroundImage = styled.img`
   position: absolute;
@@ -46,7 +46,7 @@ const BackgroundImage = styled.img`
   animation-delay: 0.25s;
   object-fit: cover;
   object-position: center center;
-`
+`;
 
 const BackgroundVideo = styled.video`
   position: absolute;
@@ -63,7 +63,7 @@ const BackgroundVideo = styled.video`
   @media (max-width: ${XS}px) {
     display: none;
   }
-`
+`;
 
 const HeaderCardContainer = styled.div`
   position: absolute;
@@ -72,7 +72,7 @@ const HeaderCardContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-`
+`;
 
 const HeaderContainerInner = styled.div`
   position: relative;
@@ -81,7 +81,7 @@ const HeaderContainerInner = styled.div`
   @media (max-height: 700px) and (min-width: 1000px) {
     width: 90%;
   }
-`
+`;
 
 const HeaderCard = styled.div`
   position: relative;
@@ -100,7 +100,7 @@ const HeaderCard = styled.div`
   @media (max-height: 700px) and (min-width: 1000px) {
     padding: ${SPACING.xl}rem ${SPACING.l}rem ${SPACING.l}rem;
   }
-`
+`;
 
 const Title = styled.h1`
   position: relative;
@@ -127,17 +127,17 @@ const Title = styled.h1`
   @media (max-width: ${XS}px) {
     font-size: 2.25rem;
   }
-`
+`;
 
 const fadeIn = keyframes`
   from { color: transparent; }
   to {color: black; }
-`
+`;
 
 const subFadeIn = keyframes`
   from { color: transparent; }
   to {color: ${TYPE_COLORS.grey}}
-`
+`;
 
 const dotFadeIn = keyframes`
   from { color: transparent; }
@@ -147,7 +147,7 @@ const dotFadeIn = keyframes`
 const backgroundSlide = keyframes`
   from { background-position: -800px; }
   to { background-position: 800px; }
-`
+`;
 
 const TitleSpanContainer = styled.span`
   position: relative;
@@ -162,7 +162,7 @@ const TitleSpanContainer = styled.span`
   animation-delay: 0.5s;
   animation-timing-function: linear;
   z-index: 100;
-`
+`;
 
 const TitleSpan = styled.span`
   position: relative;
@@ -172,14 +172,14 @@ const TitleSpan = styled.span`
   z-index: -1;
   animation: ${fadeIn} 0.4s forwards;
   animation-delay: 0.8s;
-`
+`;
 const TitleSpan1 = styled(TitleSpan)``
 const TitleSpan2 = styled(TitleSpan)``
 const TitleSpan3 = styled(TitleSpan)`
   color: transparent;
   animation: ${dotFadeIn} 0.4s forwards;
   animation-delay: 0.8s;
-`
+`;
 
 const Subtitle = styled.h2`
   color: transparent;
@@ -208,7 +208,7 @@ const Subtitle = styled.h2`
     font-size: 1.5rem;
     max-width: 550px;
   }
-`
+`;
 export default function Component({ headerTitles, backgroundVideoUrl, backgroundImage }) {
   const [vidReady, setVidReady] = useState(false)
   const { titleOne, titleTwo, subtitle } = headerTitles

@@ -1,7 +1,7 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from 'react';
+import styled from 'styled-components';
 
-import TYPE, { TYPE_COLORS } from '../../../styles/type'
+import TYPE, { TYPE_COLORS } from '@/styles/type';
 
 const SkipMain = styled.a`
   position: absolute;
@@ -35,7 +35,7 @@ const SkipMain = styled.a`
   &:visited {
     color: ${TYPE_COLORS.black} !important;
   }
-`
+`;
 export default function Component({ text, navigate, href }) { 
   return(
     <SkipMain

@@ -1,11 +1,11 @@
-import React from 'react'
-import styled, { css, keyframes } from 'styled-components'
+import React from 'react';
+import styled, { css, keyframes } from 'styled-components';
 
-import Ms1 from '../images/media-scroll-01'
-import Ms2 from '../images/media-scroll-02'
-import Ms3 from '../images/media-scroll-03'
+import Ms1 from '@/components/images/media-scroll-01';
+import Ms2 from '@/components/images/media-scroll-02';
+import Ms3 from '@/components/images/media-scroll-03';
 
-const imgArray = [Ms1, Ms2, Ms3]
+const imgArray = [Ms1, Ms2, Ms3];
 
 const MediaObjectsOuter = styled.div`
   position: sticky;
@@ -14,7 +14,7 @@ const MediaObjectsOuter = styled.div`
   right: 0;
   height: calc(100vh - 68px);
   width: 100%;
-`
+`;
 
 const MediaObject = styled.div`
   position: absolute;
@@ -40,17 +40,17 @@ const MediaObject = styled.div`
     css`
       z-index: 200;
     `}
-`
+`;
 
 const leavingAboveAnimation = keyframes`
   0% {transform: translateY(0);}
   100% {transform: translateY(-80%);}
-`
+`;
 
 const leavingBelowAnimation = keyframes`
   0% {transform: translateY(0);}
   100% {transform: translateY(80%);}
-`
+`;
 
 const MediaObjectInner = styled.div`
   position: absolute;
@@ -81,7 +81,7 @@ const MediaObjectInner = styled.div`
       transform: translateY(100%);
     `}
 
-`
+`;
 
 const MediaObjects = ({ inView, currentMedia }) =>
   imgArray.map((Media, i) => (
@@ -100,8 +100,11 @@ const MediaObjects = ({ inView, currentMedia }) =>
     </MediaObject>
   ))
 
-export default ({ inView, currentMedia }) => (
-  <MediaObjectsOuter>
-    <MediaObjects inView={inView} currentMedia={currentMedia} />
-  </MediaObjectsOuter>
-)
+  export default function Component({ inView, currentMedia}) { 
+    return (
+      <MediaObjectsOuter>
+        <MediaObjects inView={inView} currentMedia={currentMedia} />
+      </MediaObjectsOuter>
+    )
+  }
+

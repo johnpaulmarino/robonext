@@ -1,12 +1,12 @@
-import React, { useReducer, useEffect, useRef } from 'react'
-import styled, { css } from 'styled-components'
+import React, { useReducer, useEffect, useRef } from 'react';
+import styled, { css } from 'styled-components';
 
-import TYPE, { TYPE_COLORS } from '../../../styles/type'
-import SPACING from '../../../styles/spacing'
-import { S } from '../../../styles/breakpoints'
-import { BLACK, WHITE } from '../../../styles/colors'
+import TYPE, { TYPE_COLORS } from '@/styles/type';
+import SPACING from '@/styles/spacing';
+import { S } from '@/styles/breakpoints';
+import { BLACK, WHITE } from '@/styles/colors';
 
-import { dyk } from '../../../cms/robocalls/fighting-content'
+import { dyk } from '@/cms/robocalls/fighting-content';
 
 const DynamicHeightContainer = styled.div.attrs(({ dynamicHeight }) => {
   const height = `${dynamicHeight}px`
@@ -14,7 +14,7 @@ const DynamicHeightContainer = styled.div.attrs(({ dynamicHeight }) => {
 })`
   position: relative;
   width: 100%;
-`
+`;
 
 const HorizontalObjectContainer = styled.div`
   position: sticky;
@@ -37,7 +37,7 @@ const HorizontalObjectContainer = styled.div`
   @media (min-width: ${S}px) and (max-height: 700px) {
     padding-top: 0;
   }
-`
+`;
 
 const HorizontalObject = styled.div.attrs(({ translate }) => ({
   style: { transform: `translateX(${translate}px)` },
@@ -50,7 +50,7 @@ const HorizontalObject = styled.div.attrs(({ translate }) => ({
   flex-grow: 1;
   will-change: transform;
   /* padding-top: 4rem; */
-`
+`;
 
 const HorizontalObjectTop = styled.div`
   position: relative;
@@ -58,12 +58,12 @@ const HorizontalObjectTop = styled.div`
   width: 2000px;
   display: flex;
   flex-flow: row nowrap;
-`
+`;
 const HorizontalObjectBottom = styled.div`
   position: relative;
   height: 32%;
   width: 2000px;
-`
+`;
 
 const HorizontalBar = styled.div`
   position: absolute;
@@ -74,7 +74,7 @@ const HorizontalBar = styled.div`
   background-color: #7b6fb1;
   opacity: 0.32;
   border-radius: 20px;
-`
+`;
 
 const BlockBoxContainer = styled.div`
   margin-top: 36px;
@@ -85,7 +85,7 @@ const BlockBoxContainer = styled.div`
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
-`
+`;
 
 const BlockBox = styled.div`
   position: relative;
@@ -98,7 +98,7 @@ const BlockBox = styled.div`
   @media (max-width: ${S}px) {
     max-width: none;
   }
-`
+`;
 
 const BlockBoxHeader = styled.h4`
   margin: 0;
@@ -111,7 +111,7 @@ const BlockBoxHeader = styled.h4`
   color: ${TYPE_COLORS.white};
   background-color: ${BLACK};
   text-transform: uppercase;
-`
+`;
 
 const BlockBoxParagraph = styled.p`
   margin: 0;
@@ -129,7 +129,7 @@ const BlockBoxParagraph = styled.p`
     padding: ${props =>
       props.learnMoreUrl ? '0.75rem 1rem 2em' : '0.75rem 1rem .9em'};
   }
-`
+`;
 
 const calcDynamicHeight = objectWidth => {
   const vw = window.innerWidth
@@ -184,7 +184,7 @@ const HorizontalObjectInner = styled.div`
       transition-delay: 0.15s, 0.15s;
       transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
     `}
-`
+`;
 export default function Component({  cards, header, active }) {
   const [translate, dispatch] = useReducer(translateReducer, {
     scrollY: 0,

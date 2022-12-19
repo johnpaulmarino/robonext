@@ -1,8 +1,8 @@
 import React, { Children, cloneElement } from 'react'
 import styled from 'styled-components'
 import { isEmpty } from 'lodash'
-import { L, M, S, XS } from '../../../styles/breakpoints'
-import gridSpacing from '../../../styles/grid-spacing'
+import { L, M, S, XS } from '@/styles/breakpoints'
+import gridSpacing from '@/styles/grid-spacing'
 
 const StyledGrid = styled.div`
   display: flex;
@@ -113,4 +113,4 @@ const Grid = props => {
   )
 }
 
-export default Grid
+export default Grid;

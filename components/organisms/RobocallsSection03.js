@@ -1,31 +1,31 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from 'react';
+import styled from 'styled-components';
 
-import sectionTitles from '../../../cms/robocalls/section-titles'
-import Spacer from '../atoms/Spacer'
-import { S } from '../../../styles/breakpoints'
-import TYPE, { TYPE_COLORS } from '../../../styles/type'
-import { BLACK, WHITE } from '../../../styles/colors'
-import SPACING from '../../../styles/spacing'
+import sectionTitles from '@/cms/robocalls/section-titles';
+import Spacer from '@/components/atoms/Spacer';
+import { S } from '@/styles/breakpoints';
+import TYPE, { TYPE_COLORS } from '@/styles/type';
+import { BLACK, WHITE } from '@/styles/colors';
+import SPACING from '@/styles/spacing';
 
-import HorizontalScroll from '../molecules/horizontal-scroll-fighting'
-import FightingCards from '../molecules/fighting-cards'
-import fightingContent, { dyk } from '../../../cms/robocalls/fighting-content'
-import roboSlugs from '../../../cms/robocalls/slugs'
+import HorizontalScroll from '@/components/molecules/horizontal-scroll-fighting';
+import FightingCards from '@/components/molecules/fighting-cards';
+import fightingContent, { dyk } from '@/cms/robocalls/fighting-content';
+import roboSlugs from '@/cms/robocalls/slugs';
 
 
-import backgroundGrid from '../../../static/background-textures/s03-grid.png'
-import fightImg01 from '../../../static/horizontal-fighting/S-03-Robo_ICONS_01.png'
-import fightImg02 from '../../../static/horizontal-fighting/S-03-Robo_ICONS-02.png'
-import fightImg03 from '../../../static/horizontal-fighting/S-03-Robo_ICONS-03.png'
-import fightImg04 from '../../../static/horizontal-fighting/S-03-Robo_ICONS-05.png'
-import fightImg05 from '../../../static/horizontal-fighting/S-03-Robo_ICONS-04.png'
+import backgroundGrid from '@/static/background-textures/s03-grid.png';
+import fightImg01 from '@/static/horizontal-fighting/S-03-Robo_ICONS_01.png';
+import fightImg02 from '@/static/horizontal-fighting/S-03-Robo_ICONS-02.png';
+import fightImg03 from '@/static/horizontal-fighting/S-03-Robo_ICONS-03.png';
+import fightImg04 from '@/static/horizontal-fighting/S-03-Robo_ICONS-05.png';
+import fightImg05 from '@/static/horizontal-fighting/S-03-Robo_ICONS-04.png';
 
 import {
   Section,
   StyledSectionTitleContainer,
   SectionContent,
-} from '../styled/Section'
+} from '@/components/styled/Section';
 
 const fightingImages = [
   fightImg01,
@@ -33,7 +33,7 @@ const fightingImages = [
   fightImg03,
   fightImg04,
   fightImg05,
-]
+];
 
 const fightingImagesAltTags = [
   'Cellphone with incoming caller getting blocked',
@@ -41,19 +41,19 @@ const fightingImagesAltTags = [
   'Computer system under a magnifying glass',
   'Partially artificial brain with binary numbers behind it',
   'Network of callers and receivers',
-]
+];
 
 const BackgroundContainer = styled.div`
   position: absolute;
   height: 100%;
   width: 100%;
-`
+`;
 
 const BackgroundContainerInner = styled.div`
   position: relative;
   height: 100%;
   width: 100%;
-`
+`;
 
 const BackgroundFullHeight = styled.div`
   position: sticky;
@@ -63,7 +63,7 @@ const BackgroundFullHeight = styled.div`
   background-size: cover;
   background-position: center;
   background: radial-gradient(#333e57, #1d2435);
-`
+`;
 
 const BackgroundImageOverlay = styled.div`
   position: absolute;
@@ -76,7 +76,7 @@ const BackgroundImageOverlay = styled.div`
   background-image: url(${({ bgImage }) => bgImage});
   background-size: cover;
   background-position: center;
-`
+`;
 
 const SectionBackground = ({ bgImage }) => (
   <BackgroundContainer>
@@ -86,7 +86,7 @@ const SectionBackground = ({ bgImage }) => (
       </BackgroundFullHeight>
     </BackgroundContainerInner>
   </BackgroundContainer>
-)
+);
 
 const HorizontalContainer = styled.div`
   position: relative;
@@ -97,7 +97,7 @@ const HorizontalContainer = styled.div`
   @media (max-width: ${S - 1}px) {
     display: none;
   }
-`
+`;
 
 const MobileContainer = styled.div`
   display: none;
@@ -106,7 +106,7 @@ const MobileContainer = styled.div`
   @media (max-width: ${S - 1}px) {
     display: block;
   }
-`
+`;
 
 const BlockBoxContainer = styled.div`
   margin: 2rem auto 0;
@@ -117,7 +117,7 @@ const BlockBoxContainer = styled.div`
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
-`
+`;
 
 const BlockBox = styled.div`
   position: relative;
@@ -134,7 +134,7 @@ const BlockBox = styled.div`
   @media (max-width: 320px) {
     width: 90%;
   }
-`
+`;
 
 const BlockBoxHeader = styled.h4`
   margin: 0;
@@ -147,7 +147,7 @@ const BlockBoxHeader = styled.h4`
   color: ${TYPE_COLORS.white};
   background-color: ${BLACK};
   text-transform: uppercase;
-`
+`;
 
 const BlockBoxParagraph = styled.p`
   margin: 0;
@@ -165,17 +165,17 @@ const BlockBoxParagraph = styled.p`
     padding: ${props =>
       props.learnMoreUrl ? '0.75rem 1rem 2em' : '0.75rem 1rem .9em'};
   }
-`
+`;
 
 const StyledSectionContent = styled(SectionContent)`
   opacity: 1;
   transform: translateY(0%);
-`
+`;
 
 export default function Component({ checkSectionVisited }) {
-  const section = sectionTitles[3]
+  const section = sectionTitles[3];
 
-  const visited = checkSectionVisited(3)
+  const visited = checkSectionVisited(3);
   return (
     <Section>
       <SectionBackground bgImage={backgroundGrid} />

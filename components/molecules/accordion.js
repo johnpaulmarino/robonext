@@ -1,14 +1,14 @@
-import React, { useState, useEffect } from 'react'
-import styled, { css, keyframes, createGlobalStyle } from 'styled-components'
+import React, { useState, useEffect } from 'react';
+import styled, { css, keyframes, createGlobalStyle } from 'styled-components';
 
-import { BLACK, VERYLIGHTGRAY, TEEL } from '../../../styles/colors'
-import TYPE, { TYPE_COLORS } from '../../../styles/type'
+import { BLACK, VERYLIGHTGRAY, TEEL } from '@styles/colors';
+import TYPE, { TYPE_COLORS } from '@/styles/type';
 
 const Accordion = styled.div`
   width: 100%;
   display: flex;
   flex-flow: column nowrap;
-`
+`;
 
 const AccordionItem = styled.div`
   border-top: 1px solid ${VERYLIGHTGRAY};
@@ -17,7 +17,7 @@ const AccordionItem = styled.div`
   &:last-child {
     border-bottom: 1px solid ${VERYLIGHTGRAY};
   }
-`
+`;
 
 const AccordionHeader = styled.button`
   display: flex;
@@ -44,13 +44,13 @@ const AccordionHeader = styled.button`
     flex-shrink: 0;
     font-weight: 900;
   }
-`
+`;
 
 const DelayedHeightAuto = keyframes`
   to { height: auto; }
-`
+`;
 
-const transitionPeriod = 0.5
+const transitionPeriod = 0.5;
 
 const AccordionBody = styled.div`
   display: block;
@@ -85,7 +85,7 @@ const AccordionBody = styled.div`
   a:focus {
     border: 3px solid ${TEEL};
   }
-`
+`;
 
 const AccordionParagraph = styled.p`
   margin: 0;
@@ -95,7 +95,7 @@ const AccordionParagraph = styled.p`
   font-weight: ${TYPE.bodySerif.weight};
   font-size: ${TYPE.bodySerif.size}rem;
   line-height: ${TYPE.bodySerif.line};
-`
+`;
 
 const AccordionList = styled.ul`
   margin-top: 0;
@@ -106,11 +106,11 @@ const AccordionList = styled.ul`
   font-size: ${TYPE.bodySerif.size}rem;
   line-height: ${TYPE.bodySerif.line};
   padding-bottom: 12px;
-`
+`;
 
 const AccordionListItem = styled.li`
   padding-bottom: 1rem;
-`
+`;
 
 const AccordionStyles = createGlobalStyle`
   .acc-header-div {
@@ -121,7 +121,7 @@ const AccordionStyles = createGlobalStyle`
     text-decoration: underline;
     text-decoration-color: ${TEEL};
   }
-`
+`;
 
 export const AccordionItems = ({
   accordionContent,
@@ -170,7 +170,7 @@ export const AccordionItems = ({
         </div>
       </AccordionBody>
     </AccordionItem>
-  ))
+  ));
 
 export default function Component({ accordionContent,
   refs,
