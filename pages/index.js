@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Resiliency from 'components/resiliency';
 import Robocalls from 'components/robocalls';
 
-import 'styles/index.css';
+
 
 
 export default function Home() {
