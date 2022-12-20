@@ -1,8 +1,8 @@
 import React, { Suspense } from 'react';
 import { Waypoint } from 'react-waypoint';
 import styled from 'styled-components';
-import { navigate } from '@reach/router';
-
+//import { navigate } from '@reach/router';
+import { useNavigate } from "react-router-dom";
 import Metadata from 'components/meta';
 import metadata from 'cms/robocalls/metadata';
 

@@ -6,7 +6,8 @@ import { S } from 'styles/breakpoints';
 import arrowDown from 'public/static/arrows/long-arrow-down.svg';
 import resilArrowDownActive from 'public/static/arrows/resil-long-arrow-down-active.svg';
 import roboArrowDownActive from 'public/static/arrows/robo-long-arrow-down-active.svg';
-import { navigate } from '@reach/router';
+//import { navigate } from '@reach/router';
+import { useNavigate } from "react-router-dom";
 import Spacer from 'components/atoms/Spacer';
 import dotPattern from 'public/static/background-textures/dot-pattern.svg';
 import Image from 'next/image';
@@ -171,6 +172,7 @@ const Button = styled.div`
 `;
 
 const TableOfContents = React.memo(function TableOfContents({ sectionTitles, page, navigateSection, slugs }) { 
+  const navigate = useNavigate();
   return (
     <OuterContainer>
       <Spacer height={5} id={slugs[0]} />
