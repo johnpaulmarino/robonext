@@ -1,11 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import TYPE, { TYPE_COLORS } from '@/styles/type';
-import SPACING from '@/styles/spacing';
-import { XS, S } from '@/styles/breakpoints';
+import TYPE, { TYPE_COLORS } from 'styles/type';
+import SPACING from 'styles/spacing';
+import { XS, S } from 'styles/breakpoints';
 
-import whiteSpeckle from '@/static/horizontal-dr/white-speckle.png';
+import whiteSpeckle from 'public/static/horizontal-dr/white-speckle.png';
 
 const RecoveryCardContainer = styled.div`
   max-width: 500px;

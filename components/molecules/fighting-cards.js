@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { S } from '@/styles/breakpoints';
-import TYPE, { TYPE_COLORS } from '@/styles/type';
-import SPACING from '@/styles/spacing';
+import { S } from 'styles/breakpoints';
+import TYPE, { TYPE_COLORS } from 'styles/type';
+import SPACING from 'styles/spacing';
 
 const FightingCardContainer = styled.div`
   height: 150%;

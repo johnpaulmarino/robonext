@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import { L, M, S, XS } from '@/styles/breakpoints';
-import gridSpacing from '@/styles/grid-spacing';
+import { L, M, S, XS } from 'styles/breakpoints';
+import gridSpacing from 'styles/grid-spacing';
 
 const sub = (gutter, cols) =>
   (cols * 11 * gutter - 12 * (cols - 1) * gutter) / 12

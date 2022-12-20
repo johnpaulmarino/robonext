@@ -1,8 +1,8 @@
-import img01 from '../../static/numbers/robocalls/01.png'
-import img02 from '../../static/numbers/robocalls/02.png'
-import img03 from '../../static/numbers/robocalls/03.png'
-import img04 from '../../static/numbers/robocalls/04.png'
-import img05 from '../../static/numbers/robocalls/05.png'
+import img01 from 'public/static/numbers/robocalls/01.png'
+import img02 from 'public/static/numbers/robocalls/02.png'
+import img03 from 'public/static/numbers/robocalls/03.png'
+import img04 from 'public/static/numbers/robocalls/04.png'
+import img05 from 'public/static/numbers/robocalls/05.png'
 
 const sectionTitles = [
   {

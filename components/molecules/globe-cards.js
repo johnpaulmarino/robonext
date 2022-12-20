@@ -2,15 +2,15 @@ import React from 'react';
 import styled from 'styled-components';
 import { Waypoint } from 'react-waypoint';
 
-import SPACING from '@/styles/spacing';
-import TYPE, { TYPE_COLORS } from '@/styles/type';
-import { S } from '@/styles/breakpoints';
-import { BLACK, WHITE } from '@/styles/colors';
+import SPACING from 'styles/spacing';
+import TYPE, { TYPE_COLORS } from 'styles/type';
+import { S } from 'styles/breakpoints';
+import { BLACK, WHITE } from 'styles/colors';
 
-import mobileGlobeImg1 from '@/static/rotating-globe/rotatingglobe-mobile-1.png';
-import mobileGlobeImg2 from '@/static/rotating-globe/rotatingglobe-mobile-2.png';
-import mobileGlobeImg3 from '@/static/rotating-globe/rotatingglobe-mobile-3.png';
-import mobileGlobeImg4 from '@/static/rotating-globe/rotatingglobe-mobile-4.png';
+import mobileGlobeImg1 from 'public/static/rotating-globe/rotatingglobe-mobile-1.png';
+import mobileGlobeImg2 from 'public/static/rotating-globe/rotatingglobe-mobile-2.png';
+import mobileGlobeImg3 from 'public/static/rotating-globe/rotatingglobe-mobile-3.png';
+import mobileGlobeImg4 from 'public/static/rotating-globe/rotatingglobe-mobile-4.png';
 
 const mobileGlobeImgs = [
   mobileGlobeImg1,

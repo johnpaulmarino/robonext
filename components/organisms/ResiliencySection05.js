@@ -1,26 +1,26 @@
 import React, { useState, useRef } from 'react';
 import styled from 'styled-components';
 
-import { S, M } from '@/styles/breakpoints';
+import { S, M } from 'styles/breakpoints';
 
-import sectionTitles from '@/cms/resiliency/section-titles';
-import accordionContent from '@/cms/resiliency/accordion-content';
-import resiliencySlugs from '@/cms/resiliency/slugs';
+import sectionTitles from 'cms/resiliency/section-titles';
+import accordionContent from 'cms/resiliency/accordion-content';
+import resiliencySlugs from 'cms/resiliency/slugs';
 
-import Accordion from '@/components/molecules/accordion';
+import Accordion from 'components/molecules/accordion';
 
-import AccordionPhone from '@/components/atoms/resiliency-accordion-phone';
+import AccordionPhone from 'components/atoms/resiliency-accordion-phone';
 
-import Grid from '@/components/atoms/Grid';
-import Column from '@/components/atoms/Column';
+import Grid from 'components/atoms/Grid';
+import Column from 'components/atoms/Column';
 
 import {
   Section,
   StyledSectionTitleContainer,
   SectionContent,
-} from '@/components/styled/Section';
+} from 'components/styled/Section';
 
-import Spacer from '@/components/atoms/Spacer';
+import Spacer from 'components/atoms/Spacer';
 
 const AccordionContainer = styled.div`
   width: 100%;

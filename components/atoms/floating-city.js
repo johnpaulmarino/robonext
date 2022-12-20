@@ -1,6 +1,6 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
-import Scroll from '@/components/Scroll';
+import Scroll from 'components/Scroll';
 
 const BaseG = styled.g`
   opacity: 0;

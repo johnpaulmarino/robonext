@@ -1,9 +1,9 @@
-import thumbnail01 from '../../static/testimonial-slider/thumbnail-david-matt.jpg'
-import thumbnail02 from '../../static/testimonial-slider/thumbnail-lauren-jon.jpg'
-import thumbnail03 from '../../static/testimonial-slider/thumbnail-janine.jpg'
-import thumbnail04 from '../../static/testimonial-slider/thumbnail-kelsey.jpg'
-import thumbnail05 from '../../static/testimonial-slider/thumbnail-stephan.jpg'
-import thumbnail06 from '../../static/testimonial-slider/thumbnail-williams-family.jpg'
+import thumbnail01 from 'public/static/testimonial-slider/thumbnail-david-matt.jpg'
+import thumbnail02 from 'public/static/testimonial-slider/thumbnail-lauren-jon.jpg'
+import thumbnail03 from 'public/static/testimonial-slider/thumbnail-janine.jpg'
+import thumbnail04 from 'public/static/testimonial-slider/thumbnail-kelsey.jpg'
+import thumbnail05 from 'public/static/testimonial-slider/thumbnail-stephan.jpg'
+import thumbnail06 from 'public/static/testimonial-slider/thumbnail-williams-family.jpg'
 
 const testimonialContent = [
   {

@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import styled, { keyframes, css } from 'styled-components';
 
-import { WHITE } from '@/styles/colors';
-import { XS, S, M, L, XL, XXL } from '@/styles/breakpoints';
-import SPACING from '@/styles/spacing';
-import TYPE, { TYPE_COLORS } from '@/styles/type';
+import { WHITE } from 'styles/colors';
+import { XS, S, M, L, XL, XXL } from 'styles/breakpoints';
+import SPACING from 'styles/spacing';
+import TYPE, { TYPE_COLORS } from 'styles/type';
 
-import Grid from '@/components/atoms/Grid';
-import Column from '@/components/atoms/Column';
+import Grid from 'components/atoms/Grid';
+import Column from 'components/atoms/Column';
 
 const Header = styled.header`
   padding: 68px 0 0;

@@ -1,14 +1,14 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 
-import E0 from '@/static/robocalls-accordion-phone/E2A60BE62A60BEE0.png';
-import E1 from '@/static/robocalls-accordion-phone/E2A60BE62A60BEE1.png';
-import E2 from '@/static/robocalls-accordion-phone/E2A60BE62A60BEE2.png';
-import E3 from '@/static/robocalls-accordion-phone/E2A60BE62A60BEE3.png';
-import E5 from '@/static/robocalls-accordion-phone/E2A60BE62A60BEE5.png';
-import E7 from '@/static/robocalls-accordion-phone/E2A60BE62A60BEE7.png';
-import EE from '@/static/robocalls-accordion-phone/E2A60BE62A60BEEE.png';
-import EF from '@/static/robocalls-accordion-phone/E2A60BE62A60BEEF.png';
+import E0 from 'public/static/robocalls-accordion-phone/E2A60BE62A60BEE0.png';
+import E1 from 'public/static/robocalls-accordion-phone/E2A60BE62A60BEE1.png';
+import E2 from 'public/static/robocalls-accordion-phone/E2A60BE62A60BEE2.png';
+import E3 from 'public/static/robocalls-accordion-phone/E2A60BE62A60BEE3.png';
+import E5 from 'public/static/robocalls-accordion-phone/E2A60BE62A60BEE5.png';
+import E7 from 'public/static/robocalls-accordion-phone/E2A60BE62A60BEE7.png';
+import EE from 'public/static/robocalls-accordion-phone/E2A60BE62A60BEEE.png';
+import EF from 'public/static/robocalls-accordion-phone/E2A60BE62A60BEEF.png';
 
 const BaseG = styled.g`
   opacity: 0;

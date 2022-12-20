@@ -4,16 +4,16 @@ import Image from 'next/image';
 import { Waypoint } from 'react-waypoint';
 import { debounce } from 'lodash';
 
-import TYPE, { TYPE_COLORS } from '@/styles/type';
-import SPACING from '@/styles/spacing';
-import { S, L } from '@/styles/breakpoints';
-import { WHITE, TEEL, BLACK } from '@/styles/colors';
+import TYPE, { TYPE_COLORS } from 'styles/type';
+import SPACING from 'styles/spacing';
+import { S, L } from 'styles/breakpoints';
+import { WHITE, TEEL, BLACK } from 'styles/colors';
 
-import arrowRight from '@/static/arrows/arrow-right.svg';
+import arrowRight from 'public/static/arrows/arrow-right.svg';
 
-import ms1Mobile from '@/static/media-scroll-mobile/ms-1-mobile.jpg';
-import ms2Mobile from '@/static/media-scroll-mobile/ms-2-mobile.jpg';
-import ms3Mobile from '@/static/media-scroll-mobile/ms-3-mobile.jpg';
+import ms1Mobile from 'public/static/media-scroll-mobile/ms-1-mobile.jpg';
+import ms2Mobile from 'public/static/media-scroll-mobile/ms-2-mobile.jpg';
+import ms3Mobile from 'public/static/media-scroll-mobile/ms-3-mobile.jpg';
 
 const imgArrayMobile = [ms1Mobile, ms2Mobile, ms3Mobile];
 

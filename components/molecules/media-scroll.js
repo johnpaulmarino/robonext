@@ -1,9 +1,9 @@
 import React from 'react';
 import styled, { css, keyframes } from 'styled-components';
 
-import Ms1 from '@/components/images/media-scroll-01';
-import Ms2 from '@/components/images/media-scroll-02';
-import Ms3 from '@/components/images/media-scroll-03';
+import Ms1 from 'components/images/media-scroll-01';
+import Ms2 from 'components/images/media-scroll-02';
+import Ms3 from 'components/images/media-scroll-03';
 
 const imgArray = [Ms1, Ms2, Ms3];
 

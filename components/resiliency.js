@@ -4,29 +4,29 @@ import serverPath from '../serverpath';
 import { Waypoint } from 'react-waypoint';
 import { navigate } from '@reach/router';
 
-import Metadata from '@/components/meta';
-import metadata from '@/cms/resiliency/metadata';
+import Metadata from 'components/meta';
+import metadata from 'cms/resiliency/metadata';
 
-import Layout from '@/components/layouts/layout';
-import Navbar from '@/components/organisms/Navbar';
-import Header from '@/components/organisms/header-new';
-import TableOfContents from '@/components/organisms/TableOfContents';
-import Footer from '@/components/organisms/Footer';
+import Layout from 'components/layouts/layout';
+import Navbar from 'components/organisms/Navbar';
+import Header from 'components/organisms/header-new';
+import TableOfContents from 'components/organisms/TableOfContents';
+import Footer from 'components/organisms/Footer';
 
-import A11ySkip from '@/components/atoms/a11y-skip';
+import A11ySkip from 'components/atoms/a11y-skip';
 
-import Section01 from '@/components/organisms/ResiliencySection01';
-import Section02 from '@/components/organisms/ResiliencySection02';
-import Section02Breaker from '@/components/organisms/ResiliencySection02Breaker';
-import Section03 from '@/components/organisms/ResiliencySection03';
-import Section04 from '@/components/organisms/ResiliencySection04';
-import Section05 from '@/components/organisms/ResiliencySection05';
+import Section01 from 'components/organisms/ResiliencySection01';
+import Section02 from 'components/organisms/ResiliencySection02';
+import Section02Breaker from 'components/organisms/ResiliencySection02Breaker';
+import Section03 from 'components/organisms/ResiliencySection03';
+import Section04 from 'components/organisms/ResiliencySection04';
+import Section05 from 'components/organisms/ResiliencySection05';
 
-import headerTitles from '@/cms/resiliency/header-titles';
-import sectionTitles from '@/cms/resiliency/section-titles';
-import resiliencySlugs from '@/cms/resiliency/slugs';
-import backgroundVideoImage from '@/static/background-images/resiliency-video-poster.jpg';
-import backgroundImageMobile from '@/static/background-images/resiliency-mobile-header.jpg';
+import headerTitles from 'cms/resiliency/header-titles';
+import sectionTitles from 'cms/resiliency/section-titles';
+import resiliencySlugs from 'cms/resiliency/slugs';
+import backgroundVideoImage from 'public/static/background-images/resiliency-video-poster.jpg';
+import backgroundImageMobile from 'public/static/background-images/resiliency-mobile-header.jpg';
 
 const Main = styled.main``;
 

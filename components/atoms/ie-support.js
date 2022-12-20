@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import styled, { css } from 'styled-components';
 
-import { TEEL, BLACK } from '@/styles/colors';
-import TYPE, { TYPE_COLORS } from '@/styles/type';
+import { TEEL, BLACK } from 'styles/colors';
+import TYPE, { TYPE_COLORS } from 'styles/type';
 
 const detect = () => {
   const ua = window.navigator.userAgent

@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import styled, { css, keyframes, createGlobalStyle } from 'styled-components';
 
-import { BLACK, VERYLIGHTGRAY, TEEL } from '@styles/colors';
-import TYPE, { TYPE_COLORS } from '@/styles/type';
+import { BLACK, VERYLIGHTGRAY, TEEL } from 'styles/colors';
+import TYPE, { TYPE_COLORS } from 'styles/type';
 
 const Accordion = styled.div`
   width: 100%;

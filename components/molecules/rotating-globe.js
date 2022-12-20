@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { clamp } from 'lodash';
 
-import globeImg from '@/static/rotating-globe/rotating-globe.png';
+import globeImg from 'public/static/rotating-globe/rotating-globe.png';
 
 const RotatingGlobe = styled.div`
   position: relative;

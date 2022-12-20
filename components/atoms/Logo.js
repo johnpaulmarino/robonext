@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import logoWhite from '@/static/logo-white.svg';
-import logo from '@/static/logo.svg';
+import logoWhite from 'public/static/logo-white.svg';
+import logo from 'public/static/logo.svg';
 
 const Logo = styled.img`
   height: auto;

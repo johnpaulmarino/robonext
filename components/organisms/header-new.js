@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import styled, { keyframes } from 'styled-components';
 
-import { XS, S, M, XL } from '@/styles/breakpoints';
-import SPACING from '@/styles/spacing';
-import TYPE, { TYPE_COLORS } from '@/styles/type';
+import { XS, S, M, XL } from 'styles/breakpoints';
+import SPACING from 'styles/spacing';
+import TYPE, { TYPE_COLORS } from 'styles/type';
 
-import Grid from '@/components/atoms/Grid';
-import Column from '@/components/atoms/Column';
+import Grid from 'components/atoms/Grid';
+import Column from 'components/atoms/Column';
 
 const Header = styled.header`
   position: relative;

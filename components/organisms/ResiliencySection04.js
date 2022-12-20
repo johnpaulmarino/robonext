@@ -1,27 +1,27 @@
 import React from 'react';
 import styled, { createGlobalStyle } from 'styled-components';
 
-import sectionTitles from '@/cms/resiliency/section-titles';
-import resiliencySlugs from '@/cms/resiliency/slugs';
-import testimonialContent from '@/cms/resiliency/testimonial-content';
+import sectionTitles from 'cms/resiliency/section-titles';
+import resiliencySlugs from 'cms/resiliency/slugs';
+import testimonialContent from 'cms/resiliency/testimonial-content';
 
-import TYPE, { TYPE_COLORS } from '@/styles/type';
-import { BLACK, TEEL } from '@/styles/colors';
-import { S, XS } from '@/styles/breakpoints';
+import TYPE, { TYPE_COLORS } from 'styles/type';
+import { BLACK, TEEL } from 'styles/colors';
+import { S, XS } from 'styles/breakpoints';
 import Image from 'next/image';
 
-import Testimonials from '@/components/molecules/testimonial-slider';
-import playIcon from '@/static/media-icons/play.svg';
+import Testimonials from 'components/molecules/testimonial-slider';
+import playIcon from 'public/static/media-icons/play.svg';
 
 import {
   Section,
   StyledSectionTitleContainer,
   SectionContent,
-} from '@/components/styled/Section';
+} from 'components/styled/Section';
 
-import Spacer from '@/components/atoms/Spacer';
+import Spacer from 'components/atoms/Spacer';
 
-import VideoPlayerSingleModal from '@/components/molecules/VideoPlayerSingleModal';
+import VideoPlayerSingleModal from 'components/molecules/VideoPlayerSingleModal';
 
 const GlobalTestimonialStyles = createGlobalStyle`
   .testimonial-card-container.swiper-slide-active .testimonial-card-quote {

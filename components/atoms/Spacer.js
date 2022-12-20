@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { XL, L, M, S } from '@/styles/breakpoints';
+import { XL, L, M, S } from 'styles/breakpoints';
 
 const StyledSpacer = styled.div`
   height: ${props => props.height}rem;

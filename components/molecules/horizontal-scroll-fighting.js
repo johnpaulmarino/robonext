@@ -1,12 +1,12 @@
 import React, { useReducer, useEffect, useRef } from 'react';
 import styled, { css } from 'styled-components';
 
-import TYPE, { TYPE_COLORS } from '@/styles/type';
-import SPACING from '@/styles/spacing';
-import { S } from '@/styles/breakpoints';
-import { BLACK, WHITE } from '@/styles/colors';
+import TYPE, { TYPE_COLORS } from 'styles/type';
+import SPACING from 'styles/spacing';
+import { S } from 'styles/breakpoints';
+import { BLACK, WHITE } from 'styles/colors';
 
-import { dyk } from '@/cms/robocalls/fighting-content';
+import { dyk } from 'cms/robocalls/fighting-content';
 
 const DynamicHeightContainer = styled.div.attrs(({ dynamicHeight }) => {
   const height = `${dynamicHeight}px`

@@ -3,31 +3,31 @@ import styled from 'styled-components';
 import Image from 'next/image';
 import { Waypoint } from 'react-waypoint';
 
-import sectionTitles from '@/cms/robocalls/section-titles';
-import whatIsContent from '@/cms/robocalls/what-is-robocall';
-import roboSlugs from '@/cms/robocalls/slugs';
+import sectionTitles from 'cms/robocalls/section-titles';
+import whatIsContent from 'cms/robocalls/what-is-robocall';
+import roboSlugs from 'cms/robocalls/slugs';
 
-import Spacer from '@/components/atoms/Spacer';
-import Grid from '@/components/atoms/Grid';
-import Column from '@/components/atoms/Column';
+import Spacer from 'components/atoms/Spacer';
+import Grid from 'components/atoms/Grid';
+import Column from 'components/atoms/Column';
 
-import lightgreyTexture from '@/static/background-textures/lightgrey-texture.jpg';
-import { TEEL } from '@/styles/colors';
-import TYPE, { TYPE_COLORS } from '@/styles/type';
-import { S } from '@/styles/breakpoints';
+import lightgreyTexture from 'public/static/background-textures/lightgrey-texture.jpg';
+import { TEEL } from 'styles/colors';
+import TYPE, { TYPE_COLORS } from 'styles/type';
+import { S } from 'styles/breakpoints';
 
-import TypesCallsPhone from '@/components/atoms/types-of-calls-phone';
+import TypesCallsPhone from 'components/atoms/types-of-calls-phone';
 
-import mobileImage1 from '@/static/types-of-calls/types-of-calls-mobile-4.png';
-import mobileImage2 from '@/static/types-of-calls/types-of-calls-mobile-3.png';
-import mobileImage3 from '@/static/types-of-calls/types-of-calls-mobile-2.png';
-import mobileImage4 from '@/static/types-of-calls/types-of-calls-mobile-1.png';
+import mobileImage1 from 'public/static/types-of-calls/types-of-calls-mobile-4.png';
+import mobileImage2 from 'public/static/types-of-calls/types-of-calls-mobile-3.png';
+import mobileImage3 from 'public/static/types-of-calls/types-of-calls-mobile-2.png';
+import mobileImage4 from 'public/static/types-of-calls/types-of-calls-mobile-1.png';
 
 import {
   Section,
   StyledSectionTitleContainer,
   SectionContent,
-} from '@/components/styled/Section';
+} from 'components/styled/Section';
 
 const mobileImages = [mobileImage1, mobileImage2, mobileImage3, mobileImage4];
 const mobileImageAltTags = [

@@ -2,7 +2,7 @@ import React from 'react';
 import Swiper from 'react-id-swiper';
 import 'swiper/swiper.min.css';
 
-import { M } from '@/styles/breakpoints';
+import { M } from 'styles/breakpoints';
 
 export default function Component({ children }) {
   const params = {

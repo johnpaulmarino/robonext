@@ -2,10 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 import { Waypoint } from 'react-waypoint';
 
-import { S, XS } from '@/styles/breakpoints';
-import TYPE, { TYPE_COLORS } from '@/styles/type';
-import SPACING from '@/styles/spacing';
-import { TEEL, BLACK } from '@/styles/colors';
+import { S, XS } from 'styles/breakpoints';
+import TYPE, { TYPE_COLORS } from 'styles/type';
+import SPACING from 'styles/spacing';
+import { TEEL, BLACK } from 'styles/colors';
 
 const waypointOffsets = {
   top: '35%',

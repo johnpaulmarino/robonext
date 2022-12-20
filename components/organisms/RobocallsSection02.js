@@ -1,25 +1,25 @@
 import React, { useReducer } from 'react';
 import styled from 'styled-components';
 
-import { S } from '@/styles/breakpoints';
-import Grid from '@/components/atoms/Grid';
-import Column from '@/components/atoms/Column';
+import { S } from 'styles/breakpoints';
+import Grid from 'components/atoms/Grid';
+import Column from 'components/atoms/Column';
 
-import sectionTitles from '@/cms/robocalls/section-titles';
-import Spacer from '@/components/atoms/Spacer';
+import sectionTitles from 'cms/robocalls/section-titles';
+import Spacer from 'components/atoms/Spacer';
 import {
   Section,
   StyledSectionTitleContainer,
   SectionContent,
-} from '@/components/styled/Section';
+} from 'components/styled/Section';
 
-import HowRobocallsWork from '@/cms/robocalls/how-robocalls-work';
-import roboSlugs from '@/cms/robocalls/slugs';
+import HowRobocallsWork from 'cms/robocalls/how-robocalls-work';
+import roboSlugs from 'cms/robocalls/slugs';
 
-import RotatingGlobe from '@/components/molecules/rotating-globe-final';
-import GlobeContent from '@/components/molecules/globe-cards';
+import RotatingGlobe from 'components/molecules/rotating-globe-final';
+import GlobeContent from 'components/molecules/globe-cards';
 
-import globeBackground from '@/static/background-textures/rotating-globe-bg.png';
+import globeBackground from 'public/static/background-textures/rotating-globe-bg.png';
 
 const GlobeContainer = styled.div`
   position: absolute;

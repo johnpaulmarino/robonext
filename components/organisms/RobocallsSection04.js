@@ -1,23 +1,23 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import sectionTitles from '@/cms/robocalls/section-titles';
-import roboSlugs from '@/cms/robocalls/slugs';
-import Spacer from '@/components/atoms/Spacer';
+import sectionTitles from 'cms/robocalls/section-titles';
+import roboSlugs from 'cms/robocalls/slugs';
+import Spacer from 'components/atoms/Spacer';
 
-import { S } from '@/styles/breakpoints';
+import { S } from 'styles/breakpoints';
 
-import lightgreyTexture from '@/static/background-textures/lightgrey-texture.jpg';
-import HorizontalScroll from '@/components/molecules/horizontal-scroll';
-import EnforcementCards from '@/components/molecules/enforcement-cards';
-import enforcementContent, { sixthCardContent } from '@/cms/robocalls/enforcement-content';
+import lightgreyTexture from 'public/static/background-textures/lightgrey-texture.jpg';
+import HorizontalScroll from 'components/molecules/horizontal-scroll';
+import EnforcementCards from 'components/molecules/enforcement-cards';
+import enforcementContent, { sixthCardContent } from 'cms/robocalls/enforcement-content';
 
 
 import {
   Section,
   StyledSectionTitleContainer,
   SectionContent,
-} from '@/components/styled/Section';
+} from 'components/styled/Section';
 
 const BackgroundContainer = styled.div`
   position: absolute;

@@ -2,9 +2,9 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 import { CSSTransition } from 'react-transition-group';
 
-import Ms1 from '@/components/images/media-scroll-01';
-import Ms2 from '@/components/images/media-scroll-02';
-import Ms3 from '@/components/images/media-scroll-03';
+import Ms1 from 'components/images/media-scroll-01';
+import Ms2 from 'components/images/media-scroll-02';
+import Ms3 from 'components/images/media-scroll-03';
 
 const mediaImages = [Ms1, Ms2, Ms3];
 

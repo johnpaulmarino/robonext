@@ -3,10 +3,10 @@ import { CSSTransition } from 'react-transition-group';
 import styled, { keyframes } from 'styled-components';
 import Image from 'next/image';
 
-import { BLACK, WHITE } from '@/styles/colors';
-import TYPE, { TYPE_COLORS } from '@/styles/type';
-import { S } from '@/styles/breakpoints';
-import playIcon from '@/static/media-icons/play.svg';
+import { BLACK, WHITE } from 'styles/colors';
+import TYPE, { TYPE_COLORS } from 'styles/type';
+import { S } from 'styles/breakpoints';
+import playIcon from 'public/static/media-icons/play.svg';
 
 const VideoComponentWrapper = styled.div`
   height: calc(100vh - 68px);

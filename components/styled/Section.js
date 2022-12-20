@@ -1,12 +1,12 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
-import Grid from '@/components/atoms/Grid';
-import Column from '@/components/atoms/Column';
+import Grid from 'components/atoms/Grid';
+import Column from 'components/atoms/Column';
 
-import SPACING from '@/styles/spacing';
-import { XS, S, M } from '@/styles/breakpoints';
-import TYPE, { TYPE_COLORS } from '@/styles/type';
-import { TEEL } from '@/styles/colors';
+import SPACING from 'styles/spacing';
+import { XS, S, M } from 'styles/breakpoints';
+import TYPE, { TYPE_COLORS } from 'styles/type';
+import { TEEL } from 'styles/colors';
 
 export const Section = styled.section`
   position: relative;

@@ -1,6 +1,6 @@
 import { keyframes } from 'styled-components';
 
-import { rotationAdjustments } from '@/components/molecules/rotating-globe-final';
+import { rotationAdjustments } from 'components/molecules/rotating-globe-final';
 
 const bgScene1 = keyframes`
   0% {

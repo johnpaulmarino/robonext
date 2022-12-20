@@ -2,17 +2,17 @@ import React from 'react';
 import { Waypoint } from 'react-waypoint';
 import styled from 'styled-components';
 
-import Grid from '@/components/atoms/Grid';
-import Column from '@/components/atoms/Column';
+import Grid from 'components/atoms/Grid';
+import Column from 'components/atoms/Column';
 
-import { S } from '@/styles/breakpoints';
-import TYPE, { TYPE_COLORS } from '@/styles/type';
-import transparentGrain from '@/static/background-textures/transparent-grain.png';
-import { Section } from '@/components/styled/Section';
+import { S } from 'styles/breakpoints';
+import TYPE, { TYPE_COLORS } from 'styles/type';
+import transparentGrain from 'public/static/background-textures/transparent-grain.png';
+import { Section } from 'components/styled/Section';
 
-import phone from '@/static/new-tech-vertical-scroll/new-tech-phone.png';
-import { techHeader } from '@/cms/robocalls/develop-new-tech';
-import { techContent } from '@/cms/robocalls/develop-new-tech';
+import phone from 'public/static/new-tech-vertical-scroll/new-tech-phone.png';
+import { techHeader } from 'cms/robocalls/develop-new-tech';
+import { techContent } from 'cms/robocalls/develop-new-tech';
 
 const BackgroundContainer = styled.div`
   position: absolute;

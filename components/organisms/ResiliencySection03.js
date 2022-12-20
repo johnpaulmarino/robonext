@@ -1,31 +1,31 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { XS, S } from '@/styles/breakpoints';
+import { XS, S } from 'styles/breakpoints';
 
-import dr01 from '@/static/horizontal-dr/disaster-recovery-sm-1.png';
-import dr02 from '@/static/horizontal-dr/disaster-recovery-sm-2.png';
-import dr03 from '@/static/horizontal-dr/disaster-recovery-sm-3.png';
-import dr04 from '@/static/horizontal-dr/disaster-recovery-sm-4.png';
-import dr05 from '@/static/horizontal-dr/disaster-recovery-sm-5.png';
+import dr01 from 'public/static/horizontal-dr/disaster-recovery-sm-1.png';
+import dr02 from 'public/static/horizontal-dr/disaster-recovery-sm-2.png';
+import dr03 from 'public/static/horizontal-dr/disaster-recovery-sm-3.png';
+import dr04 from 'public/static/horizontal-dr/disaster-recovery-sm-4.png';
+import dr05 from 'public/static/horizontal-dr/disaster-recovery-sm-5.png';
 
-import lightgreyTexture from '@/static/background-textures/lightgrey-texture.jpg';
+import lightgreyTexture from 'public/static/background-textures/lightgrey-texture.jpg';
 
-import sectionTitles from '@/cms/resiliency/section-titles';
-import resiliencySlugs from '@/cms/resiliency/slugs';
-import recoveryContent from '@/cms/resiliency/horizontal-dr-content';
+import sectionTitles from 'cms/resiliency/section-titles';
+import resiliencySlugs from 'cms/resiliency/slugs';
+import recoveryContent from 'cms/resiliency/horizontal-dr-content';
 
-import HorizontalScroll from '@/components/molecules/horizontal-scroll';
-import RecoveryCards from '@/components/molecules/recovery-cards';
+import HorizontalScroll from 'components/molecules/horizontal-scroll';
+import RecoveryCards from 'components/molecules/recovery-cards';
 
 import {
   Section,
   StyledSectionTitleContainer,
   SectionContent,
   SectionBackground,
-} from '@/components/styled/Section';
+} from 'components/styled/Section';
 
-import Spacer from '@/components/atoms/Spacer';
+import Spacer from 'components/atoms/Spacer';
 
 const drImages = [dr01, dr02, dr03, dr04, dr05];
 

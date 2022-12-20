@@ -1,13 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 import { navigate } from '@reach/router';
-import Logo from '@/components/atoms/Logo';
-import ShareButtons from '@/components/atoms/ShareButtons';
-import TYPE, { TYPE_COLORS } from '@/styles/type';
-import { S } from '@/styles/breakpoints';
-import { BLACK, WHITE, SEAGREEN, MEDIUMGRAY } from '@/styles/colors';
-import whiteSpeckle from '@/static/horizontal-dr/white-speckle.png';
-import menuIcon from '@/static/menu/menu.png';
+import Logo from 'components/atoms/Logo';
+import ShareButtons from 'components/atoms/ShareButtons';
+import TYPE, { TYPE_COLORS } from 'styles/type';
+import { S } from 'styles/breakpoints';
+import { BLACK, WHITE, SEAGREEN, MEDIUMGRAY } from 'styles/colors';
+import whiteSpeckle from 'public/static/horizontal-dr/white-speckle.png';
+import menuIcon from 'public/static/menu/menu.png';
 import Image from 'next/image';
 
 const StyledContainer = styled.div`

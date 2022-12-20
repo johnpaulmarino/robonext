@@ -1,8 +1,8 @@
 import React, { useReducer, useEffect, useRef } from 'react';
 import styled, { css } from 'styled-components';
 
-import dotPattern from '@/static/background-textures/dot-pattern.svg';
-import { S } from '@/styles/breakpoints';
+import dotPattern from 'public/static/background-textures/dot-pattern.svg';
+import { S } from 'styles/breakpoints';
 
 const DynamicHeightContainer = styled.div.attrs(({ dynamicHeight }) => {
   const height = `${dynamicHeight}px`

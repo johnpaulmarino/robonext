@@ -1,14 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
-import { SMALL } from '@/styles/spacing';
-import { BLACK, TEEL } from '@/styles/colors';
+import { SMALL } from 'styles/spacing';
+import { BLACK, TEEL } from 'styles/colors';
 
-import linkNaked from '@/static/social-icons/link-naked.svg';
-import facebookNaked from '@/static/social-icons/facebook-naked.svg';
-import mailNaked from '@/static/social-icons/mail-naked.svg';
-import twitterNaked from '@/static/social-icons/twitter-naked.svg';
-import linkedInNaked from '@/static/social-icons/linkedin-naked.svg';
-import share from '@/static/share.svg';
+import linkNaked from 'public/static/social-icons/link-naked.svg';
+import facebookNaked from 'public/static/social-icons/facebook-naked.svg';
+import mailNaked from 'public/static/social-icons/mail-naked.svg';
+import twitterNaked from 'public/static/social-icons/twitter-naked.svg';
+import linkedInNaked from 'public/static/social-icons/linkedin-naked.svg';
+import share from 'public/static/share.svg';
 import Image from 'next/image';
 
 const ShareOpener = styled.div`

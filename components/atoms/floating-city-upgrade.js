@@ -1,15 +1,15 @@
 import React from 'react';
 import styled, { css, keyframes } from 'styled-components';
-import Scroll from '@/components/Scroll';
-import FlCty01 from '@/static/floating-cities/floating-city-base-resize.png';
-import FlCty02 from '@/static/floating-cities/floating-city2.png';
-import FlCty03 from '@/static/floating-cities/floating-city3.png';
-import FlCty04 from '@/static/floating-cities/floating-city4.png';
-import FlCty05 from '@/static/floating-cities/floating-city5.png';
-import FlCty06 from '@/static/floating-cities/floating-city6.png';
-import FlCty07 from '@/static/floating-cities/floating-city7.png';
-import FlCty08 from '@/static/floating-cities/floating-city8.png';
-import FlCty09 from '@/static/floating-cities/floating-city9.png';
+import Scroll from 'components/Scroll';
+import FlCty01 from 'public/static/floating-cities/floating-city-base-resize.png';
+import FlCty02 from 'public/static/floating-cities/floating-city2.png';
+import FlCty03 from 'public/static/floating-cities/floating-city3.png';
+import FlCty04 from 'public/static/floating-cities/floating-city4.png';
+import FlCty05 from 'public/static/floating-cities/floating-city5.png';
+import FlCty06 from 'public/static/floating-cities/floating-city6.png';
+import FlCty07 from 'public/static/floating-cities/floating-city7.png';
+import FlCty08 from 'public/static/floating-cities/floating-city8.png';
+import FlCty09 from 'public/static/floating-cities/floating-city9.png';
 
 const BaseG = styled.g`
   opacity: 0;

@@ -2,9 +2,9 @@ import React from 'react';
 import { CSSTransition } from 'react-transition-group';
 import styled, { keyframes } from 'styled-components';
 
-import { BLACK, WHITE } from '@/styles/colors';
-import TYPE from '@/styles/type';
-import { S } from '@/styles/breakpoints';
+import { BLACK, WHITE } from 'styles/colors';
+import TYPE from 'styles/type';
+import { S } from 'styles/breakpoints';
 
 const VideoModal = styled.div`
   background-color: ${BLACK};

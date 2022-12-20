@@ -2,11 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 import { clamp } from 'lodash';
 
-import GatsbyGlobe from '@/components/images/globe';
-import GatsbyGlobeBackground from '@/components/images/globeBackground';
-import GatsbyGlobeForeground from '@/components/images/globeForeground';
+import GatsbyGlobe from 'components/images/globe';
+import GatsbyGlobeBackground from 'components/images/globeBackground';
+import GatsbyGlobeForeground from 'components/images/globeForeground';
 
-import { fgKeyframes, bgKeyframes } from '@/components/molecules/rotating-globe-keyframes';
+import { fgKeyframes, bgKeyframes } from 'components/molecules/rotating-globe-keyframes';
 
 const RotatingGlobe = styled.div`
   position: relative;

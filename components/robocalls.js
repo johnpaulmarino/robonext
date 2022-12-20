@@ -3,29 +3,29 @@ import { Waypoint } from 'react-waypoint';
 import styled from 'styled-components';
 import { navigate } from '@reach/router';
 
-import Metadata from '@/components/meta';
-import metadata from '@/cms/robocalls/metadata';
+import Metadata from 'components/meta';
+import metadata from 'cms/robocalls/metadata';
 
 
-import Layout from '@/components/layouts/layout';
-import Navbar from '@/components/organisms/Navbar';
-import Header from '@/components/organisms/header-new';
-import TableOfContents from '@/components/organisms/TableOfContents';
-import Footer from '@/components/organisms/Footer';
+import Layout from 'components/layouts/layout';
+import Navbar from 'components/organisms/Navbar';
+import Header from 'components/organisms/header-new';
+import TableOfContents from 'components/organisms/TableOfContents';
+import Footer from 'components/organisms/Footer';
 
-import A11ySkip from '@/components/atoms/a11y-skip';
+import A11ySkip from 'components/atoms/a11y-skip';
 
-import Section01 from '@/components/organisms/RobocallsSection01';
-import Section02 from '@/components/organisms/RobocallsSection02';
-import Section03 from '@/components/organisms/RobocallsSection03';
-import Section03Breaker from '@/components/organisms/RobocallsSection03Breaker';
-import Section04 from '@/components/organisms/RobocallsSection04';
-import Section05 from '@/components/organisms/RobocallsSection05';
+import Section01 from 'components/organisms/RobocallsSection01';
+import Section02 from 'components/organisms/RobocallsSection02';
+import Section03 from 'components/organisms/RobocallsSection03';
+import Section03Breaker from 'components/organisms/RobocallsSection03Breaker';
+import Section04 from 'components/organisms/RobocallsSection04';
+import Section05 from 'components/organisms/RobocallsSection05';
 
-import headerTitles from '@/cms/robocalls/header-titles';
-import sectionTitles from '@/cms/robocalls/section-titles';
-import roboSlugs from '@/cms/robocalls/slugs';
-import backgroundVideoImage from '@/static/background-images/robo-video-poster.jpg';
+import headerTitles from 'cms/robocalls/header-titles';
+import sectionTitles from 'cms/robocalls/section-titles';
+import roboSlugs from 'cms/robocalls/slugs';
+import backgroundVideoImage from 'public/static/background-images/robo-video-poster.jpg';
 
 
 const Main = styled.main``;

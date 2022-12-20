@@ -1,12 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { S } from '@/styles/breakpoints';
-import TYPE, { TYPE_COLORS } from '@/styles/type';
-import SPACING from '@/styles/spacing';
-import { BLACK, WHITE } from '@/styles/colors';
+import { S } from 'styles/breakpoints';
+import TYPE, { TYPE_COLORS } from 'styles/type';
+import SPACING from 'styles/spacing';
+import { BLACK, WHITE } from 'styles/colors';
 
-import sixthCardImage from '@/static/enforcement/enforcement-icon.png';
+import sixthCardImage from 'public/static/enforcement/enforcement-icon.png';
 
 const cardGradients = [
   'linear-gradient(180deg, #A992CC, #795BA4)',

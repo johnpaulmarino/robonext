@@ -2,29 +2,29 @@ import React, { useReducer } from 'react';
 import styled from 'styled-components';
 import { Waypoint } from 'react-waypoint';
 
-import { GRAYGRAIN_BACKGROUND } from '@/styles/colors';
+import { GRAYGRAIN_BACKGROUND } from 'styles/colors';
 
-import { S } from '@/styles/breakpoints'
-import lightgreyTexture from '@/static/background-textures/lightgrey-texture.jpg';
+import { S } from 'styles/breakpoints'
+import lightgreyTexture from 'public/static/background-textures/lightgrey-texture.jpg';
 
-import sectionTitles from '@/cms/resiliency/section-titles';
-import { section01 } from '@/cms/resiliency/section-content';
-import resiliencySlugs from '@/cms/resiliency/slugs';
+import sectionTitles from 'cms/resiliency/section-titles';
+import { section01 } from 'cms/resiliency/section-content';
+import resiliencySlugs from 'cms/resiliency/slugs';
 
 import {
   Section,
   StyledSectionTitleContainer,
   SectionContent,
   SectionBackground,
-} from '@/components/styled/Section';
+} from 'components/styled/Section';
 
-import MediaScroll from '@/components/molecules/media-scroll-transition';
+import MediaScroll from 'components/molecules/media-scroll-transition';
 import {
   LargeScreenContent,
   SmallScreenContent,
-} from '@/components/molecules/media-scroll-content';
+} from 'components/molecules/media-scroll-content';
 
-import Spacer from '@/components/atoms/Spacer';
+import Spacer from 'components/atoms/Spacer';
 
 const Section01Section = styled(Section)`
   padding-top: 20px;

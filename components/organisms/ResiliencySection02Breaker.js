@@ -1,14 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
-import { BLACK, WHITE } from '@/styles/colors';
-import TYPE, { TYPE_COLORS } from '@/styles/type';
-import { S } from '@/styles/breakpoints';
-import playIcon from '@/static/media-icons/play.svg';
-import imageBreaker from '@/static/image-breaker/resiliency-section02-breaker.jpg';
-import { section02video } from '@/cms/resiliency/video-desriptions';
+import { BLACK, WHITE } from 'styles/colors';
+import TYPE, { TYPE_COLORS } from 'styles/type';
+import { S } from 'styles/breakpoints';
+import playIcon from 'public/static/media-icons/play.svg';
+import imageBreaker from 'public/static/image-breaker/resiliency-section02-breaker.jpg';
+import { section02video } from 'cms/resiliency/video-desriptions';
 import Image from 'next/image';
 
-import VideoPlayerSingleModal from '@/components/molecules/VideoPlayerSingleModal';
+import VideoPlayerSingleModal from 'components/molecules/VideoPlayerSingleModal';
 
 const BreakerContainer = styled.div`
   height: calc(100vh - 68px);

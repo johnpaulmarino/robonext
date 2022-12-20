@@ -1,31 +1,31 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import sectionTitles from '@/cms/robocalls/section-titles';
-import Spacer from '@/components/atoms/Spacer';
-import { S } from '@/styles/breakpoints';
-import TYPE, { TYPE_COLORS } from '@/styles/type';
-import { BLACK, WHITE } from '@/styles/colors';
-import SPACING from '@/styles/spacing';
+import sectionTitles from 'cms/robocalls/section-titles';
+import Spacer from 'components/atoms/Spacer';
+import { S } from 'styles/breakpoints';
+import TYPE, { TYPE_COLORS } from 'styles/type';
+import { BLACK, WHITE } from 'styles/colors';
+import SPACING from 'styles/spacing';
 
-import HorizontalScroll from '@/components/molecules/horizontal-scroll-fighting';
-import FightingCards from '@/components/molecules/fighting-cards';
-import fightingContent, { dyk } from '@/cms/robocalls/fighting-content';
-import roboSlugs from '@/cms/robocalls/slugs';
+import HorizontalScroll from 'components/molecules/horizontal-scroll-fighting';
+import FightingCards from 'components/molecules/fighting-cards';
+import fightingContent, { dyk } from 'cms/robocalls/fighting-content';
+import roboSlugs from 'cms/robocalls/slugs';
 
 
-import backgroundGrid from '@/static/background-textures/s03-grid.png';
-import fightImg01 from '@/static/horizontal-fighting/S-03-Robo_ICONS_01.png';
-import fightImg02 from '@/static/horizontal-fighting/S-03-Robo_ICONS-02.png';
-import fightImg03 from '@/static/horizontal-fighting/S-03-Robo_ICONS-03.png';
-import fightImg04 from '@/static/horizontal-fighting/S-03-Robo_ICONS-05.png';
-import fightImg05 from '@/static/horizontal-fighting/S-03-Robo_ICONS-04.png';
+import backgroundGrid from 'public/static/background-textures/s03-grid.png';
+import fightImg01 from 'public/static/horizontal-fighting/S-03-Robo_ICONS_01.png';
+import fightImg02 from 'public/static/horizontal-fighting/S-03-Robo_ICONS-02.png';
+import fightImg03 from 'public/static/horizontal-fighting/S-03-Robo_ICONS-03.png';
+import fightImg04 from 'public/static/horizontal-fighting/S-03-Robo_ICONS-05.png';
+import fightImg05 from 'public/static/horizontal-fighting/S-03-Robo_ICONS-04.png';
 
 import {
   Section,
   StyledSectionTitleContainer,
   SectionContent,
-} from '@/components/styled/Section';
+} from 'components/styled/Section';
 
 const fightingImages = [
   fightImg01,

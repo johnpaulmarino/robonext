@@ -1,15 +1,15 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 
-import FE from '@/static/resiliency-accordion-phone/F026551A0CA5AB5E.png';
-import F0 from '@/static/resiliency-accordion-phone/F026551A0CA5AB50.png';
-import F1 from '@/static/resiliency-accordion-phone/F026551A0CA5AB51.png';
-import F2 from '@/static/resiliency-accordion-phone/F026551A0CA5AB52.png';
-import F3 from '@/static/resiliency-accordion-phone/F026551A0CA5AB53.png';
-import F4 from '@/static/resiliency-accordion-phone/F026551A0CA5AB54.png';
-import F5 from '@/static/resiliency-accordion-phone/F026551A0CA5AB55.png';
-import F6 from '@/static/resiliency-accordion-phone/F026551A0CA5AB56.png';
-import F7 from '@/static/resiliency-accordion-phone/F026551A0CA5AB57.png';
+import FE from 'public/static/resiliency-accordion-phone/F026551A0CA5AB5E.png';
+import F0 from 'public/static/resiliency-accordion-phone/F026551A0CA5AB50.png';
+import F1 from 'public/static/resiliency-accordion-phone/F026551A0CA5AB51.png';
+import F2 from 'public/static/resiliency-accordion-phone/F026551A0CA5AB52.png';
+import F3 from 'public/static/resiliency-accordion-phone/F026551A0CA5AB53.png';
+import F4 from 'public/static/resiliency-accordion-phone/F026551A0CA5AB54.png';
+import F5 from 'public/static/resiliency-accordion-phone/F026551A0CA5AB55.png';
+import F6 from 'public/static/resiliency-accordion-phone/F026551A0CA5AB56.png';
+import F7 from 'public/static/resiliency-accordion-phone/F026551A0CA5AB57.png';
 
 const BaseG = styled.g`
   opacity: 0;

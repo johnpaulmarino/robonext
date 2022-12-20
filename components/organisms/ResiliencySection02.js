@@ -1,37 +1,37 @@
 import React, { useReducer } from 'react';
 import styled from 'styled-components';
 
-import cityContent from '@/cms/resiliency/floating-city';
-import resiliencySlugs from '@/cms/resiliency/slugs';
+import cityContent from 'cms/resiliency/floating-city';
+import resiliencySlugs from 'cms/resiliency/slugs';
 
-import { S } from '@/styles/breakpoints';
-import { LIGHTBLUE } from '@/styles/colors';
+import { S } from 'styles/breakpoints';
+import { LIGHTBLUE } from 'styles/colors';
 
-import sectionTitles from '@/cms/resiliency/section-titles';
-import Grid from '@/components/atoms/Grid';
-import Column from '@/components/atoms/Column';
+import sectionTitles from 'cms/resiliency/section-titles';
+import Grid from 'components/atoms/Grid';
+import Column from 'components/atoms/Column';
 
-import FloatingCityUpgrade, { vehicles } from '../atoms/floating-city-upgrade';
-import FloatingCityCards from '@/components/molecules/floating-city-cards';
+import FloatingCityUpgrade, { vehicles } from 'components/atoms/floating-city-upgrade';
+import FloatingCityCards from 'components/molecules/floating-city-cards';
 
-import FlCtMobile01 from '@/static/floating-cities/floating-city-mobile-1.png';
-import FlCtMobile02 from '@/static/floating-cities/floating-city-mobile-2.png';
-import FlCtMobile03 from '@/static/floating-cities/floating-city-mobile-3.png';
-import FlCtMobile04 from '@/static/floating-cities/floating-city-mobile-4.png';
-import FlCtMobile05 from '@/static/floating-cities/floating-city-mobile-5.png';
-import FlCtMobile06 from '@/static/floating-cities/floating-city-mobile-6.png';
-import FlCtMobile07 from '@/static/floating-cities/floating-city-mobile-7.png';
-import FlCtMobile08 from '@/static/floating-cities/floating-city-mobile-8.png';
+import FlCtMobile01 from 'public/static/floating-cities/floating-city-mobile-1.png';
+import FlCtMobile02 from 'public/static/floating-cities/floating-city-mobile-2.png';
+import FlCtMobile03 from 'public/static/floating-cities/floating-city-mobile-3.png';
+import FlCtMobile04 from 'public/static/floating-cities/floating-city-mobile-4.png';
+import FlCtMobile05 from 'public/static/floating-cities/floating-city-mobile-5.png';
+import FlCtMobile06 from 'public/static/floating-cities/floating-city-mobile-6.png';
+import FlCtMobile07 from 'public/static/floating-cities/floating-city-mobile-7.png';
+import FlCtMobile08 from 'public/static/floating-cities/floating-city-mobile-8.png';
 
-import backgroundClouds from '@/static/background-textures/disaster-background-clouds-transparent.png';
+import backgroundClouds from 'public/static/background-textures/disaster-background-clouds-transparent.png';
 
-import Spacer from '@/components/atoms/Spacer';
+import Spacer from 'components/atoms/Spacer';
 
 import {
   Section,
   StyledSectionTitleContainer,
   SectionContent,
-} from '@/components/styled/Section';
+} from 'components/styled/Section';
 
 const mobileVehicles = [
   FlCtMobile01,

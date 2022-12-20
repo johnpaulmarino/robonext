@@ -1,27 +1,27 @@
 import React, { useState, useRef } from 'react';
 import styled from 'styled-components';
 
-import { S, M } from '@/styles/breakpoints';
-import SPACING from '@/styles/spacing';
+import { S, M } from 'styles/breakpoints';
+import SPACING from 'styles/spacing';
 
-import sectionTitles from '@/cms/robocalls/section-titles';
-import accordionContent from '@/cms/robocalls/accordion-content';
-import roboSlugs from '@/cms/robocalls/slugs';
+import sectionTitles from 'cms/robocalls/section-titles';
+import accordionContent from 'cms/robocalls/accordion-content';
+import roboSlugs from 'cms/robocalls/slugs';
 
-import Accordion from '@/components/molecules/accordion';
+import Accordion from 'components/molecules/accordion';
 
-import AccordionPhone from '@/components/atoms/robocalls-accordion-phone';
+import AccordionPhone from 'components/atoms/robocalls-accordion-phone';
 
-import Grid from '@/components/atoms/Grid';
-import Column from '@/components/atoms/Column';
+import Grid from 'components/atoms/Grid';
+import Column from 'components/atoms/Column';
 
 import {
   Section,
   StyledSectionTitleContainer,
   SectionContent,
-} from '@/components/styled/Section';
+} from 'components/styled/Section';
 
-import Spacer from '@/components/atoms/Spacer';
+import Spacer from 'components/atoms/Spacer';
 
 const AccordionContainer = styled.div`
   width: 100%;

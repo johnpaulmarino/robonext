@@ -1,8 +1,8 @@
-import img01 from '../../static/numbers/resiliency/01.png'
-import img02 from '../../static/numbers/resiliency/02.png'
-import img03 from '../../static/numbers/resiliency/03.png'
-import img04 from '../../static/numbers/resiliency/04.png'
-import img05 from '../../static/numbers/resiliency/05.png'
+import img01 from 'public/static/numbers/resiliency/01.png'
+import img02 from 'public/static/numbers/resiliency/02.png'
+import img03 from 'public/static/numbers/resiliency/03.png'
+import img04 from 'public/static/numbers/resiliency/04.png'
+import img05 from 'public/static/numbers/resiliency/05.png'
 
 const sectionTitles = [
   {

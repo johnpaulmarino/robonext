@@ -1,14 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
-import { SOURCE, SOURCE_BOLD } from '@/styles/type';
-import { BLACK, WHITE, GRAY, MEDIUMGRAY, TEEL } from '@/styles/colors';
-import { S } from '@/styles/breakpoints';
-import arrowDown from '@/static/arrows/long-arrow-down.svg';
-import resilArrowDownActive from '@/static/arrows/resil-long-arrow-down-active.svg';
-import roboArrowDownActive from '@/static/arrows/robo-long-arrow-down-active.svg';
+import { SOURCE, SOURCE_BOLD } from 'styles/type';
+import { BLACK, WHITE, GRAY, MEDIUMGRAY, TEEL } from 'styles/colors';
+import { S } from 'styles/breakpoints';
+import arrowDown from 'public/static/arrows/long-arrow-down.svg';
+import resilArrowDownActive from 'public/static/arrows/resil-long-arrow-down-active.svg';
+import roboArrowDownActive from 'public/static/arrows/robo-long-arrow-down-active.svg';
 import { navigate } from '@reach/router';
-import Spacer from '@/components/atoms/Spacer';
-import dotPattern from '@/static/background-textures/dot-pattern.svg';
+import Spacer from 'components/atoms/Spacer';
+import dotPattern from 'public/static/background-textures/dot-pattern.svg';
 import Image from 'next/image';
 
 const OuterContainer = styled.div`
