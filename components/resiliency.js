@@ -2,8 +2,8 @@ import React, { Suspense } from 'react';
 import styled from 'styled-components';
 import serverPath from '../serverpath';
 import { Waypoint } from 'react-waypoint';
-//import { navigate } from '@reach/router';
-import { useNavigate } from "react-router-dom";
+import { navigate } from '@reach/router';
+//import { useNavigate } from "react-router-dom";
 
 import Metadata from 'components/meta';
 import metadata from 'cms/resiliency/metadata';

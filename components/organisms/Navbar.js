@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-//import { navigate } from '@reach/router';
-import { useNavigate } from "react-router-dom";
+import { navigate } from '@reach/router';
+//import { useNavigate } from "react-router-dom";
 import Logo from 'components/atoms/Logo';
 import ShareButtons from 'components/atoms/ShareButtons';
 import TYPE, { TYPE_COLORS } from 'styles/type';
@@ -202,7 +202,6 @@ class NavBar extends React.Component {
                   const eventDetail = e.detail
                   this.turnOnActive()
                   navigateSection(index, () => {
-                    const navigate = useNavigate();
                     const navigateHash = `#${slugs[index]}`
                     navigateHash === window.location.hash
                       ? document.querySelector(navigateHash).scrollIntoView()
