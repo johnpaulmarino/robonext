@@ -1,21 +1,21 @@
 import React from 'react';
 import styled, { css, keyframes } from 'styled-components';
 
-import P7B from 'public/static/types-of-calls/2DB380A26D3077B.png';
-import P7C from 'public/static/types-of-calls/2DB380A26D3077C.png';
-import P7D from 'public/static/types-of-calls/2DB380A26D3077D.png';
-import P7F from 'public/static/types-of-calls/2DB380A26D3077F.png';
-import P72 from 'public/static/types-of-calls/2DB380A26D30772.png';
-import P74 from 'public/static/types-of-calls/2DB380A26D30774.png';
-import P75 from 'public/static/types-of-calls/2DB380A26D30775.png';
-import P76 from 'public/static/types-of-calls/2DB380A26D30776.png';
-import P77 from 'public/static/types-of-calls/2DB380A26D30777.png';
-import P4C from 'public/static/types-of-calls/69AF19779C80144C.png';
-import P4D from 'public/static/types-of-calls/69AF19779C80144D.png';
-import P4F from 'public/static/types-of-calls/69AF19779C80144F.png';
-import P33 from 'public/static/types-of-calls/69AF19779C801433.png';
-import P34 from 'public/static/types-of-calls/69AF19779C801434.png';
-import P53 from 'public/static/types-of-calls/69AF19779C801453.png';
+import P7B from '../../public/static/types-of-calls/2DB380A26D3077B.png';
+import P7C from '../../public/static/types-of-calls/2DB380A26D3077C.png';
+import P7D from '../../public/static/types-of-calls/2DB380A26D3077D.png';
+import P7F from '../../public/static/types-of-calls/2DB380A26D3077F.png';
+import P72 from '../../public/static/types-of-calls/2DB380A26D30772.png';
+import P74 from '../../public/static/types-of-calls/2DB380A26D30774.png';
+import P75 from '../../public/static/types-of-calls/2DB380A26D30775.png';
+import P76 from '../../public/static/types-of-calls/2DB380A26D30776.png';
+import P77 from '../../public/static/types-of-calls/2DB380A26D30777.png';
+import P4C from '../../public/static/types-of-calls/69AF19779C80144C.png';
+import P4D from '../../public/static/types-of-calls/69AF19779C80144D.png';
+import P4F from '../../public/static/types-of-calls/69AF19779C80144F.png';
+import P33 from '../../public/static/types-of-calls/69AF19779C801433.png';
+import P34 from '../../public/static/types-of-calls/69AF19779C801434.png';
+import P53 from '../../public/static/types-of-calls/69AF19779C801453.png';
 
 const spot = keyframes`
   0% {
@@ -67,7 +67,7 @@ const PhoneGroup1 = ({ active }) => (
         height="2026"
         overflow="visible"
         transform="translate(-35.815 113.613) scale(.2061)"
-        xlinkHref={P4C}
+        xlinkHref="/static/types-of-calls/69AF19779C80144C.png"
       />
     </BaseG>
     <BaseG className="st0">
@@ -76,7 +76,7 @@ const PhoneGroup1 = ({ active }) => (
         height="1277"
         overflow="visible"
         transform="matrix(.174 0 0 .174 20.534 137.386)"
-        xlinkHref={P4F}
+        xlinkHref="/static/types-of-calls/69AF19779C80144F.png"
       />
       <image
         alt="Microphone with audio wave"
@@ -84,7 +84,7 @@ const PhoneGroup1 = ({ active }) => (
         height="3344"
         overflow="visible"
         transform="matrix(.174 0 0 .174 -249.126 -89.327)"
-        xlinkHref={P4D}
+        xlinkHref="/static/types-of-calls/69AF19779C80144D.png"
       />
     </BaseG>
     <BaseG clipPath="url(#y)">
@@ -94,7 +94,7 @@ const PhoneGroup1 = ({ active }) => (
         height="2863"
         overflow="visible"
         transform="translate(140.706 317.062) scale(.2257)"
-        xlinkHref={P53}
+        xlinkHref="/static/types-of-calls/69AF19779C801453.png"
       />
     </BaseG>
   </MasterGroup>
@@ -108,7 +108,7 @@ const PhoneGroup2 = ({ active }) => (
         height="2143"
         overflow="visible"
         transform="translate(52.769 329.292) scale(.1741)"
-        xlinkHref={P72}
+        xlinkHref="/static/types-of-calls/2DB380A26D30772.png"
       />
     </BaseG>
     <BaseG clipPath="url(#r)">
@@ -118,7 +118,7 @@ const PhoneGroup2 = ({ active }) => (
         height="1744"
         overflow="visible"
         transform="matrix(.24 0 0 .24 -21.242 65.965)"
-        xlinkHref={P34}
+        xlinkHref="/static/types-of-calls/69AF19779C801434.png"
       />
     </BaseG>
     <BaseG clipPath="url(#t)">
@@ -128,7 +128,7 @@ const PhoneGroup2 = ({ active }) => (
         height="1338"
         overflow="visible"
         transform="translate(265.202 291.61) scale(.1605)"
-        xlinkHref={P33}
+        xlinkHref="/static/types-of-calls/69AF19779C801433.png"
       />
     </BaseG>
   </MasterGroup>
@@ -142,7 +142,7 @@ const PhoneGroup3 = ({ active }) => (
         height="1808"
         overflow="visible"
         transform="translate(155.752 16.13) scale(.2281)"
-        xlinkHref={P7C}
+        xlinkHref="/static/types-of-calls/2DB380A26D3077C.png"
       />
     </BaseG>
     <BaseG clipPath="url(#l)">
@@ -152,7 +152,7 @@ const PhoneGroup3 = ({ active }) => (
         height="2481"
         overflow="visible"
         transform="translate(-52.32 182.116) scale(.2171)"
-        xlinkHref={P74}
+        xlinkHref="/static/types-of-calls/2DB380A26D30774.png"
       />
     </BaseG>
     <BaseG clipPath="url(#n)">
@@ -162,7 +162,7 @@ const PhoneGroup3 = ({ active }) => (
         height="3584"
         overflow="visible"
         transform="matrix(.179 0 0 .179 183.17 277.759)"
-        xlinkHref={P76}
+        xlinkHref="/static/types-of-calls/2DB380A26D30776.png"
       />
     </BaseG>
   </MasterGroup>
@@ -175,7 +175,7 @@ const PhoneGroup4 = ({ active }) => (
         height="2827"
         overflow="visible"
         transform="translate(273.865 85.946) scale(.1604)"
-        xlinkHref={P7B}
+        xlinkHref="/static/types-of-calls/2DB380A26D3077B.png"
       />
     </BaseG>
     <BaseG clipPath="url(#d)">
@@ -184,7 +184,7 @@ const PhoneGroup4 = ({ active }) => (
         height="2268"
         overflow="visible"
         transform="rotate(6.714 -2226.84 3023.601) scale(.1604)"
-        xlinkHref={P75}
+        xlinkHref="/static/types-of-calls/2DB380A26D30775.png"
       />
     </BaseG>
     <BaseG clipPath="url(#h)">
@@ -193,7 +193,7 @@ const PhoneGroup4 = ({ active }) => (
         height="1760"
         overflow="visible"
         transform="rotate(-3.699 3633.88 323.606) scale(.24)"
-        xlinkHref={P7D}
+        xlinkHref="/static/types-of-calls/2DB380A26D3077D.png"
       />
     </BaseG>
     <BaseG clipPath="url(#h)">
@@ -202,11 +202,11 @@ const PhoneGroup4 = ({ active }) => (
         height="3280"
         overflow="visible"
         transform="rotate(-3.699 1294.657 5862.185) scale(.24)"
-        xlinkHref={P7F}
+        xlinkHref="/static/types-of-calls/2DB380A26D3077F.png"
       />
     </BaseG>
   </MasterGroup>
-);
+)
 
 export default function Component({ currentPhone }) { 
   return (
@@ -231,7 +231,7 @@ export default function Component({ currentPhone }) {
           height="6101"
           overflow="visible"
           transform="matrix(.24 0 0 .24 -288.39 -333.803)"
-          xlinkHref={P77}
+          xlinkHref="/static/types-of-calls/2DB380A26D30777.png"
         />
       </g>
       <defs>

@@ -9,12 +9,12 @@ import mailNaked from 'public/static/social-icons/mail-naked.svg';
 import twitterNaked from 'public/static/social-icons/twitter-naked.svg';
 import linkedInNaked from 'public/static/social-icons/linkedin-naked.svg';
 import share from 'public/static/share.svg';
+import styles from 'styles/components/atoms/ShareButtons.module.scss';
 import Image from 'next/image';
 
 const ShareOpener = styled.div`
   position: relative;
   background-color: ${props => props.backgroundColor || BLACK};
-  background-image: url(${share});
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 36%;
@@ -118,6 +118,7 @@ class ShareButtons extends React.Component {
         <ShareOpener
           backgroundColor={this.props.backgroundColor}
           onClick={this.setDropdown(!dropdownActive)}
+          className={styles.shareOpener}
         />
         <ShareList active={dropdownActive}>
           <Link as="span" className="copy" onClick={this.copy}>

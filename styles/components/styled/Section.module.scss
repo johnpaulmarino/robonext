@@ -1,0 +1,10 @@
+.sectionNumber {
+    height: 75px;
+    width: auto;
+    margin: 0;
+    padding: 0;
+
+    @media (max-width: 576px) {
+        height: 59px;
+    }
+}

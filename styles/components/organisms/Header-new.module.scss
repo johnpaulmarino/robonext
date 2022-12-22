@@ -1,0 +1,22 @@
+@keyframes fadein {
+    from {opacity: 0}
+    to {opacity: 1}
+  }
+
+.backgroundImage {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    opacity: 0;
+    -webkit-animation: fadein .7s forwards; /* Safari 4+ */
+    -moz-animation:    fadein .7s forwards; /* Fx 5+ */
+    -o-animation:      fadein .7s forwards; /* Opera 12+ */
+    animation:         fadein .7s forwards; /* IE 10+, Fx 29+ */
+    animation-delay: 0.25s;
+    object-fit: cover;
+    object-position: center center;
+}

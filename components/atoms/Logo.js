@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import logoWhite from 'public/static/logo-white.svg';
 import logo from 'public/static/logo.svg';
 import Image from 'next/image';
-
+import styles from 'styles/components/atoms/Logo.module.scss';
 const Logo = styled.img`
   height: auto;
   margin-left: 20px;
@@ -22,8 +22,8 @@ export default function Component(props) {
       
       <Image
         src={logo}
+        className={styles.logo}
         alt="CTIA official logo"
-        width={70}
       />
     </a>
   )

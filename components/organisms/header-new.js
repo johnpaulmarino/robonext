@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Image from 'next/image';
 import styled, { keyframes } from 'styled-components';
 
 import { XS, S, M, XL } from 'styles/breakpoints';
@@ -7,6 +8,7 @@ import TYPE, { TYPE_COLORS } from 'styles/type';
 
 import Grid from 'components/atoms/Grid';
 import Column from 'components/atoms/Column';
+import styles from 'styles/components/organisms/Header-new.module.scss';
 
 const Header = styled.header`
   position: relative;
@@ -215,7 +217,11 @@ export default function Component({ headerTitles, backgroundVideoUrl, background
   return (
     <Header>
       <BackgroundVideoContainer>
-        <BackgroundImage src={backgroundImage} />
+        <Image
+        src={backgroundImage}
+        className={styles.backgroundImage}
+        alt="CTIA banner"
+      />
         <BackgroundVideo
           url={backgroundVideoUrl}
           playsInline

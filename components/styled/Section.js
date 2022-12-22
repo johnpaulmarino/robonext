@@ -1,7 +1,9 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
+import Image from 'next/image';
 import Grid from 'components/atoms/Grid';
 import Column from 'components/atoms/Column';
+import styles from 'styles/components/styled/Section.module.scss';
 
 import SPACING from 'styles/spacing';
 import { XS, S, M } from 'styles/breakpoints';
@@ -174,7 +176,12 @@ export const StyledSectionTitleContainer = ({
       <Column width={12} medWidth={12} />
       <Column width={12} largeWidth={12} medWidth={12}>
         <SectionTitleContainer active={active} noPadding={noPadding}>
-          <SectionNumber src={number} alt={altTag} />
+ 
+          <Image
+            src={number}
+            alt={altTag} 
+            className={styles.sectionNumber}
+          />
           <SectionTitle
             inverse={inverse}
             tabIndex="0"

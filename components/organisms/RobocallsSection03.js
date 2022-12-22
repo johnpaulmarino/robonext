@@ -15,11 +15,7 @@ import roboSlugs from 'cms/robocalls/slugs';
 
 
 import backgroundGrid from 'public/static/background-textures/s03-grid.png';
-import fightImg01 from 'public/static/horizontal-fighting/S-03-Robo_ICONS_01.png';
-import fightImg02 from 'public/static/horizontal-fighting/S-03-Robo_ICONS-02.png';
-import fightImg03 from 'public/static/horizontal-fighting/S-03-Robo_ICONS-03.png';
-import fightImg04 from 'public/static/horizontal-fighting/S-03-Robo_ICONS-05.png';
-import fightImg05 from 'public/static/horizontal-fighting/S-03-Robo_ICONS-04.png';
+
 
 import {
   Section,
@@ -28,11 +24,11 @@ import {
 } from 'components/styled/Section';
 
 const fightingImages = [
-  fightImg01,
-  fightImg02,
-  fightImg03,
-  fightImg04,
-  fightImg05,
+  "/static/horizontal-fighting/S-03-Robo_ICONS-01.png",
+  "/static/horizontal-fighting/S-03-Robo_ICONS-02.png",
+  "/static/horizontal-fighting/S-03-Robo_ICONS-03.png",
+  "/static/horizontal-fighting/S-03-Robo_ICONS-05.png",
+  "/static/horizontal-fighting/S-03-Robo_ICONS-04.png",
 ];
 
 const fightingImagesAltTags = [
