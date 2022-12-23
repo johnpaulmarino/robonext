@@ -1,15 +1,7 @@
 import React from 'react';
 import styled, { css, keyframes } from 'styled-components';
 import Scroll from 'components/Scroll';
-import FlCty01 from 'public/static/floating-cities/floating-city-base-resize.png';
-import FlCty02 from 'public/static/floating-cities/floating-city2.png';
-import FlCty03 from 'public/static/floating-cities/floating-city3.png';
-import FlCty04 from 'public/static/floating-cities/floating-city4.png';
-import FlCty05 from 'public/static/floating-cities/floating-city5.png';
-import FlCty06 from 'public/static/floating-cities/floating-city6.png';
-import FlCty07 from 'public/static/floating-cities/floating-city7.png';
-import FlCty08 from 'public/static/floating-cities/floating-city8.png';
-import FlCty09 from 'public/static/floating-cities/floating-city9.png';
+
 
 const BaseG = styled.g`
   opacity: 0;
@@ -104,7 +96,7 @@ const VehicleGroup8 = ({
           width="3982"
           height="2351"
           transform="matrix(.48 0 0 .48 130.08 397.44)"
-          xlinkHref={FlCty02}
+          xlinkHref="/static/floating-cities/floating-city2.png"
         />
       </g>
       <NumberG active={active} id="number">
@@ -151,7 +143,7 @@ const VehicleGroup7 = ({
           width="4829"
           height="3202"
           transform="matrix(.48 0 0 .48 65.28 210.72)"
-          xlinkHref={FlCty03}
+          xlinkHref="/static/floating-cities/floating-city3.png"
         />
       </g>
       <NumberG active={active} id="number">
@@ -198,7 +190,7 @@ const VehicleGroup6 = ({
           width="3958"
           height="2536"
           transform="matrix(.48 0 0 .48 187.68 397.44)"
-          xlinkHref={FlCty04}
+          xlinkHref="/static/floating-cities/floating-city4.png"
         />
       </g>
       <NumberG active={active} id="number">
@@ -245,7 +237,7 @@ const VehicleGroup5 = ({
           width="4253"
           height="2695"
           transform="matrix(.48 0 0 .48 0 232.32)"
-          xlinkHref={FlCty05}
+          xlinkHref="/static/floating-cities/floating-city5.png"
         />
       </g>
       <NumberG active={active} id="number">
@@ -310,7 +302,7 @@ const VehicleGroup4 = ({
           width="4829"
           height="3202"
           transform="matrix(.48 0 0 .48 65.28 210.72)"
-          xlinkHref={FlCty06}
+          xlinkHref="/static/floating-cities/floating-city6.png"
         />
       </g>
     </BaseG>
@@ -344,7 +336,7 @@ const VehicleGroup3 = ({
           width="4829"
           height="3202"
           transform="matrix(.48 0 0 .48 65.28 210.72)"
-          xlinkHref={FlCty07}
+          xlinkHref="/static/floating-cities/floating-city7.png"
         />
       </g>
       <NumberG active={active} id="number">
@@ -396,7 +388,7 @@ const VehicleGroup2 = ({
           width="3862"
           height="3179"
           transform="translate(187.68) scale(.48)"
-          xlinkHref={FlCty08}
+          xlinkHref="/static/floating-cities/floating-city8.png"
         />
       </g>
       <NumberG active={active} id="number">
@@ -448,7 +440,7 @@ const VehicleGroup1 = ({
           width="3958"
           height="2662"
           transform="matrix(.48 0 0 .48 187.68 397.44)"
-          xlinkHref={FlCty09}
+          xlinkHref="/static/floating-cities/floating-city9.png"
         />
       </g>
       <NumberG active={active} id="number">
@@ -1437,7 +1429,7 @@ export default function Component({ children }) {
           width="4829"
           height="4009"
           transform="matrix(.48 0 0 .48 64.8 213.12)"
-          xlinkHref={FlCty01}
+          xlinkHref="/static/floating-cities/floating-city-base-resize.png"
         />
       </g>
       {children}

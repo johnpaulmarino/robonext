@@ -31,7 +31,7 @@ export default function Component({  globePosition  }) {
   return (
     <RotatingGlobe>
       <GlobeImgContainer>
-        <GlobeImg src={globeImg} alt="" globePosition={globePosition} />
+        <GlobeImg src="/static/rotating-globe/rotating-globe.png" alt="" globePosition={globePosition} />
       </GlobeImgContainer>
     </RotatingGlobe>
   )

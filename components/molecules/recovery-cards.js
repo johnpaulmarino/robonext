@@ -5,7 +5,7 @@ import TYPE, { TYPE_COLORS } from 'styles/type';
 import SPACING from 'styles/spacing';
 import { XS, S } from 'styles/breakpoints';
 
-import whiteSpeckle from 'public/static/horizontal-dr/white-speckle.png';
+
 
 const RecoveryCardContainer = styled.div`
   max-width: 500px;
@@ -82,7 +82,7 @@ const RecoveryCardSpeckle = styled.div`
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url(${whiteSpeckle});
+  background-image: url("/static/horizontal-dr/white-speckle.png");
   background-size: cover;
   background-position: center;
 `;

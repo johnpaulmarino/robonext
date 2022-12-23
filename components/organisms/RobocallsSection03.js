@@ -14,7 +14,6 @@ import fightingContent, { dyk } from 'cms/robocalls/fighting-content';
 import roboSlugs from 'cms/robocalls/slugs';
 
 
-import backgroundGrid from 'public/static/background-textures/s03-grid.png';
 
 
 import {
@@ -174,7 +173,7 @@ export default function Component({ checkSectionVisited }) {
   const visited = checkSectionVisited(3);
   return (
     <Section>
-      <SectionBackground bgImage={backgroundGrid} />
+      <SectionBackground bgImage="/static/background-textures/s03-grid.png" />
       <Spacer height={0} id={roboSlugs[3]} style={{ paddingTop: '1rem' }} />
 
       <StyledSectionContent>

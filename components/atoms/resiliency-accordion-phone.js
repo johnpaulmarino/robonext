@@ -1,15 +1,7 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 
-import FE from 'public/static/resiliency-accordion-phone/F026551A0CA5AB5E.png';
-import F0 from 'public/static/resiliency-accordion-phone/F026551A0CA5AB50.png';
-import F1 from 'public/static/resiliency-accordion-phone/F026551A0CA5AB51.png';
-import F2 from 'public/static/resiliency-accordion-phone/F026551A0CA5AB52.png';
-import F3 from 'public/static/resiliency-accordion-phone/F026551A0CA5AB53.png';
-import F4 from 'public/static/resiliency-accordion-phone/F026551A0CA5AB54.png';
-import F5 from 'public/static/resiliency-accordion-phone/F026551A0CA5AB55.png';
-import F6 from 'public/static/resiliency-accordion-phone/F026551A0CA5AB56.png';
-import F7 from 'public/static/resiliency-accordion-phone/F026551A0CA5AB57.png';
+
 
 const BaseG = styled.g`
   opacity: 0;
@@ -33,7 +25,7 @@ const PhoneGroupE = ({ active }) => (
       height="2068"
       overflow="visible"
       transform="matrix(.48 0 0 .48 -207.18 -111.38)"
-      xlinkHref={FE}
+      xlinkHref="/static/resiliency-accordion-phone/F026551A0CA5AB5E.png"
     />
   </BaseG>
 );
@@ -46,7 +38,7 @@ const PhoneGroup0 = ({ active }) => (
       height="1535"
       overflow="visible"
       transform="matrix(.48 0 0 .48 1.62 125.26)"
-      xlinkHref={F0}
+      xlinkHref="/static/resiliency-accordion-phone/F026551A0CA5AB50.png"
     />
   </BaseG>
 );
@@ -59,7 +51,7 @@ const PhoneGroup1 = ({ active }) => (
       height="2569"
       overflow="visible"
       transform="matrix(.48 0 0 .48 -226.42 -95.015)"
-      xlinkHref={F1}
+      xlinkHref="/static/resiliency-accordion-phone/F026551A0CA5AB51.png"
     />
   </BaseG>
 );
@@ -72,7 +64,7 @@ const PhoneGroup3 = ({ active }) => (
       height="2733"
       overflow="visible"
       transform="matrix(.48 0 0 .48 -223.98 -95.54)"
-      xlinkHref={F3}
+      xlinkHref="/static/resiliency-accordion-phone/F026551A0CA5AB53.png"
     />
   </BaseG>
 );
@@ -85,7 +77,7 @@ const PhoneGroup4 = ({ active }) => (
       height="2293"
       overflow="visible"
       transform="matrix(.48 0 0 .48 -75.66 -145.94)"
-      xlinkHref={F4}
+      xlinkHref="/static/resiliency-accordion-phone/F026551A0CA5AB54.png"
     />
   </BaseG>
 );
@@ -98,7 +90,7 @@ const PhoneGroup5 = ({ active }) => (
       height="1969"
       overflow="visible"
       transform="matrix(.48 0 0 .48 -89.1 -124.34)"
-      xlinkHref={F5}
+      xlinkHref="/static/resiliency-accordion-phone/F026551A0CA5AB55.png"
     />
   </BaseG>
 );
@@ -111,7 +103,7 @@ const PhoneGroup7 = ({ active }) => (
       height="1892"
       overflow="visible"
       transform="matrix(.48 0 0 .48 -130.38 -84.5)"
-      xlinkHref={F7}
+      xlinkHref="/static/resiliency-accordion-phone/F026551A0CA5AB57.png"
     />
   </BaseG>
 );
@@ -132,7 +124,7 @@ export default function Component({ currentPhone }) {
         height="1942"
         overflow="visible"
         transform="matrix(.48 0 0 .48 141.3 48.46)"
-        xlinkHref={F2}
+        xlinkHref="/static/resiliency-accordion-phone/F026551A0CA5AB52.png"
       />
       <defs>
         <path id="a" d="M1 0.17H793.84V1052.44H1z" />
@@ -146,7 +138,7 @@ export default function Component({ currentPhone }) {
           height="3214"
           overflow="visible"
           transform="matrix(.48 0 0 .48 -268.14 -240.98)"
-          xlinkHref={F6}
+          xlinkHref="/static/resiliency-accordion-phone/F026551A0CA5AB56.png"
         />
       </g>
       <defs>

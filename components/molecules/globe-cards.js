@@ -7,16 +7,13 @@ import TYPE, { TYPE_COLORS } from 'styles/type';
 import { S } from 'styles/breakpoints';
 import { BLACK, WHITE } from 'styles/colors';
 
-import mobileGlobeImg1 from 'public/static/rotating-globe/rotatingglobe-mobile-1.png';
-import mobileGlobeImg2 from 'public/static/rotating-globe/rotatingglobe-mobile-2.png';
-import mobileGlobeImg3 from 'public/static/rotating-globe/rotatingglobe-mobile-3.png';
-import mobileGlobeImg4 from 'public/static/rotating-globe/rotatingglobe-mobile-4.png';
+
 
 const mobileGlobeImgs = [
-  mobileGlobeImg1,
-  mobileGlobeImg2,
-  mobileGlobeImg3,
-  mobileGlobeImg4,
+  "/static/rotating-globe/rotatingglobe-mobile-1.png",
+  "/static/rotating-globe/rotatingglobe-mobile-2.png",
+  "/static/rotating-globe/rotatingglobe-mobile-3.png",
+  "/static/rotating-globe/rotatingglobe-mobile-4.png"
 ];
 
 const CardContainer = styled.div`

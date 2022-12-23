@@ -3,11 +3,7 @@ import styled from 'styled-components';
 
 import { XS, S } from 'styles/breakpoints';
 
-import dr01 from 'public/static/horizontal-dr/disaster-recovery-sm-1.png';
-import dr02 from 'public/static/horizontal-dr/disaster-recovery-sm-2.png';
-import dr03 from 'public/static/horizontal-dr/disaster-recovery-sm-3.png';
-import dr04 from 'public/static/horizontal-dr/disaster-recovery-sm-4.png';
-import dr05 from 'public/static/horizontal-dr/disaster-recovery-sm-5.png';
+
 
 import lightgreyTexture from 'public/static/background-textures/lightgrey-texture.jpg';
 
@@ -27,7 +23,9 @@ import {
 
 import Spacer from 'components/atoms/Spacer';
 
-const drImages = [dr01, dr02, dr03, dr04, dr05];
+const drImages = ["/static/horizontal-dr/disaster-recovery-sm-1.png", 
+"/static/horizontal-dr/disaster-recovery-sm-2.png", "/static/horizontal-dr/disaster-recovery-sm-3.png", 
+"/static/horizontal-dr/disaster-recovery-sm-4.png", "/static/horizontal-dr/disaster-recovery-sm-5.png"];
 
 const MobileContainer = styled.div`
   display: none;

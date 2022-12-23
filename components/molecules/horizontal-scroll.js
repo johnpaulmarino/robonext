@@ -1,7 +1,7 @@
 import React, { useReducer, useEffect, useRef } from 'react';
 import styled, { css } from 'styled-components';
 
-import dotPattern from 'public/static/background-textures/dot-pattern.svg';
+
 import { S } from 'styles/breakpoints';
 
 const DynamicHeightContainer = styled.div.attrs(({ dynamicHeight }) => {
@@ -35,7 +35,7 @@ const DotPatternContainer = styled.div`
   position: absolute;
   width: 400px;
   height: 400px;
-  background-image: url(${dotPattern});
+  background-image: url("/static/background-textures/dot-pattern.svg");
   opacity: 0.7;
 
   @media (max-width: ${S}px) {

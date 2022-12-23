@@ -1,10 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
-
+import Image from 'next/image';
 import { S } from 'styles/breakpoints';
 import TYPE, { TYPE_COLORS } from 'styles/type';
 import SPACING from 'styles/spacing';
 import { BLACK, WHITE } from 'styles/colors';
+import styles from 'styles/components/molecules/enforcement-cards.module.scss';
 
 import sixthCardImage from 'public/static/enforcement/enforcement-icon.png';
 
@@ -222,8 +223,9 @@ const SixthCardImage = styled.img`
 export const SixthCard = ({ content }) => (
   <EnforcementCardContainer>
     <EnforcementCard gradient={cardGradients[5]}>
-      <SixthCardImage
+      <Image
         src={sixthCardImage}
+        className={styles.sixthCardImage}
         alt="Signed petition to support Congress in fighting illegal robocalls"
       />
       <SixthCardBody>

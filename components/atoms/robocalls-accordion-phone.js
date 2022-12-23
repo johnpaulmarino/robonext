@@ -1,14 +1,6 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 
-import E0 from 'public/static/robocalls-accordion-phone/E2A60BE62A60BEE0.png';
-import E1 from 'public/static/robocalls-accordion-phone/E2A60BE62A60BEE1.png';
-import E2 from 'public/static/robocalls-accordion-phone/E2A60BE62A60BEE2.png';
-import E3 from 'public/static/robocalls-accordion-phone/E2A60BE62A60BEE3.png';
-import E5 from 'public/static/robocalls-accordion-phone/E2A60BE62A60BEE5.png';
-import E7 from 'public/static/robocalls-accordion-phone/E2A60BE62A60BEE7.png';
-import EE from 'public/static/robocalls-accordion-phone/E2A60BE62A60BEEE.png';
-import EF from 'public/static/robocalls-accordion-phone/E2A60BE62A60BEEF.png';
 
 const BaseG = styled.g`
   opacity: 0;
@@ -32,7 +24,7 @@ const PhoneGroup7 = ({ active }) => (
       height="2122"
       overflow="visible"
       transform="matrix(.48 0 0 .48 -138.082 231.276)"
-      xlinkHref={E7}
+      xlinkHref="/static/robocalls-accordion-phone/E2A60BE62A60BEE7.png"
     />
   </BaseG>
 )
@@ -45,7 +37,7 @@ const PhoneGroup0 = ({ active }) => (
       height="3363"
       overflow="visible"
       transform="matrix(.48 0 0 .48 -462.082 -314.484)"
-      xlinkHref={E0}
+      xlinkHref="/static/robocalls-accordion-phone/E2A60BE62A60BEE0.png"
     />
   </BaseG>
 )
@@ -58,7 +50,7 @@ const PhoneGroupE = ({ active }) => (
       height="2150"
       overflow="visible"
       transform="matrix(.48 0 0 .48 -34.402 27.276)"
-      xlinkHref={EE}
+      xlinkHref="/static/robocalls-accordion-phone/E2A60BE62A60BEEE.png"
     />
   </BaseG>
 )
@@ -71,7 +63,7 @@ const PhoneGroupF = ({ active }) => (
       height="1236"
       overflow="visible"
       transform="matrix(.48 0 0 .48 183.518 236.556)"
-      xlinkHref={EF}
+      xlinkHref="/static/robocalls-accordion-phone/E2A60BE62A60BEEF.png"
     />
   </BaseG>
 )
@@ -84,7 +76,7 @@ const PhoneGroup2 = ({ active }) => (
       height="2944"
       overflow="visible"
       transform="matrix(.48 0 0 .48 -338.242 -170.964)"
-      xlinkHref={E2}
+      xlinkHref="/static/robocalls-accordion-phone/E2A60BE62A60BEE2.png"
     />
   </BaseG>
 )
@@ -97,7 +89,7 @@ const PhoneGroup5 = ({ active }) => (
       height="2591"
       overflow="visible"
       transform="matrix(.48 0 0 .48 -184.162 50.796)"
-      xlinkHref={E5}
+      xlinkHref="/static/robocalls-accordion-phone/E2A60BE62A60BEE5.png"
     />
   </BaseG>
 )
@@ -117,7 +109,7 @@ export default function Component({ currentPhone }) {
         height="1942"
         overflow="visible"
         transform="matrix(.48 0 0 .48 181.118 61.356)"
-        xlinkHref={E3}
+        xlinkHref="/static/robocalls-accordion-phone/E2A60BE62A60BEE3.png"
       />
       <image
         alt="Cellphone"
@@ -125,7 +117,7 @@ export default function Component({ currentPhone }) {
         height="3311"
         overflow="visible"
         transform="matrix(.48 0 0 .48 -252.322 -274.644)"
-        xlinkHref={E1}
+        xlinkHref="/static/robocalls-accordion-phone/E2A60BE62A60BEE1.png"
       />
       <PhoneGroup7 active={currentPhone === 4} />
       <PhoneGroup0 active={currentPhone === 2} />
