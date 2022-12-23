@@ -5,7 +5,7 @@ import { Waypoint } from 'react-waypoint';
 import { GRAYGRAIN_BACKGROUND } from 'styles/colors';
 
 import { S } from 'styles/breakpoints'
-import lightgreyTexture from 'public/static/background-textures/lightgrey-texture.jpg';
+
 
 import sectionTitles from 'cms/resiliency/section-titles';
 import { section01 } from 'cms/resiliency/section-content';
@@ -167,7 +167,7 @@ export default function Component({ checkSectionVisited }) {
             dispatchCurrentMedia({ currentMedia: 0 })
           }}
         />
-        <MobileSectionBackground bgImage={lightgreyTexture} />
+        <MobileSectionBackground bgImage="/static/background-textures/lightgrey-texture.jpg" />
         <Spacer height={6} id={resiliencySlugs[1]} />
         <StyledSectionTitleContainer
           section={sectionTitles[1]}
@@ -179,7 +179,7 @@ export default function Component({ checkSectionVisited }) {
         <Section01SectionContent active={visited}>
           <SectionBackground
             bgColor={GRAYGRAIN_BACKGROUND}
-            bgImage={lightgreyTexture}
+            bgImage="/static/background-textures/lightgrey-texture.jpg"
             mobileHide={true}
           />
           <LargeScreen>

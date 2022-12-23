@@ -19,7 +19,7 @@ import roboSlugs from 'cms/robocalls/slugs';
 import RotatingGlobe from 'components/molecules/rotating-globe-final';
 import GlobeContent from 'components/molecules/globe-cards';
 
-import globeBackground from 'public/static/background-textures/rotating-globe-bg.png';
+
 
 const GlobeContainer = styled.div`
   position: absolute;
@@ -105,7 +105,7 @@ export default function Component({ checkSectionVisited }) {
     <Section>
       <SectionBackground
         bgGradient={'linear-gradient(to right, #ECF7F8, #B2DFFB)'}
-        bgImage={globeBackground}
+        bgImage="/static/background-textures/rotating-globe-bg.png"
       />
       <Spacer height={5} id={roboSlugs[2]} />
       <StyledSectionTitleContainer

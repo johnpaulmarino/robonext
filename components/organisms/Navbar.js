@@ -7,7 +7,6 @@ import ShareButtons from 'components/atoms/ShareButtons';
 import TYPE, { TYPE_COLORS } from 'styles/type';
 import { S } from 'styles/breakpoints';
 import { BLACK, WHITE, SEAGREEN, MEDIUMGRAY } from 'styles/colors';
-import whiteSpeckle from 'public/static/horizontal-dr/white-speckle.png';
 import menuIcon from 'public/static/menu/menu.png';
 import Image from 'next/image';
 
@@ -55,7 +54,7 @@ const Bar = styled.div`
     props.currentSection === props.sectionNumber ? SEAGREEN : MEDIUMGRAY};
   background-image: ${props =>
     props.currentSection === props.sectionNumber
-      ? `url(${whiteSpeckle})`
+      ? `url("/static/horizontal-dr/white-speckle.png")`
       : null};
   cursor: pointer;
   color: ${props =>

@@ -4,7 +4,6 @@ import { BLACK, WHITE } from 'styles/colors';
 import TYPE, { TYPE_COLORS } from 'styles/type';
 import { S } from 'styles/breakpoints';
 import playIcon from 'public/static/media-icons/play.svg';
-import imageBreaker from 'public/static/image-breaker/resiliency-section02-breaker.jpg';
 import { section02video } from 'cms/resiliency/video-desriptions';
 import Image from 'next/image';
 
@@ -14,7 +13,7 @@ const BreakerContainer = styled.div`
   height: calc(100vh - 68px);
   width: 100%;
   position: relative;
-  background-image: url(${imageBreaker});
+  background-image: url("/static/image-breaker/resiliency-section02-breaker.jpg");
   // background-image: url(//img.youtube.com/vi/4gj79lYuDuc/maxresdefault.jpg);
   background-size: cover;
   background-position: center;

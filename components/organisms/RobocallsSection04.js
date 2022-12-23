@@ -7,7 +7,7 @@ import Spacer from 'components/atoms/Spacer';
 
 import { S } from 'styles/breakpoints';
 
-import lightgreyTexture from 'public/static/background-textures/lightgrey-texture.jpg';
+
 import HorizontalScroll from 'components/molecules/horizontal-scroll';
 import EnforcementCards from 'components/molecules/enforcement-cards';
 import enforcementContent, { sixthCardContent } from 'cms/robocalls/enforcement-content';
@@ -91,7 +91,7 @@ export default function Component({ checkSectionVisited }) {
   const visited = checkSectionVisited(4);
   return (
     <Section>
-      <SectionBackground bgImage={lightgreyTexture} />
+      <SectionBackground bgImage="/static/background-textures/lightgrey-texture.jpg" />
       <Spacer height={0} id={roboSlugs[4]} style={{ paddingTop: '1rem' }} />
 
       <StyledSectionContent>

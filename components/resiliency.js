@@ -82,11 +82,9 @@ class Resiliency extends React.Component {
   }
 
   render() {
-    const renderPage =
-      process.env.GATSBY_PAGE === 'RESILIENCY' ||
-      process.env.GATSBY_PAGE === 'DEV'
+    
     return (
-      renderPage && (
+
         <Suspense fallback={<h1>Loading content</h1>}>
           <Layout>
             <Metadata metadata={metadata(process.env.GATSBY_BASE_URL)} />
@@ -234,7 +232,7 @@ class Resiliency extends React.Component {
             </div>
           </Layout>
         </Suspense>
-      )
+      
     )
   }
 }

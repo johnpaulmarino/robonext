@@ -1,12 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
+import Image from 'next/image';
 import { Waypoint } from 'react-waypoint';
 
 import SPACING from 'styles/spacing';
 import TYPE, { TYPE_COLORS } from 'styles/type';
 import { S } from 'styles/breakpoints';
 import { BLACK, WHITE } from 'styles/colors';
-
+import styles from 'styles/components/molecules/mobileGlobeImage.module.scss';
 
 
 const mobileGlobeImgs = [
@@ -222,7 +223,13 @@ const globeCards = React.memo(function globeCards({ content, dispatch }) {
           </BlockBoxContainer>
         )}
       </CardContainerInner>
-      <MobileGlobeImage src={mobileGlobeImgs[i]} />
+      <Image
+        src={mobileGlobeImgs[i]}
+        className={styles.mobileGlobeImage}
+        alt="globe image"
+        width="500"
+        height="500"
+      />
     </CardContainer>
   ))}
 );

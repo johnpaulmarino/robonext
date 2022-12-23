@@ -7,10 +7,10 @@ import Column from 'components/atoms/Column';
 
 import { S } from 'styles/breakpoints';
 import TYPE, { TYPE_COLORS } from 'styles/type';
-import transparentGrain from 'public/static/background-textures/transparent-grain.png';
+
 import { Section } from 'components/styled/Section';
 
-import phone from 'public/static/new-tech-vertical-scroll/new-tech-phone.png';
+
 import { techHeader } from 'cms/robocalls/develop-new-tech';
 import { techContent } from 'cms/robocalls/develop-new-tech';
 
@@ -278,7 +278,7 @@ class RobocallsBreaker extends React.Component {
 
     return (
       <Section>
-        <SectionBackground bgImage={transparentGrain} />
+        <SectionBackground bgImage="/static/background-textures/transparent-grain.png" />
         <Grid>
           <Column width={6} smallWidth={12} align="top">
             <PhoneContainer>
@@ -288,7 +288,7 @@ class RobocallsBreaker extends React.Component {
               </PhoneHeaderContainer>
               <PhoneImageContainer>
                 <PhoneImage
-                  src={phone}
+                  src="/static/new-tech-vertical-scroll/new-tech-phone.png"
                   height="100%"
                   width="auto"
                   display="block"

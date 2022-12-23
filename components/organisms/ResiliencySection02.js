@@ -14,16 +14,7 @@ import Column from 'components/atoms/Column';
 import FloatingCityUpgrade, { vehicles } from 'components/atoms/floating-city-upgrade';
 import FloatingCityCards from 'components/molecules/floating-city-cards';
 
-import FlCtMobile01 from 'public/static/floating-cities/floating-city-mobile-1.png';
-import FlCtMobile02 from 'public/static/floating-cities/floating-city-mobile-2.png';
-import FlCtMobile03 from 'public/static/floating-cities/floating-city-mobile-3.png';
-import FlCtMobile04 from 'public/static/floating-cities/floating-city-mobile-4.png';
-import FlCtMobile05 from 'public/static/floating-cities/floating-city-mobile-5.png';
-import FlCtMobile06 from 'public/static/floating-cities/floating-city-mobile-6.png';
-import FlCtMobile07 from 'public/static/floating-cities/floating-city-mobile-7.png';
-import FlCtMobile08 from 'public/static/floating-cities/floating-city-mobile-8.png';
 
-import backgroundClouds from 'public/static/background-textures/disaster-background-clouds-transparent.png';
 
 import Spacer from 'components/atoms/Spacer';
 
@@ -34,14 +25,14 @@ import {
 } from 'components/styled/Section';
 
 const mobileVehicles = [
-  FlCtMobile01,
-  FlCtMobile02,
-  FlCtMobile03,
-  FlCtMobile04,
-  FlCtMobile05,
-  FlCtMobile06,
-  FlCtMobile07,
-  FlCtMobile08,
+  "/static/floating-cities/floating-city-mobile-1.png",
+  "/static/floating-cities/floating-city-mobile-2.png",
+  "/static/floating-cities/floating-city-mobile-3.png",
+  "/static/floating-cities/floating-city-mobile-4.png",
+  "/static/floating-cities/floating-city-mobile-5.png",
+  "/static/floating-cities/floating-city-mobile-6.png",
+  "/static/floating-cities/floating-city-mobile-7.png",
+  "/static/floating-cities/floating-city-mobile-8.png",
 ];
 
 const ContentInner = styled.div`
@@ -198,7 +189,7 @@ export default function Component({ checkSectionVisited }) {
     <Section style={{ zIndex: 300 }}>
       <SectionBackground
         bgColor={LIGHTBLUE}
-        bgImage={backgroundClouds}
+        bgImage="/static/background-textures/disaster-background-clouds-transparent.png"
         bgGradient={bgGradient}
       >
         <span role="img" aria-label="Clouds with rain pouring down"></span>
