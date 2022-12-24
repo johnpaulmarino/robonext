@@ -8,7 +8,7 @@ export default function Component() {
     src='/static/_images/globe.png'
     alt='globe'
     height={884}
-    width={100}
+    width={500}
     />
 }
 
