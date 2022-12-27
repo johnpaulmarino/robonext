@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
-import { navigate } from '@reach/router';
+import Link from 'next/link';
 //import { useNavigate } from "react-router-dom";
 import Logo from 'components/atoms/Logo';
 import ShareButtons from 'components/atoms/ShareButtons';
@@ -9,6 +9,7 @@ import { S } from 'styles/breakpoints';
 import { BLACK, WHITE, SEAGREEN, MEDIUMGRAY } from 'styles/colors';
 import menuIcon from 'public/static/menu/menu.png';
 import Image from 'next/image';
+
 
 const StyledContainer = styled.div`
   position: fixed;
@@ -130,15 +131,11 @@ const BarContainer = styled.a`
   &:hover ${BarCover} {
     transform: translateY(-20px);
   }
-  &:focus ${BarCover} {
-    transform: translateY(-20px);
-  }
+
   &:hover ${BarNumber} {
     opacity: 1;
   }
-  &:focus ${BarNumber} {
-    opacity: 1;
-  }
+
   &:hover ${BarTitle} {
     opacity: 1;
     transform: translateY(1px);
@@ -147,69 +144,73 @@ const BarContainer = styled.a`
         ? 'opacity 0.1s ease-in!important, transform 0.1s ease-in!important'
         : 'opacity 0.7s ease-in, transform 0.3s ease-in'};
   }
-  &:focus ${BarTitle} {
-    opacity: 1;
-    transform: translateY(1px);
-    transition: ${props =>
-      props.active === 'clicked'
-        ? 'opacity 0.1s ease-in!important, transform 0.1s ease-in!important'
-        : 'opacity 0.7s ease-in, transform 0.3s ease-in'};
-  }
-  &:focus ${Bar} {
-    outline: none;
-  }
+
+ 
 `;
 
-class NavBar extends React.Component {
-  
+
+
+function NavBar(props) {
+//class NavBar extends React.Component {
+  /*
   state = {
     active: null,
+  } */
+  const [active, setActive] = useState(null);
+  //const navigate = useNavigate();
+  function turnOnActive(){
+    //this.setState({ active: 'clicked' })
+    setActive('clicked');
   }
-
-  turnOnActive = () => {
-    this.setState({ active: 'clicked' })
+  
+  function turnOffActive(){
+    setActive(null);
+    console.log(active);
   }
-
-  turnOffActive = () => {
-    if (this.state.active) {
-      this.setState({ active: null })
-    }
-    return null
-  }
-
-  accessibleFocus = index => {
+  function accessibleFocus(index){
+  //accessibleFocus = index => {
     index === 0
       ? document.querySelector('#toc-card-1').focus()
       : document.querySelector(`#section-title-${index}`).focus()
   }
+
+  const { navigateSection, currentSection, sectionTitles, slugs } = props;
+   // const { active } = this.state;
   
+  /*
   render() {
     const { navigateSection, currentSection, sectionTitles, slugs } = this.props;
-    const { active } = this.state;
+    const { active } = this.state; }*/
+   
     return (
       <StyledContainer>
         <Logo />
-
+   
         <Progress>
+        
           {sectionTitles.map((section, index) => {
             return (
-              <BarContainer
+              // eslint-disable-next-line react/jsx-key
+              <Link href={`#${slugs[index]}`} passHref legacyBehavior>
+                 <BarContainer
                 href={`#${slugs[index]}`}
-                onMouseDown={e => e.preventDefault()}
+                //onMouseDown={e => e.preventDefault()}
                 onClick={e => {
-                  e.preventDefault()
+                 // e.preventDefault()
                   const eventDetail = e.detail
-                  this.turnOnActive()
-                  navigateSection(index, () => {
+                 turnOnActive()
+                 /* navigateSection(index, () => {
                     const navigateHash = `#${slugs[index]}`
                     navigateHash === window.location.hash
                       ? document.querySelector(navigateHash).scrollIntoView()
                       : navigate(navigateHash)
                     if (eventDetail === 0) this.accessibleFocus(index)
-                  })
+                  }) */
+                  //if (eventDetail === 0) accessibleFocus(index)
                 }}
                 key={`navbar-${index}`}
-                onMouseLeave={() => this.turnOffActive()}
+                onMouseLeave={() => turnOffActive()}
+               
                 active={active}
               >
                 <Bar currentSection={currentSection} sectionNumber={index}>
@@ -225,9 +226,11 @@ class NavBar extends React.Component {
 
                 <BarCover active={active} />
               </BarContainer>
+              </Link>
             )
           })}
         </Progress>
+   
         <div style={{ display: 'flex' }}>
           <Hamburger
             onClick={() => {
@@ -240,7 +243,7 @@ class NavBar extends React.Component {
         </div>
       </StyledContainer>
     )
-  }
-}
+ 
+}; 
 
 export default NavBar;

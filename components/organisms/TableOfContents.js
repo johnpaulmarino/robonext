@@ -6,7 +6,7 @@ import { S } from 'styles/breakpoints';
 import arrowDown from 'public/static/arrows/long-arrow-down.svg';
 import resilArrowDownActive from 'public/static/arrows/resil-long-arrow-down-active.svg';
 import roboArrowDownActive from 'public/static/arrows/robo-long-arrow-down-active.svg';
-import { navigate } from '@reach/router';
+import Link from 'next/link';
 //import { useNavigate } from "react-router-dom";
 import Spacer from 'components/atoms/Spacer';
 import dotPattern from 'public/static/background-textures/dot-pattern.svg';
@@ -182,31 +182,25 @@ const TableOfContents = React.memo(function TableOfContents({ sectionTitles, pag
         {sectionTitles.map((section, index) => {
           return index > 0 ? (
             <TableContentsCardContainer key={`toc-container-${index}`}>
-              <TableContentsCard
-                href={`#section-title-${index}`}
-                page={page}
-                onClick={e => {
-                  const eventDetail = e.detail
-                  e.preventDefault()
-                  navigateSection(index, () => {
-                    navigate(`#${slugs[index]}`)
-                    if (eventDetail === 0)
-                      document.querySelector(`#section-title-${index}`).focus()
-                  })
-                }}
-                id={`toc-card-${index}`}
-              >
-                <NumberContainer>
-                  <NumberImage number={section.number} index={index} />
-                </NumberContainer>
-                <TitleContainer>
-                  <Title>{section.title}</Title>
-                  <Subtitle>{section.linkSubtitle}</Subtitle>
-                </TitleContainer>
-                <Button>
-                  <ContentsArrow></ContentsArrow>
-                </Button>
-              </TableContentsCard>
+              <Link href={`#section-title-${index}`} passHref legacyBehavior>
+                <TableContentsCard
+                  href={`#section-title-${index}`}
+                  page={page}
+                  id={`toc-card-${index}`}
+                >
+                  <NumberContainer>
+                    <NumberImage number={section.number} index={index} />
+                  </NumberContainer>
+                  <TitleContainer>
+                    <Title>{section.title}</Title>
+                    <Subtitle>{section.linkSubtitle}</Subtitle>
+                  </TitleContainer>
+                  <Button>
+                    <ContentsArrow></ContentsArrow>
+                  </Button>
+                </TableContentsCard>
+              </Link>
+              
             </TableContentsCardContainer>
           ) : null
         })}
