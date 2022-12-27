@@ -4,6 +4,9 @@ const nextConfig = {
   swcMinify: true,
   serverRuntimeConfig: {
     PROJECT_ROOT: __dirname
+  },
+  env: {
+    GATSBY_PAGE: process.env.GATSBY_PAGE,
   }
 }
 
