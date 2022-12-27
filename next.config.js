@@ -8,7 +8,7 @@ const nextConfig = {
 }
 
 
-module.exports.nextConfig = nextConfig;
+module.exports = nextConfig;
 
-const withOptimizedImages = require('next-optimized-images')
-module.exports.withOptimizedImages = withOptimizedImages({})
+//const withOptimizedImages = require('next-optimized-images')
+//module.exports.withOptimizedImages = withOptimizedImages({})

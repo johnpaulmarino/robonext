@@ -65,7 +65,7 @@ const DotPatternContainer2 = styled(DotPatternContainer)`
 `;
 
 const ContentsArrow = styled.div`
-  background-image: url(${arrowDown});
+  background-image: url('/static/arrows/long-arrow-down.svg');
   height: 30px;
   width: 20px;
 
@@ -109,8 +109,8 @@ const TableContentsCard = styled.a`
     &:hover ${ContentsArrow} {
       background-image: ${props =>
         props.page === 'resiliency'
-          ? `url(${resilArrowDownActive})`
-          : `url(${roboArrowDownActive})`};
+          ? `url('/static/arrows/resil-long-arrow-down-active.svg')`
+          : `url('/static/arrows/robo-long-arrow-down-active.svg')`};
     }
   }
 `;
@@ -134,7 +134,7 @@ const NumberImage = ({ number, index }) => (
   <Image
     src={number}
     alt={`Section ${index}`}
-    style={{ paddingTop: 5, width: '136%' }}
+    style={{ paddingTop: 5, width: '136%', maxWidth: '90px', maxHeight: '70px' }}
   />
 );
 
