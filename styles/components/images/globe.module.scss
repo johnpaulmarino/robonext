@@ -1,0 +1,14 @@
+.globecontainer {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.globeImage {
+    height: 100%;
+    transform: translateZ(0px);
+    transition: opacity 250ms linear 0s;
+    will-change: opacity;
+    opacity: 1;
+}
